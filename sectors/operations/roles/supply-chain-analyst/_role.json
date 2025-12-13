@@ -1,0 +1,238 @@
+{
+  "id": "supply-chain-analyst",
+  "name": "Supply Chain Analyst",
+  "sector": "operations",
+  "description": "Collects, analyzes, and interprets data to optimize supply chain operations across procurement, inventory management, logistics, and demand planning.",
+  
+  "profile": {
+    "typical_titles": [
+      "Supply Chain Analyst",
+      "Supply Chain Data Analyst",
+      "Logistics Analyst",
+      "Inventory Analyst",
+      "Demand Planning Analyst",
+      "Supply Planning Analyst",
+      "Materials Analyst"
+    ],
+    "reports_to": [
+      "Supply Chain Manager",
+      "Operations Manager",
+      "Director of Supply Chain",
+      "VP of Operations"
+    ],
+    "collaborates_with": [
+      "Production/Manufacturing",
+      "Sales",
+      "Finance",
+      "Procurement",
+      "Warehousing",
+      "IT",
+      "Customer Service"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Retail & E-commerce",
+      "Consumer Packaged Goods",
+      "Healthcare & Pharmaceuticals",
+      "Technology",
+      "Food & Beverage",
+      "Automotive",
+      "Government"
+    ]
+  },
+
+  "task_clusters": [
+    {
+      "name": "Data Collection & Validation",
+      "time_allocation_percent": 20,
+      "frequency": "daily",
+      "activities": [
+        "Gathering data from ERP systems (SAP, Oracle, NetSuite)",
+        "Validating data accuracy across multiple sources",
+        "Cleaning and standardizing datasets",
+        "Maintaining data in spreadsheets and databases",
+        "Reconciling discrepancies between systems"
+      ]
+    },
+    {
+      "name": "Reporting & Dashboard Development",
+      "time_allocation_percent": 20,
+      "frequency": "daily/weekly",
+      "activities": [
+        "Building and maintaining KPI dashboards",
+        "Creating periodic reports for management",
+        "Visualizing supply chain metrics",
+        "Tracking performance against targets",
+        "Presenting findings to stakeholders"
+      ]
+    },
+    {
+      "name": "Demand Planning & Forecasting",
+      "time_allocation_percent": 15,
+      "frequency": "weekly",
+      "activities": [
+        "Analyzing historical data for demand patterns",
+        "Developing and maintaining forecasting models",
+        "Collaborating with Sales on demand signals",
+        "Adjusting forecasts for seasonality and promotions",
+        "Supporting S&OP processes"
+      ]
+    },
+    {
+      "name": "Inventory Analysis & Optimization",
+      "time_allocation_percent": 15,
+      "frequency": "daily/weekly",
+      "activities": [
+        "Monitoring inventory levels and turns",
+        "Analyzing safety stock requirements",
+        "Identifying slow-moving or excess inventory",
+        "Recommending reorder points",
+        "Supporting inventory reduction initiatives"
+      ]
+    },
+    {
+      "name": "Supplier & Vendor Performance Analysis",
+      "time_allocation_percent": 10,
+      "frequency": "weekly/monthly",
+      "activities": [
+        "Tracking supplier delivery performance",
+        "Analyzing vendor pricing and costs",
+        "Comparing supplier metrics",
+        "Supporting vendor selection decisions",
+        "Identifying supply risks"
+      ]
+    },
+    {
+      "name": "Process Improvement & Optimization",
+      "time_allocation_percent": 10,
+      "frequency": "ongoing",
+      "activities": [
+        "Identifying bottlenecks and inefficiencies",
+        "Recommending process improvements",
+        "Supporting automation initiatives",
+        "Conducting root cause analysis",
+        "Implementing Lean/Six Sigma methodologies"
+      ]
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "time_allocation_percent": 5,
+      "frequency": "daily",
+      "activities": [
+        "Coordinating with Production, Sales, Finance",
+        "Participating in planning meetings",
+        "Communicating supply chain status",
+        "Aligning on priorities and constraints"
+      ]
+    },
+    {
+      "name": "System Support & Enhancement",
+      "time_allocation_percent": 5,
+      "frequency": "as_needed",
+      "activities": [
+        "Supporting ERP implementations and upgrades",
+        "Testing system changes",
+        "Documenting processes",
+        "Training users on tools and reports"
+      ]
+    }
+  ],
+
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Collecting data from multiple ERP systems, spreadsheets, databases and ensuring accuracy",
+      "evidence": "Job postings consistently require gathering and validating data from multiple sources",
+      "time_impact_hours_per_week": 5,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F2",
+      "type": "reporting_overhead",
+      "description": "Creating periodic reports manually, copying data between systems",
+      "evidence": "Resume examples cite 'automated data collection saving 150 hours per month'",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F3",
+      "type": "manual_document_creation",
+      "description": "Keeping dashboards updated, fixing data issues, responding to ad-hoc requests",
+      "evidence": "Dashboard development and maintenance cited as core responsibility",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F4",
+      "type": "information_seeking",
+      "description": "Monitoring inventory levels across locations, identifying exceptions",
+      "evidence": "Industry articles cite 'lack of real-time visibility' as top pain point",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F5",
+      "type": "vendor_supplier_evaluation",
+      "description": "Finding supplier performance data, pricing history, contact information",
+      "evidence": "Vendor evaluation and research cited in multiple job descriptions",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F6",
+      "type": "data_analysis",
+      "description": "Running forecasting models, analyzing accuracy, adjusting parameters",
+      "evidence": "Forecasting model development cited as key responsibility",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F7",
+      "type": "information_seeking",
+      "description": "Finding and investigating anomalies, stockouts, delivery delays",
+      "evidence": "Exception identification and reactive management cited as pain points",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F8",
+      "type": "context_switching",
+      "description": "Comparing data across ERP, WMS, TMS to find discrepancies",
+      "evidence": "Multi-system navigation cited as required skill",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    }
+  ],
+
+  "tools_and_systems": {
+    "erp_systems": ["SAP S/4HANA", "Oracle SCM Cloud", "NetSuite", "Microsoft Dynamics 365", "JD Edwards", "Infor"],
+    "analytics_tools": ["Microsoft Power BI", "Tableau", "Excel (Advanced)", "SQL", "Python", "R"],
+    "supply_chain_tools": ["Kinaxis RapidResponse", "JDA/Blue Yonder", "Anaplan", "Manhattan Associates", "E2open"],
+    "collaboration": ["Microsoft Teams", "Outlook", "SharePoint"]
+  },
+
+  "agent_opportunities": [
+    {
+      "name": "Inventory & Order Tracker",
+      "friction_addressed": ["F1", "F4", "F7"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 4
+    },
+    {
+      "name": "Supply Chain Report Assistant",
+      "friction_addressed": ["F2", "F3"],
+      "complexity": "medium",
+      "estimated_time_saved_hours": 3
+    }
+  ],
+
+  "sources_analyzed": {
+    "job_board_templates": 8,
+    "active_job_listings": 12,
+    "industry_articles": 10,
+    "career_resources": 4,
+    "vendor_documentation": 2,
+    "evidence_file": "job-evidence.csv"
+  }
+}

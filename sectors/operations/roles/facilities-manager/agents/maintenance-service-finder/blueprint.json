@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "maintenance-service-finder",
+  "version": "1.0.0",
+  "name": "Maintenance & Service Finder",
+  "description": "Helps facilities managers quickly find maintenance records, vendor information, service contracts, equipment history, and compliance documentation.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "facilities-manager",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "facilities",
+      "maintenance",
+      "vendors",
+      "contracts",
+      "service",
+      "equipment",
+      "compliance",
+      "work-orders"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Finding maintenance records, equipment history, and service documentation scattered across files and systems"
+    },
+    {
+      "type": "vendor_supplier_evaluation",
+      "description": "Locating vendor contact information, contract details, and service history"
+    },
+    {
+      "type": "compliance_verification",
+      "description": "Finding inspection records, certifications, and compliance documentation"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster access to maintenance history, vendor info, and compliance docs",
+    "secondary_benefits": [
+      "Reduced time searching through files and emails",
+      "Quicker vendor coordination",
+      "Better preparedness for inspections",
+      "Improved response to maintenance inquiries"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to maintenance records, vendor contracts, equipment files, and compliance documents",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) maintenance records and work order history, (2) vendor contracts and contact info, (3) equipment manuals and service records, (4) inspection and compliance documents"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Email",
+        "reason": "Can search email for vendor communications, service confirmations, and work order updates",
+        "setup_instructions": "Enable if facilities team receives maintenance-related communications via email"
+      },
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to CMMS or facilities management systems via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for facilities systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves information but does not create work orders, modify records, or contact vendors."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Equipment history",
+      "text": "What's the maintenance history for [equipment name/ID]?"
+    },
+    {
+      "title": "Vendor contact",
+      "text": "Who do we call for [service type] issues?"
+    },
+    {
+      "title": "Contract lookup",
+      "text": "Find our service contract with [vendor name]"
+    },
+    {
+      "title": "Last service date",
+      "text": "When was the [equipment/system] last serviced?"
+    },
+    {
+      "title": "Inspection records",
+      "text": "Find the most recent [inspection type] inspection report"
+    },
+    {
+      "title": "Equipment manual",
+      "text": "Where's the manual for the [equipment name]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 20,
+    "prerequisites": [
+      "SharePoint site or folder with maintenance records",
+      "Vendor contracts and contact information stored in SharePoint",
+      "Equipment documentation accessible via SharePoint",
+      "Inspection and compliance records in SharePoint",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Maintenance work order history",
+      "Equipment service records",
+      "Vendor contracts and agreements",
+      "Vendor contact information",
+      "Inspection reports and certifications",
+      "Equipment manuals and specifications"
+    ],
+    "data_not_accessed": [
+      "Live CMMS/CAFM data (unless Graph connector configured)",
+      "Financial details beyond contract values",
+      "Employee personal information",
+      "Security system credentials"
+    ],
+    "recommended_audience": [
+      "Facilities Managers",
+      "Building Managers",
+      "Maintenance Supervisors",
+      "Facilities Coordinators",
+      "Operations Managers"
+    ],
+    "admin_considerations": [
+      "Keep vendor contracts current in SharePoint",
+      "Ensure maintenance records are regularly exported/updated",
+      "Review what contract details should be accessible",
+      "Consider archiving old records to improve search relevance"
+    ]
+  }
+}

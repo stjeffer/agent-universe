@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "inventory-order-tracker",
+  "version": "1.0.0",
+  "name": "Inventory & Order Tracker",
+  "description": "Helps supply chain analysts quickly find inventory status, order information, shipment tracking, and supply chain exceptions across documentation and reports.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "supply-chain-analyst",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "supply-chain",
+      "inventory",
+      "orders",
+      "tracking",
+      "logistics",
+      "shipments",
+      "exceptions",
+      "status"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Collecting data from multiple systems and reports to find inventory and order status"
+    },
+    {
+      "type": "information_seeking",
+      "description": "Monitoring inventory levels across locations and identifying exceptions"
+    },
+    {
+      "type": "context_switching",
+      "description": "Switching between multiple systems and documents to piece together supply chain status"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster access to inventory status, order information, and supply chain exceptions",
+    "secondary_benefits": [
+      "Reduced context-switching between systems and documents",
+      "Quicker response to status inquiries from stakeholders",
+      "Easier identification of supply chain issues",
+      "Consolidated view of supply chain information"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to inventory reports, order logs, shipment tracking documents, and exception reports",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) inventory reports and snapshots, (2) order tracking documents, (3) shipment logs, (4) exception and alert reports"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to ERP or WMS systems via Graph connectors for more current data",
+        "setup_instructions": "Configure if organization has Graph connectors for SAP, Oracle, or other supply chain systems"
+      },
+      {
+        "name": "Email",
+        "reason": "Can search email for order confirmations, shipment notifications, and supplier communications",
+        "setup_instructions": "Enable if analysts receive supply chain updates via email"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves and surfaces information but does not modify inventory levels, orders, or system data."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Inventory status",
+      "text": "What's the current inventory level for [SKU/product]?"
+    },
+    {
+      "title": "Order lookup",
+      "text": "Find the status of order [order number]"
+    },
+    {
+      "title": "Shipment tracking",
+      "text": "Where is the shipment from [supplier] that was supposed to arrive [date]?"
+    },
+    {
+      "title": "Low stock alerts",
+      "text": "Which items are below safety stock right now?"
+    },
+    {
+      "title": "Backorder status",
+      "text": "What orders are currently on backorder?"
+    },
+    {
+      "title": "Supplier deliveries",
+      "text": "What deliveries are expected from [supplier] this week?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 20,
+    "prerequisites": [
+      "SharePoint site or folder containing inventory reports",
+      "Access to order tracking documents and logs",
+      "Shipment and delivery tracking reports",
+      "Exception/alert reports accessible via SharePoint",
+      "Microsoft 365 Copilot license for users who will use the agent"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Inventory level reports and snapshots",
+      "Order tracking documents",
+      "Shipment logs and delivery schedules",
+      "Exception and alert reports",
+      "Supplier delivery confirmations"
+    ],
+    "data_not_accessed": [
+      "Live ERP/WMS data (unless Graph connector configured)",
+      "Financial transactions",
+      "Customer personal information",
+      "Pricing and cost data (unless in tracked documents)"
+    ],
+    "recommended_audience": [
+      "Supply Chain Analysts",
+      "Inventory Analysts",
+      "Logistics Coordinators",
+      "Demand Planners",
+      "Operations Managers"
+    ],
+    "admin_considerations": [
+      "Data freshness depends on how often reports are exported to SharePoint",
+      "Consider automated exports from ERP to keep documents current",
+      "Align SharePoint permissions with data sensitivity",
+      "Agent surfaces information from documents — verify against source systems for critical decisions"
+    ]
+  }
+}

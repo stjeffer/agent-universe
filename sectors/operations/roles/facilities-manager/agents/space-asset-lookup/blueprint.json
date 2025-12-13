@@ -1,0 +1,136 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "space-asset-lookup",
+  "version": "1.0.0",
+  "name": "Space & Asset Lookup",
+  "description": "Helps facilities managers find information about building spaces, room configurations, equipment locations, and asset details.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "facilities-manager",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "facilities",
+      "space",
+      "assets",
+      "rooms",
+      "floor-plans",
+      "equipment",
+      "locations",
+      "inventory"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Finding information about spaces, equipment locations, and building systems"
+    },
+    {
+      "type": "information_seeking",
+      "description": "Locating asset details, specifications, and installation information"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 2,
+    "primary_benefit": "Faster answers to space and asset inquiries",
+    "secondary_benefits": [
+      "Quicker response to employee space questions",
+      "Better asset tracking and inventory visibility",
+      "Easier coordination for moves and changes",
+      "Reduced time searching for equipment info"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to floor plans, space inventories, asset registers, and equipment documentation",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) floor plans and space layouts, (2) room/space inventories, (3) asset registers and equipment lists, (4) building information documents"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to facilities management or asset tracking systems via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for CAFM, IWMS, or asset tracking systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves information but does not modify space assignments, asset records, or booking systems."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Room info",
+      "text": "What's the capacity of conference room [name]?"
+    },
+    {
+      "title": "Equipment location",
+      "text": "Where is [equipment name] located?"
+    },
+    {
+      "title": "Floor plan",
+      "text": "Show me the floor plan for [building/floor]"
+    },
+    {
+      "title": "Asset details",
+      "text": "What do we know about asset [ID/name]?"
+    },
+    {
+      "title": "Space availability",
+      "text": "Which conference rooms have video conferencing?"
+    },
+    {
+      "title": "Building info",
+      "text": "What floors are in [building name]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 20,
+    "prerequisites": [
+      "SharePoint site or folder with floor plans and space documentation",
+      "Room/space inventory accessible via SharePoint",
+      "Asset register or equipment list in SharePoint",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Floor plans and space layouts",
+      "Room configurations and capacities",
+      "Equipment locations and specifications",
+      "Asset registers and inventory",
+      "Building information documents"
+    ],
+    "data_not_accessed": [
+      "Room booking/calendar data (unless integrated)",
+      "Real-time occupancy data",
+      "Security system details",
+      "Financial asset values (unless in scope)"
+    ],
+    "recommended_audience": [
+      "Facilities Managers",
+      "Facilities Coordinators",
+      "Office Managers",
+      "Administrative Assistants",
+      "IT Support (for equipment locations)"
+    ],
+    "admin_considerations": [
+      "Keep floor plans current when layouts change",
+      "Update asset register as equipment moves",
+      "Consider sensitivity of detailed floor plans",
+      "Archive outdated versions to improve search"
+    ]
+  }
+}

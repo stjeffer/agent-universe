@@ -1,0 +1,224 @@
+{
+  "id": "facilities-manager",
+  "name": "Facilities Manager",
+  "sector": "operations",
+  "description": "Oversees the daily operations, maintenance, and safety of an organization's buildings and grounds, ensuring facilities are safe, functional, and well-maintained.",
+  
+  "profile": {
+    "typical_titles": [
+      "Facilities Manager",
+      "Facilities Maintenance Manager",
+      "Building Manager",
+      "Property Manager",
+      "Facilities Coordinator",
+      "Director of Facilities",
+      "Building Operations Manager"
+    ],
+    "reports_to": [
+      "Director of Operations",
+      "VP of Administration",
+      "CFO",
+      "General Manager",
+      "COO"
+    ],
+    "collaborates_with": [
+      "HR",
+      "IT",
+      "Finance",
+      "Safety/Security",
+      "Department heads",
+      "Vendors and contractors"
+    ],
+    "industries": [
+      "Corporate offices",
+      "Healthcare",
+      "Education",
+      "Manufacturing",
+      "Retail and hospitality",
+      "Government",
+      "Multi-tenant properties"
+    ]
+  },
+
+  "task_clusters": [
+    {
+      "name": "Maintenance Management",
+      "time_allocation_percent": 25,
+      "frequency": "daily",
+      "activities": [
+        "Managing work orders and maintenance requests",
+        "Scheduling preventive maintenance",
+        "Coordinating repairs (HVAC, electrical, plumbing)",
+        "Overseeing maintenance staff and contractors",
+        "Tracking equipment condition and repair history"
+      ]
+    },
+    {
+      "name": "Building Operations & Safety",
+      "time_allocation_percent": 20,
+      "frequency": "daily",
+      "activities": [
+        "Monitoring building systems",
+        "Ensuring safety compliance",
+        "Conducting facility inspections",
+        "Managing security protocols",
+        "Responding to emergencies"
+      ]
+    },
+    {
+      "name": "Vendor & Contractor Management",
+      "time_allocation_percent": 15,
+      "frequency": "weekly",
+      "activities": [
+        "Sourcing and selecting vendors",
+        "Negotiating service contracts",
+        "Overseeing contractor work",
+        "Managing vendor relationships",
+        "Evaluating vendor performance"
+      ]
+    },
+    {
+      "name": "Budget & Cost Management",
+      "time_allocation_percent": 15,
+      "frequency": "weekly/monthly",
+      "activities": [
+        "Developing maintenance budgets",
+        "Tracking expenses and costs",
+        "Managing capital projects",
+        "Identifying cost-saving opportunities",
+        "Preparing financial reports"
+      ]
+    },
+    {
+      "name": "Space Management & Planning",
+      "time_allocation_percent": 10,
+      "frequency": "as_needed",
+      "activities": [
+        "Managing office layouts and space allocation",
+        "Coordinating moves and reconfigurations",
+        "Tracking space utilization",
+        "Planning renovations and improvements"
+      ]
+    },
+    {
+      "name": "Compliance & Documentation",
+      "time_allocation_percent": 10,
+      "frequency": "ongoing",
+      "activities": [
+        "Ensuring regulatory compliance",
+        "Maintaining facility records",
+        "Managing inspections and certifications",
+        "Tracking asset information"
+      ]
+    },
+    {
+      "name": "Communication & Coordination",
+      "time_allocation_percent": 5,
+      "frequency": "daily",
+      "activities": [
+        "Responding to employee requests",
+        "Coordinating with departments",
+        "Communicating with vendors",
+        "Reporting to leadership"
+      ]
+    }
+  ],
+
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Finding maintenance records, equipment info, vendor contacts, asset details",
+      "evidence": "Limited access to maintenance logs and equipment details; sifting through outdated paper records",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F2",
+      "type": "manual_document_creation",
+      "description": "Managing work orders manually, paper-based tracking, data entry",
+      "evidence": "Time-consuming manual data entry; manual paper-based operations do not allow critical insights",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F3",
+      "type": "context_switching",
+      "description": "Handling urgent maintenance requests, prioritizing on the fly",
+      "evidence": "Constantly putting out fires; urgent calls requiring immediate decisions",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F4",
+      "type": "vendor_supplier_evaluation",
+      "description": "Finding vendor information, tracking contracts, managing communications",
+      "evidence": "Too much done over phone and email; manage vendor contracts",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F5",
+      "type": "compliance_verification",
+      "description": "Ensuring inspections are current, tracking certifications, maintaining documentation",
+      "evidence": "Schedule maintenance inspections ensuring they are current and compliant",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F6",
+      "type": "reporting_overhead",
+      "description": "Tracking expenses, preparing budget reports, analyzing costs",
+      "evidence": "Prepare operation reports, maintenance budgets, and provide analysis",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F7",
+      "type": "information_seeking",
+      "description": "Finding information about spaces, equipment, building systems",
+      "evidence": "Employees spend 20% of workweek looking for internal information",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F8",
+      "type": "stakeholder_communication",
+      "description": "Responding to inquiries, explaining status, coordinating requests",
+      "evidence": "Acting as linchpin in interdepartmental communication",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    }
+  ],
+
+  "tools_and_systems": {
+    "facilities_software": ["CMMS", "CAFM", "IWMS", "Work order systems"],
+    "building_systems": ["BAS", "DDC", "EMS", "Security systems", "Fire/life safety"],
+    "specialized_tools": ["Space planning software", "Asset tracking", "Inventory management"],
+    "collaboration": ["Microsoft Office", "SharePoint", "Email/Calendar"]
+  },
+
+  "agent_opportunities": [
+    {
+      "name": "Maintenance & Service Finder",
+      "friction_addressed": ["F1", "F4", "F5"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 4
+    },
+    {
+      "name": "Space & Asset Lookup",
+      "friction_addressed": ["F7", "F1"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 2
+    }
+  ],
+
+  "sources_analyzed": {
+    "job_board_templates": 3,
+    "industry_guides": 4,
+    "pain_point_articles": 10,
+    "government_resources": 2,
+    "public_sector_postings": 2,
+    "evidence_file": "job-evidence.csv"
+  }
+}

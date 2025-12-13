@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "supply-chain-report-assistant",
+  "version": "1.0.0",
+  "name": "Supply Chain Report Assistant",
+  "description": "Helps supply chain analysts draft periodic reports, summarize KPIs, analyze supply chain data, and create management updates.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "supply-chain-analyst",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "supply-chain",
+      "reporting",
+      "kpi",
+      "analytics",
+      "dashboards",
+      "management",
+      "metrics",
+      "performance"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "reporting_overhead",
+      "description": "Creating periodic reports manually, aggregating data from multiple sources, formatting for stakeholders"
+    },
+    {
+      "type": "manual_document_creation",
+      "description": "Building and updating dashboards, responding to ad-hoc analysis requests"
+    },
+    {
+      "type": "data_analysis",
+      "description": "Processing supply chain data to identify trends, calculate metrics, and surface insights"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 3,
+    "primary_benefit": "Faster creation of supply chain reports and KPI summaries",
+    "secondary_benefits": [
+      "Consistent report formatting across periods",
+      "Quicker response to ad-hoc analysis requests",
+      "Better data visualization and insights",
+      "More time for strategic analysis vs. manual compilation"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to supply chain data files, historical reports, KPI definitions, and templates",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) supply chain data exports, (2) report templates, (3) historical reports, (4) KPI reference documents"
+      },
+      {
+        "name": "CodeInterpreter",
+        "reason": "Agent needs to analyze data, perform calculations, and generate visualizations",
+        "setup_instructions": "Enable Code Interpreter capability — no additional configuration required"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can pull data from ERP systems via Graph connectors for more current analysis",
+        "setup_instructions": "Configure if organization has Graph connectors for supply chain systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent analyzes data and produces reports but does not modify source systems or publish reports automatically."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Weekly summary",
+      "text": "Create a weekly supply chain performance summary"
+    },
+    {
+      "title": "KPI report",
+      "text": "Summarize our key supply chain KPIs for [time period]"
+    },
+    {
+      "title": "Inventory analysis",
+      "text": "Analyze inventory turns and days of supply from the latest data"
+    },
+    {
+      "title": "Delivery performance",
+      "text": "What's our on-time delivery rate this month?"
+    },
+    {
+      "title": "Trend analysis",
+      "text": "How have our supply chain metrics trended over the past quarter?"
+    },
+    {
+      "title": "Executive update",
+      "text": "Draft an executive summary of supply chain performance"
+    }
+  ],
+
+  "setup": {
+    "complexity": "medium",
+    "estimated_time_minutes": 30,
+    "prerequisites": [
+      "SharePoint site or folder containing supply chain data exports (Excel, CSV)",
+      "KPI definitions and target documents",
+      "Historical report templates for reference",
+      "Data in analyzable format (structured tables)",
+      "Microsoft 365 Copilot license for users who will use the agent"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Supply chain performance data",
+      "Inventory metrics and reports",
+      "Delivery and fulfillment data",
+      "Historical KPI reports",
+      "Report templates"
+    ],
+    "data_not_accessed": [
+      "Live ERP data (unless Graph connector configured)",
+      "Financial transaction details",
+      "Customer personal information",
+      "Confidential pricing data (unless in scope)"
+    ],
+    "recommended_audience": [
+      "Supply Chain Analysts",
+      "Supply Chain Managers",
+      "Operations Analysts",
+      "Planning Analysts",
+      "Business Intelligence Analysts"
+    ],
+    "admin_considerations": [
+      "Data freshness depends on export frequency",
+      "Verify calculations against source systems for critical reports",
+      "Agent produces drafts — human review before publishing",
+      "Consider what data should be accessible for reporting"
+    ]
+  }
+}
