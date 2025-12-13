@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "rfp-drafting-assistant",
+  "version": "1.0.0",
+  "name": "RFP/RFQ Drafting Assistant",
+  "description": "Helps procurement officers draft RFPs, RFQs, and procurement specifications by leveraging templates, past solicitations, and organizational policies.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "procurement-officer",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "procurement",
+      "rfp",
+      "rfq",
+      "rfi",
+      "solicitation",
+      "sourcing",
+      "templates",
+      "specifications"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "manual_document_creation",
+      "description": "Drafting RFPs, RFQs, and specifications from scratch or heavily modifying templates for each solicitation"
+    },
+    {
+      "type": "compliance_verification",
+      "description": "Ensuring solicitation documents include required policy language, terms, and evaluation criteria"
+    },
+    {
+      "type": "information_seeking",
+      "description": "Finding relevant past RFPs, templates, and policy requirements scattered across SharePoint"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster creation of consistent, policy-compliant solicitation documents",
+    "secondary_benefits": [
+      "Reduced errors and omissions in RFP content",
+      "Consistent format and language across solicitations",
+      "Better leverage of past RFPs and lessons learned",
+      "Easier onboarding for new procurement staff"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to RFP/RFQ templates, past solicitations, procurement policies, and specification documents",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) RFP/RFQ templates, (2) past solicitations, (3) procurement policies, (4) standard terms and conditions"
+      }
+    ],
+    "optional": [
+      {
+        "name": "WebSearch",
+        "reason": "Can research industry benchmarks, market rates, or vendor information to inform specifications",
+        "setup_instructions": "Enable if procurement team wants to include external research in drafting process; consider scoping to trusted industry sites"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent assists with drafting but does not create files or send documents. Users copy the generated content into their document management workflow."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Start an RFP",
+      "text": "Help me draft an RFP for [product/service category]"
+    },
+    {
+      "title": "Find a template",
+      "text": "What RFP templates do we have for [category]?"
+    },
+    {
+      "title": "Build specifications",
+      "text": "Help me write specifications for [product/service]"
+    },
+    {
+      "title": "Evaluation criteria",
+      "text": "What evaluation criteria should I use for [category]?"
+    },
+    {
+      "title": "Reference past RFP",
+      "text": "Show me how we handled [requirement] in past RFPs"
+    },
+    {
+      "title": "Policy requirements",
+      "text": "What policy language must be included in an RFP for [category]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 25,
+    "prerequisites": [
+      "SharePoint site or folder containing RFP/RFQ templates",
+      "Access to past solicitation documents",
+      "Procurement policy documents accessible via SharePoint",
+      "Standard terms and conditions documents",
+      "Microsoft 365 Copilot license for users who will use the agent"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "RFP/RFQ templates",
+      "Past solicitation documents",
+      "Procurement policies and procedures",
+      "Standard terms and conditions",
+      "Specification templates",
+      "Evaluation criteria frameworks"
+    ],
+    "data_not_accessed": [
+      "Vendor pricing or proposals (unless in configured locations)",
+      "Contract execution details",
+      "Financial systems",
+      "HR or employee data"
+    ],
+    "recommended_audience": [
+      "Procurement Officers",
+      "Procurement Managers",
+      "Buyers",
+      "Sourcing Specialists",
+      "Category Managers"
+    ],
+    "admin_considerations": [
+      "Ensure templates are current and approved before including in agent scope",
+      "Consider version control for policy documents",
+      "Review which past RFPs should be accessible (may contain sensitive scope/pricing info)",
+      "Agent produces drafts only — ensure users understand review/approval still required"
+    ]
+  }
+}
