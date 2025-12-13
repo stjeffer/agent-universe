@@ -1,0 +1,20 @@
+{
+  "id": "operations",
+  "name": "Operations",
+  "description": "Procurement, supply chain, facilities, and logistics functions that keep organizations running efficiently",
+  "overview": "Operations teams manage the flow of goods, services, and resources. They handle procurement, vendor relationships, facilities, logistics, and supply chain management. These roles are often document-heavy, with significant time spent on contracts, compliance, and coordination.",
+  "common_friction_patterns": [
+    "information_seeking",
+    "manual_document_creation",
+    "contract_tracking",
+    "vendor_supplier_evaluation",
+    "compliance_verification"
+  ],
+  "typical_knowledge_sources": [
+    "Contract repositories",
+    "Supplier/vendor documentation",
+    "Procurement policies and procedures",
+    "RFP/RFQ templates and responses",
+    "Performance scorecards"
+  ]
+}

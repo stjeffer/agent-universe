@@ -1,0 +1,218 @@
+{
+  "$schema": "../schemas/capabilities.schema.json",
+  "version": "1.0.0",
+  "description": "Microsoft 365 Copilot declarative agent capabilities reference",
+  "capabilities": [
+    {
+      "id": "OneDriveAndSharePoint",
+      "name": "OneDrive and SharePoint",
+      "description": "Search and retrieve content from SharePoint sites and OneDrive locations",
+      "manifest_name": "OneDriveAndSharePoint",
+      "requires_license": true,
+      "setup_complexity": "low",
+      "configuration": {
+        "scoping_options": [
+          "Specific SharePoint sites by URL",
+          "Specific folders by URL",
+          "Specific documents by SharePoint IDs",
+          "All accessible SharePoint/OneDrive (unscoped)"
+        ],
+        "setup_requirements": [
+          "SharePoint site/folder URLs",
+          "User must have read access to configured locations"
+        ]
+      },
+      "best_for": [
+        "Document retrieval",
+        "Policy and procedure lookup",
+        "Template access",
+        "Historical record search"
+      ]
+    },
+    {
+      "id": "WebSearch",
+      "name": "Web Search",
+      "description": "Search the public web for information",
+      "manifest_name": "WebSearch",
+      "requires_license": false,
+      "setup_complexity": "low",
+      "configuration": {
+        "scoping_options": [
+          "Specific domains (max 4 sites)",
+          "All public web (unscoped)"
+        ],
+        "setup_requirements": [
+          "List of allowed domains (optional)"
+        ]
+      },
+      "best_for": [
+        "Market research",
+        "Industry news",
+        "Competitor information",
+        "Public documentation"
+      ]
+    },
+    {
+      "id": "GraphConnectors",
+      "name": "Copilot Connectors (Graph Connectors)",
+      "description": "Search data from external systems indexed via Microsoft Graph connectors",
+      "manifest_name": "GraphConnectors",
+      "requires_license": true,
+      "setup_complexity": "high",
+      "configuration": {
+        "scoping_options": [
+          "Specific connector by connection ID",
+          "All available connectors (unscoped)"
+        ],
+        "setup_requirements": [
+          "Graph connector must be configured in tenant",
+          "Connection ID for scoping"
+        ]
+      },
+      "best_for": [
+        "CRM data access",
+        "Ticketing system search",
+        "External database queries"
+      ]
+    },
+    {
+      "id": "CodeInterpreter",
+      "name": "Code Interpreter",
+      "description": "Generate and execute Python code for data analysis, calculations, and visualizations",
+      "manifest_name": "CodeInterpreter",
+      "requires_license": true,
+      "setup_complexity": "none",
+      "configuration": {
+        "scoping_options": [],
+        "setup_requirements": []
+      },
+      "best_for": [
+        "Data analysis",
+        "Calculations",
+        "Chart generation",
+        "Data transformation"
+      ]
+    },
+    {
+      "id": "GraphicArt",
+      "name": "Image Generator",
+      "description": "Create images and artwork based on text descriptions",
+      "manifest_name": "GraphicArt",
+      "requires_license": true,
+      "setup_complexity": "none",
+      "configuration": {
+        "scoping_options": [],
+        "setup_requirements": []
+      },
+      "best_for": [
+        "Creative content",
+        "Visual assets",
+        "Concept illustrations"
+      ]
+    },
+    {
+      "id": "Email",
+      "name": "Email",
+      "description": "Search through email messages in accessible mailboxes",
+      "manifest_name": "Email",
+      "requires_license": true,
+      "setup_complexity": "low",
+      "configuration": {
+        "scoping_options": [
+          "User's mailbox",
+          "Shared mailbox by SMTP address",
+          "Specific folders by folder ID"
+        ],
+        "setup_requirements": [
+          "Shared mailbox SMTP address (if applicable)",
+          "Folder IDs for scoping (optional)"
+        ]
+      },
+      "best_for": [
+        "Communication history",
+        "Correspondence search",
+        "Email-based workflows"
+      ]
+    },
+    {
+      "id": "TeamsMessages",
+      "name": "Teams Messages",
+      "description": "Search through Teams channels, chats, and meeting conversations",
+      "manifest_name": "TeamsMessages",
+      "requires_license": true,
+      "setup_complexity": "low",
+      "configuration": {
+        "scoping_options": [
+          "Specific channels/chats by URL (max 5)",
+          "All accessible Teams content (unscoped)"
+        ],
+        "setup_requirements": [
+          "Teams channel/chat URLs for scoping (optional)"
+        ]
+      },
+      "best_for": [
+        "Team communication search",
+        "Meeting context",
+        "Decision history"
+      ]
+    },
+    {
+      "id": "People",
+      "name": "People",
+      "description": "Search for information about people in the organization",
+      "manifest_name": "People",
+      "requires_license": true,
+      "setup_complexity": "none",
+      "configuration": {
+        "scoping_options": [],
+        "setup_requirements": []
+      },
+      "best_for": [
+        "Org chart lookups",
+        "Contact information",
+        "Expertise finding"
+      ]
+    },
+    {
+      "id": "Meetings",
+      "name": "Meetings",
+      "description": "Search for information about meetings in the organization",
+      "manifest_name": "Meetings",
+      "requires_license": true,
+      "setup_complexity": "none",
+      "configuration": {
+        "scoping_options": [],
+        "setup_requirements": []
+      },
+      "best_for": [
+        "Meeting history",
+        "Calendar context",
+        "Scheduling information"
+      ]
+    },
+    {
+      "id": "Dataverse",
+      "name": "Dataverse",
+      "description": "Search through data from Dynamics 365 / Dataverse tables",
+      "manifest_name": "Dataverse",
+      "requires_license": true,
+      "setup_complexity": "high",
+      "configuration": {
+        "scoping_options": [
+          "Specific tables by name",
+          "Specific Dataverse instance by hostname"
+        ],
+        "setup_requirements": [
+          "Dataverse hostname",
+          "Skill identifier (from Copilot Studio)",
+          "Table names"
+        ]
+      },
+      "best_for": [
+        "CRM data",
+        "Business application data",
+        "Dynamics 365 integration"
+      ]
+    }
+  ]
+}

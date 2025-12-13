@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "contract-supplier-finder",
+  "version": "1.0.0",
+  "name": "Contract & Supplier Finder",
+  "description": "Helps procurement officers quickly find past contracts, supplier information, pricing history, and performance records across procurement documentation.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "procurement-officer",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "procurement",
+      "contracts",
+      "suppliers",
+      "vendors",
+      "sourcing",
+      "pricing",
+      "negotiations"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Finding past contracts and supplier data scattered across multiple SharePoint sites, folders, and systems"
+    },
+    {
+      "type": "context_switching",
+      "description": "Switching between contract repository, supplier database, and email to piece together vendor history"
+    },
+    {
+      "type": "contract_tracking",
+      "description": "Locating contracts approaching renewal or expiration"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 3,
+    "primary_benefit": "Instant access to contract and supplier information without manual searching",
+    "secondary_benefits": [
+      "Faster response to internal stakeholder inquiries",
+      "Better preparation for supplier negotiations with historical context",
+      "Reduced risk of missed contract renewals",
+      "Consistent access to approved supplier information"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to contract repository, supplier documentation, and procurement records stored in SharePoint",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) executed contracts, (2) supplier/vendor files, (3) RFP responses, (4) performance evaluations"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Email",
+        "reason": "Can search email for supplier correspondence and negotiation history",
+        "setup_instructions": "Enable if procurement team wants to include email search in supplier lookups"
+      },
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to ERP or contract management systems via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for procurement systems (e.g., SAP, Oracle)"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent is retrieval-only. It helps find and summarize existing information but does not create, modify, or take action on contracts or supplier records."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Find a contract",
+      "text": "Find our current contract with [supplier name]"
+    },
+    {
+      "title": "Supplier lookup",
+      "text": "What do we have on file for [supplier name]?"
+    },
+    {
+      "title": "Pricing history",
+      "text": "What pricing have we had with [supplier] over the past 2 years?"
+    },
+    {
+      "title": "Expiring contracts",
+      "text": "Which contracts are expiring in the next 90 days?"
+    },
+    {
+      "title": "Past RFP responses",
+      "text": "Find RFP responses we received for [category] last year"
+    },
+    {
+      "title": "Supplier performance",
+      "text": "What's the performance history for [supplier name]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 20,
+    "prerequisites": [
+      "SharePoint site or folder structure containing procurement contracts",
+      "Supplier/vendor documentation accessible via SharePoint or OneDrive",
+      "User deploying the agent must have read access to the configured locations",
+      "Microsoft 365 Copilot license for users who will use the agent"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Executed contracts and agreements",
+      "Supplier/vendor profiles and documentation",
+      "Historical pricing and quote records",
+      "Supplier performance evaluations",
+      "RFP/RFQ responses"
+    ],
+    "data_not_accessed": [
+      "Financial systems (ERP) unless Graph connector configured",
+      "HR or employee data",
+      "Customer data",
+      "Confidential legal matters outside procurement"
+    ],
+    "recommended_audience": [
+      "Procurement Officers",
+      "Procurement Managers",
+      "Buyers",
+      "Sourcing Specialists",
+      "Category Managers"
+    ],
+    "admin_considerations": [
+      "Ensure SharePoint permissions align with who should access contract information",
+      "Consider scoping to specific folders if some contracts are highly sensitive",
+      "Review what historical data should be included vs. archived",
+      "Audit agent usage if contract data is subject to compliance requirements"
+    ]
+  }
+}

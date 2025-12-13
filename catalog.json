@@ -1,0 +1,72 @@
+{
+  "$schema": "./schemas/catalog.schema.json",
+  "version": "1.0.0",
+  "generated_at": "2025-01-15T00:00:00Z",
+  "total_agents": 1,
+  "agents": [
+    {
+      "id": "operations-procurement-officer-contract-supplier-finder",
+      "name": "Contract & Supplier Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers quickly find past contracts, supplier information, pricing history, and performance records across procurement documentation.",
+      "friction_addressed": [
+        "information_seeking",
+        "context_switching",
+        "contract_tracking"
+      ],
+      "capabilities_required": [
+        "OneDriveAndSharePoint"
+      ],
+      "capabilities_optional": [
+        "Email",
+        "GraphConnectors"
+      ],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 3,
+      "tags": [
+        "procurement",
+        "contracts",
+        "suppliers",
+        "vendors",
+        "sourcing",
+        "pricing",
+        "negotiations"
+      ],
+      "path": "sectors/operations/roles/procurement-officer/agents/contract-supplier-finder",
+      "version": "1.0.0"
+    }
+  ],
+  "index": {
+    "by_sector": {
+      "operations": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ]
+    },
+    "by_role": {
+      "procurement-officer": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ]
+    },
+    "by_capability": {
+      "OneDriveAndSharePoint": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ]
+    },
+    "by_friction": {
+      "information_seeking": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ],
+      "context_switching": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ],
+      "contract_tracking": [
+        "operations-procurement-officer-contract-supplier-finder"
+      ]
+    }
+  }
+}
