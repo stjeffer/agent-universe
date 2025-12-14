@@ -2,7 +2,7 @@
   "$schema": "./schemas/catalog.schema.json",
   "version": "1.0.0",
   "generated_at": "2025-01-15T00:00:00Z",
-  "total_agents": 7,
+  "total_agents": 11,
   "agents": [
     {
       "id": "operations-procurement-officer-contract-supplier-finder",
@@ -19,7 +19,7 @@
       "complexity": "low",
       "setup_time_minutes": 20,
       "time_saved_hours_per_week": 3,
-      "tags": ["procurement", "contracts", "suppliers", "vendors", "sourcing", "pricing", "negotiations"],
+      "tags": ["procurement", "contracts", "suppliers", "vendors", "sourcing", "pricing"],
       "path": "sectors/operations/roles/procurement-officer/agents/contract-supplier-finder",
       "version": "1.0.0"
     },
@@ -38,7 +38,7 @@
       "complexity": "low",
       "setup_time_minutes": 25,
       "time_saved_hours_per_week": 4,
-      "tags": ["procurement", "rfp", "rfq", "rfi", "solicitation", "sourcing", "templates", "specifications"],
+      "tags": ["procurement", "rfp", "rfq", "solicitation", "sourcing", "templates"],
       "path": "sectors/operations/roles/procurement-officer/agents/rfp-drafting-assistant",
       "version": "1.0.0"
     },
@@ -57,7 +57,7 @@
       "complexity": "medium",
       "setup_time_minutes": 30,
       "time_saved_hours_per_week": 3,
-      "tags": ["procurement", "spend-analysis", "reporting", "supplier-performance", "cost-savings", "analytics", "dashboards"],
+      "tags": ["procurement", "spend-analysis", "reporting", "supplier-performance", "analytics"],
       "path": "sectors/operations/roles/procurement-officer/agents/procurement-spend-analyst",
       "version": "1.0.0"
     },
@@ -76,7 +76,7 @@
       "complexity": "low",
       "setup_time_minutes": 20,
       "time_saved_hours_per_week": 4,
-      "tags": ["supply-chain", "inventory", "orders", "tracking", "logistics", "shipments", "exceptions", "status"],
+      "tags": ["supply-chain", "inventory", "orders", "tracking", "logistics", "shipments"],
       "path": "sectors/operations/roles/supply-chain-analyst/agents/inventory-order-tracker",
       "version": "1.0.0"
     },
@@ -95,7 +95,7 @@
       "complexity": "medium",
       "setup_time_minutes": 30,
       "time_saved_hours_per_week": 3,
-      "tags": ["supply-chain", "reporting", "kpi", "analytics", "dashboards", "management", "metrics", "performance"],
+      "tags": ["supply-chain", "reporting", "kpi", "analytics", "dashboards", "metrics"],
       "path": "sectors/operations/roles/supply-chain-analyst/agents/supply-chain-report-assistant",
       "version": "1.0.0"
     },
@@ -114,7 +114,7 @@
       "complexity": "low",
       "setup_time_minutes": 20,
       "time_saved_hours_per_week": 4,
-      "tags": ["facilities", "maintenance", "vendors", "contracts", "service", "equipment", "compliance", "work-orders"],
+      "tags": ["facilities", "maintenance", "vendors", "contracts", "service", "equipment"],
       "path": "sectors/operations/roles/facilities-manager/agents/maintenance-service-finder",
       "version": "1.0.0"
     },
@@ -133,8 +133,84 @@
       "complexity": "low",
       "setup_time_minutes": 20,
       "time_saved_hours_per_week": 2,
-      "tags": ["facilities", "space", "assets", "rooms", "floor-plans", "equipment", "locations", "inventory"],
+      "tags": ["facilities", "space", "assets", "rooms", "floor-plans", "equipment"],
       "path": "sectors/operations/roles/facilities-manager/agents/space-asset-lookup",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-operations-manager-operations-status-finder",
+      "name": "Operations Status Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "operations-manager",
+      "role_name": "Operations Manager",
+      "description": "Helps operations managers quickly find status updates, project information, team updates, and cross-departmental information across organizational documentation.",
+      "friction_addressed": ["information_seeking", "context_switching", "stakeholder_communication"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["operations", "status", "projects", "cross-functional", "updates", "tracking"],
+      "path": "sectors/operations/roles/operations-manager/agents/operations-status-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-operations-manager-operations-report-assistant",
+      "name": "Operations Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "operations-manager",
+      "role_name": "Operations Manager",
+      "description": "Helps operations managers draft performance reports, summarize KPIs, prepare meeting materials, and create leadership updates.",
+      "friction_addressed": ["reporting_overhead", "data_analysis", "meeting_preparation"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 4,
+      "tags": ["operations", "reporting", "kpi", "performance", "dashboards", "leadership"],
+      "path": "sectors/operations/roles/operations-manager/agents/operations-report-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-quality-assurance-analyst-quality-docs-finder",
+      "name": "Quality Docs Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "quality-assurance-analyst",
+      "role_name": "Quality Assurance Analyst",
+      "description": "Helps QA analysts quickly find specifications, standards, SOPs, supplier quality records, and compliance documentation.",
+      "friction_addressed": ["information_seeking", "compliance_verification", "vendor_supplier_evaluation"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["quality", "qa", "specifications", "sop", "standards", "compliance", "audit"],
+      "path": "sectors/operations/roles/quality-assurance-analyst/agents/quality-docs-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-quality-assurance-analyst-quality-report-assistant",
+      "name": "Quality Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "quality-assurance-analyst",
+      "role_name": "Quality Assurance Analyst",
+      "description": "Helps QA analysts draft quality reports, summarize non-conformance data, analyze quality metrics, and prepare audit documentation.",
+      "friction_addressed": ["manual_document_creation", "reporting_overhead", "information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["quality", "qa", "reporting", "ncr", "capa", "metrics", "audit"],
+      "path": "sectors/operations/roles/quality-assurance-analyst/agents/quality-report-assistant",
       "version": "1.0.0"
     }
   ],
@@ -147,7 +223,11 @@
         "operations-supply-chain-analyst-inventory-order-tracker",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-facilities-manager-maintenance-service-finder",
-        "operations-facilities-manager-space-asset-lookup"
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ]
     },
     "by_role": {
@@ -163,6 +243,14 @@
       "facilities-manager": [
         "operations-facilities-manager-maintenance-service-finder",
         "operations-facilities-manager-space-asset-lookup"
+      ],
+      "operations-manager": [
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant"
+      ],
+      "quality-assurance-analyst": [
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ]
     },
     "by_capability": {
@@ -173,11 +261,17 @@
         "operations-supply-chain-analyst-inventory-order-tracker",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-facilities-manager-maintenance-service-finder",
-        "operations-facilities-manager-space-asset-lookup"
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ],
       "CodeInterpreter": [
         "operations-procurement-officer-procurement-spend-analyst",
-        "operations-supply-chain-analyst-supply-chain-report-assistant"
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ]
     },
     "by_friction": {
@@ -186,34 +280,47 @@
         "operations-procurement-officer-rfp-drafting-assistant",
         "operations-supply-chain-analyst-inventory-order-tracker",
         "operations-facilities-manager-maintenance-service-finder",
-        "operations-facilities-manager-space-asset-lookup"
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ],
       "context_switching": [
         "operations-procurement-officer-contract-supplier-finder",
-        "operations-supply-chain-analyst-inventory-order-tracker"
-      ],
-      "contract_tracking": [
-        "operations-procurement-officer-contract-supplier-finder"
-      ],
-      "manual_document_creation": [
-        "operations-procurement-officer-rfp-drafting-assistant",
-        "operations-supply-chain-analyst-supply-chain-report-assistant"
-      ],
-      "compliance_verification": [
-        "operations-procurement-officer-rfp-drafting-assistant",
-        "operations-facilities-manager-maintenance-service-finder"
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-operations-manager-operations-status-finder"
       ],
       "reporting_overhead": [
         "operations-procurement-officer-procurement-spend-analyst",
-        "operations-supply-chain-analyst-supply-chain-report-assistant"
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant"
+      ],
+      "manual_document_creation": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant"
       ],
       "data_analysis": [
         "operations-procurement-officer-procurement-spend-analyst",
-        "operations-supply-chain-analyst-supply-chain-report-assistant"
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-operations-manager-operations-report-assistant"
       ],
       "vendor_supplier_evaluation": [
         "operations-procurement-officer-procurement-spend-analyst",
-        "operations-facilities-manager-maintenance-service-finder"
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-quality-assurance-analyst-quality-docs-finder"
+      ],
+      "compliance_verification": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-quality-assurance-analyst-quality-docs-finder"
+      ],
+      "stakeholder_communication": [
+        "operations-operations-manager-operations-status-finder"
+      ],
+      "meeting_preparation": [
+        "operations-operations-manager-operations-report-assistant"
       ]
     }
   }

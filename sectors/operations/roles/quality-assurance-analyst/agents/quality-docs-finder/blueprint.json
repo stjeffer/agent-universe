@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "quality-docs-finder",
+  "version": "1.0.0",
+  "name": "Quality Docs Finder",
+  "description": "Helps QA analysts quickly find specifications, standards, SOPs, supplier quality records, and compliance documentation.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "quality-assurance-analyst",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "quality",
+      "qa",
+      "specifications",
+      "sop",
+      "standards",
+      "compliance",
+      "suppliers",
+      "audit"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Finding specifications, standards, SOPs, test methods, and quality records"
+    },
+    {
+      "type": "compliance_verification",
+      "description": "Locating certifications, calibration records, and audit documentation"
+    },
+    {
+      "type": "vendor_supplier_evaluation",
+      "description": "Finding supplier quality records, certifications, and performance history"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster access to quality documentation and compliance records",
+    "secondary_benefits": [
+      "Reduced time searching for specifications",
+      "Better audit preparedness",
+      "Quicker supplier quality lookups",
+      "Improved compliance tracking"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to SOPs, specifications, quality records, supplier documentation, and compliance files",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) SOPs and work instructions, (2) specifications and standards, (3) supplier quality records, (4) compliance and certification documents, (5) calibration records"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to quality management systems via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for QMS or document control systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves information but does not modify documents, update records, or approve quality decisions."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Find SOP",
+      "text": "Find the SOP for [process/activity]"
+    },
+    {
+      "title": "Product specification",
+      "text": "What's the specification for [product/part]?"
+    },
+    {
+      "title": "Supplier quality",
+      "text": "Find the quality records for supplier [name]"
+    },
+    {
+      "title": "Calibration status",
+      "text": "When is [equipment] due for calibration?"
+    },
+    {
+      "title": "Audit documents",
+      "text": "Find documents for the upcoming [audit type] audit"
+    },
+    {
+      "title": "Standard reference",
+      "text": "What does [standard, e.g., ISO 9001] require for [topic]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 25,
+    "prerequisites": [
+      "SharePoint site or folder with quality documentation",
+      "SOPs and work instructions accessible via SharePoint",
+      "Specifications and standards documents",
+      "Supplier quality records",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Standard Operating Procedures (SOPs)",
+      "Product and material specifications",
+      "Quality standards and requirements",
+      "Supplier quality records and certifications",
+      "Calibration records and schedules",
+      "Audit documentation and findings"
+    ],
+    "data_not_accessed": [
+      "Live QMS data (unless Graph connector configured)",
+      "Proprietary formulations or trade secrets",
+      "Confidential supplier pricing",
+      "Employee personal information"
+    ],
+    "recommended_audience": [
+      "Quality Assurance Analysts",
+      "QA Specialists",
+      "Quality Inspectors",
+      "Quality Engineers",
+      "QA Managers"
+    ],
+    "admin_considerations": [
+      "Keep SOPs current with document control process",
+      "Ensure specifications are version-controlled",
+      "Review sensitivity of supplier quality records",
+      "Maintain calibration records in accessible location"
+    ]
+  }
+}

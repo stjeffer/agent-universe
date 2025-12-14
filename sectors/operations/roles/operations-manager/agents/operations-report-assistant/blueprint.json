@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "operations-report-assistant",
+  "version": "1.0.0",
+  "name": "Operations Report Assistant",
+  "description": "Helps operations managers draft performance reports, summarize KPIs, prepare meeting materials, and create leadership updates.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "operations-manager",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "operations",
+      "reporting",
+      "kpi",
+      "performance",
+      "dashboards",
+      "leadership",
+      "meetings",
+      "analysis"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "reporting_overhead",
+      "description": "Creating performance reports, compiling KPIs, and preparing leadership updates"
+    },
+    {
+      "type": "data_analysis",
+      "description": "Analyzing performance data, identifying trends, and preparing forecasts"
+    },
+    {
+      "type": "meeting_preparation",
+      "description": "Preparing agendas, gathering data for meetings, and creating presentation materials"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster creation of performance reports and leadership updates",
+    "secondary_benefits": [
+      "More consistent report formats",
+      "Better data-driven insights",
+      "Reduced time preparing for meetings",
+      "Improved communication to leadership"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to operational data, KPI tracking, historical reports, and templates",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) KPI and performance data exports, (2) historical reports and templates, (3) departmental metrics, (4) meeting materials and agendas"
+      },
+      {
+        "name": "CodeInterpreter",
+        "reason": "Agent needs to perform calculations, create visualizations, and analyze operational data",
+        "setup_instructions": "Enable CodeInterpreter for data analysis capabilities"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to operational systems for live data via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for ERP or operational systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent drafts reports and analyzes data but does not publish reports, send communications, or update systems."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Weekly ops report",
+      "text": "Help me create the weekly operations report"
+    },
+    {
+      "title": "KPI summary",
+      "text": "Summarize our key operational KPIs for [period]"
+    },
+    {
+      "title": "Leadership update",
+      "text": "Draft an executive summary for leadership"
+    },
+    {
+      "title": "Performance trends",
+      "text": "Analyze performance trends over the past [period]"
+    },
+    {
+      "title": "Meeting agenda",
+      "text": "Help me prepare the agenda for [meeting name]"
+    },
+    {
+      "title": "Compare periods",
+      "text": "Compare this month's performance to last month"
+    }
+  ],
+
+  "setup": {
+    "complexity": "medium",
+    "estimated_time_minutes": 30,
+    "prerequisites": [
+      "SharePoint site or folder with operational data",
+      "KPI and performance data in Excel or CSV format",
+      "Historical reports for reference",
+      "Report templates (if standardized)",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "KPI and performance data",
+      "Operational metrics and dashboards",
+      "Historical reports",
+      "Report templates",
+      "Meeting agendas and materials"
+    ],
+    "data_not_accessed": [
+      "Live ERP/operational system data (unless Graph connector configured)",
+      "Confidential HR data",
+      "Individual employee performance data",
+      "Financial forecasts beyond operational scope"
+    ],
+    "recommended_audience": [
+      "Operations Managers",
+      "Directors of Operations",
+      "General Managers",
+      "COOs",
+      "Operations Analysts"
+    ],
+    "admin_considerations": [
+      "Ensure KPI data exports are refreshed regularly",
+      "Standardize report templates for consistency",
+      "Consider sensitivity of performance data",
+      "Verify users should have access to cross-departmental metrics"
+    ]
+  }
+}

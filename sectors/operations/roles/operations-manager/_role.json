@@ -1,0 +1,221 @@
+{
+  "id": "operations-manager",
+  "name": "Operations Manager",
+  "sector": "operations",
+  "description": "Oversees the day-to-day operations of a business, coordinating across departments to ensure efficiency, productivity, and alignment with organizational goals.",
+
+  "profile": {
+    "typical_titles": [
+      "Operations Manager",
+      "General Manager",
+      "Director of Operations",
+      "Operations Director",
+      "Business Operations Manager",
+      "Regional Operations Manager",
+      "Plant Manager"
+    ],
+    "reports_to": [
+      "CEO",
+      "COO",
+      "VP of Operations",
+      "General Manager"
+    ],
+    "collaborates_with": [
+      "HR",
+      "Finance",
+      "IT",
+      "Sales",
+      "Production",
+      "Supply Chain",
+      "Quality",
+      "All department heads"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Retail and hospitality",
+      "Healthcare",
+      "Professional services",
+      "Technology",
+      "Non-profit",
+      "Government"
+    ]
+  },
+
+  "task_clusters": [
+    {
+      "name": "Performance Monitoring & Reporting",
+      "time_allocation_percent": 25,
+      "frequency": "daily/weekly",
+      "activities": [
+        "Tracking KPIs and operational metrics",
+        "Creating dashboards and performance reports",
+        "Analyzing data to identify trends",
+        "Presenting operational updates to leadership",
+        "Monitoring budget vs. actual performance"
+      ]
+    },
+    {
+      "name": "Process Management & Improvement",
+      "time_allocation_percent": 20,
+      "frequency": "ongoing",
+      "activities": [
+        "Designing and implementing operational processes",
+        "Identifying bottlenecks and inefficiencies",
+        "Standardizing procedures and best practices",
+        "Driving continuous improvement initiatives"
+      ]
+    },
+    {
+      "name": "Resource Coordination",
+      "time_allocation_percent": 15,
+      "frequency": "daily",
+      "activities": [
+        "Allocating staff across projects",
+        "Managing schedules and workloads",
+        "Coordinating between departments",
+        "Balancing capacity with demand"
+      ]
+    },
+    {
+      "name": "Team Leadership & Development",
+      "time_allocation_percent": 15,
+      "frequency": "daily/weekly",
+      "activities": [
+        "Supervising and mentoring staff",
+        "Conducting performance reviews",
+        "Training and developing team members",
+        "Resolving conflicts and issues"
+      ]
+    },
+    {
+      "name": "Budget & Financial Management",
+      "time_allocation_percent": 10,
+      "frequency": "weekly/monthly",
+      "activities": [
+        "Developing operational budgets",
+        "Tracking expenses and costs",
+        "Identifying cost-saving opportunities",
+        "Financial forecasting"
+      ]
+    },
+    {
+      "name": "Cross-Functional Communication",
+      "time_allocation_percent": 10,
+      "frequency": "daily",
+      "activities": [
+        "Facilitating communication between departments",
+        "Leading operational meetings",
+        "Coordinating with leadership on priorities",
+        "Managing stakeholder expectations"
+      ]
+    },
+    {
+      "name": "Compliance & Quality Assurance",
+      "time_allocation_percent": 5,
+      "frequency": "ongoing",
+      "activities": [
+        "Ensuring regulatory compliance",
+        "Maintaining quality standards",
+        "Working with legal and safety teams",
+        "Managing audits and inspections"
+      ]
+    }
+  ],
+
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Finding status updates, project information, team updates across departments",
+      "evidence": "Ensure consistent communication; coordinate across departments",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F2",
+      "type": "reporting_overhead",
+      "description": "Creating performance reports, compiling KPIs, preparing leadership updates",
+      "evidence": "Drowning in data while thirsting for insights; corporate reporting",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F3",
+      "type": "context_switching",
+      "description": "Moving between different department issues, projects, and priorities",
+      "evidence": "Too diverse to classify in any one functional area",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F4",
+      "type": "manual_document_creation",
+      "description": "Drafting operational procedures, process documentation, meeting summaries",
+      "evidence": "Implementing policies, procedures, and systems",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F5",
+      "type": "data_analysis",
+      "description": "Analyzing performance data, identifying trends, preparing forecasts",
+      "evidence": "Analyzing data and implementing corrective actions",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F6",
+      "type": "stakeholder_communication",
+      "description": "Facilitating cross-department communication, managing stakeholder updates",
+      "evidence": "Communication distortion between multiple people/channels",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F7",
+      "type": "budget_tracking",
+      "description": "Monitoring expenses, tracking budget vs. actual, preparing financial summaries",
+      "evidence": "Prepare annual budget, plan future spending",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F8",
+      "type": "meeting_preparation",
+      "description": "Preparing agendas, gathering data for meetings, creating presentation materials",
+      "evidence": "Leading meetings; presenting to leadership",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    }
+  ],
+
+  "tools_and_systems": {
+    "enterprise_systems": ["ERP (SAP, Oracle, NetSuite)", "Project management software", "HR systems"],
+    "analytics_reporting": ["Power BI", "Tableau", "Excel", "KPI dashboards"],
+    "communication": ["Microsoft Teams", "Outlook", "SharePoint", "Slack"],
+    "specialized": ["APS software", "Process mapping tools", "Time tracking"]
+  },
+
+  "agent_opportunities": [
+    {
+      "name": "Operations Status Finder",
+      "friction_addressed": ["F1", "F3", "F6"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 4
+    },
+    {
+      "name": "Operations Report Assistant",
+      "friction_addressed": ["F2", "F5", "F8"],
+      "complexity": "medium",
+      "estimated_time_saved_hours": 4
+    }
+  ],
+
+  "sources_analyzed": {
+    "job_board_templates": 6,
+    "government_resources": 1,
+    "industry_guides": 2,
+    "pain_point_articles": 6,
+    "evidence_file": "job-evidence.csv"
+  }
+}

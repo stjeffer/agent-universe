@@ -1,0 +1,145 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "quality-report-assistant",
+  "version": "1.0.0",
+  "name": "Quality Report Assistant",
+  "description": "Helps QA analysts draft quality reports, summarize non-conformance data, analyze quality metrics, and prepare audit documentation.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "quality-assurance-analyst",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "quality",
+      "qa",
+      "reporting",
+      "ncr",
+      "capa",
+      "metrics",
+      "audit",
+      "analysis"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "manual_document_creation",
+      "description": "Creating test reports, inspection summaries, and CAPA documentation"
+    },
+    {
+      "type": "reporting_overhead",
+      "description": "Preparing quality reports, management summaries, and audit findings"
+    },
+    {
+      "type": "information_seeking",
+      "description": "Finding NCR history, CAPA status, and corrective action effectiveness"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 3,
+    "primary_benefit": "Faster creation of quality reports and NCR summaries",
+    "secondary_benefits": [
+      "More consistent report formats",
+      "Better data-driven quality insights",
+      "Reduced time preparing for audits",
+      "Improved visibility into CAPA trends"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to quality data, NCR logs, CAPA records, and report templates",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) quality metrics data, (2) NCR and CAPA logs, (3) inspection records, (4) report templates"
+      },
+      {
+        "name": "CodeInterpreter",
+        "reason": "Agent needs to perform calculations, analyze quality data, and create visualizations",
+        "setup_instructions": "Enable CodeInterpreter for data analysis capabilities"
+      }
+    ],
+    "optional": [
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to QMS for live data via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for quality management systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent drafts reports and analyzes data but does not publish reports, close CAPAs, or update quality records."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Quality report",
+      "text": "Help me create the monthly quality report"
+    },
+    {
+      "title": "NCR summary",
+      "text": "Summarize non-conformances for [period]"
+    },
+    {
+      "title": "CAPA status",
+      "text": "What's the status of open CAPAs?"
+    },
+    {
+      "title": "Quality trends",
+      "text": "Analyze quality trends over the past [period]"
+    },
+    {
+      "title": "Audit summary",
+      "text": "Summarize findings from the recent [audit type] audit"
+    },
+    {
+      "title": "Defect analysis",
+      "text": "What are the top defect types this month?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "medium",
+    "estimated_time_minutes": 30,
+    "prerequisites": [
+      "SharePoint site or folder with quality data",
+      "Quality metrics in Excel or CSV format",
+      "NCR and CAPA logs accessible",
+      "Report templates (if standardized)",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Quality metrics and KPIs",
+      "Non-conformance records (NCRs)",
+      "CAPA logs and status",
+      "Inspection and test data",
+      "Audit findings and reports"
+    ],
+    "data_not_accessed": [
+      "Live QMS data (unless Graph connector configured)",
+      "Confidential customer complaints",
+      "Personnel actions related to quality issues",
+      "Financial impact details (unless in scope)"
+    ],
+    "recommended_audience": [
+      "Quality Assurance Analysts",
+      "QA Managers",
+      "Quality Engineers",
+      "Operations Managers"
+    ],
+    "admin_considerations": [
+      "Ensure quality data exports are refreshed regularly",
+      "Standardize report templates for consistency",
+      "Consider sensitivity of NCR and CAPA details",
+      "Verify users should have access to quality metrics"
+    ]
+  }
+}

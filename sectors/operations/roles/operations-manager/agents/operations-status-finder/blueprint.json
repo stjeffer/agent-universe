@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "operations-status-finder",
+  "version": "1.0.0",
+  "name": "Operations Status Finder",
+  "description": "Helps operations managers quickly find status updates, project information, team updates, and cross-departmental information across organizational documentation.",
+
+  "metadata": {
+    "sector": "operations",
+    "role": "operations-manager",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "operations",
+      "status",
+      "projects",
+      "cross-functional",
+      "updates",
+      "tracking",
+      "coordination"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "information_seeking",
+      "description": "Finding status updates, project information, and team updates across multiple departments"
+    },
+    {
+      "type": "context_switching",
+      "description": "Reducing time spent switching between different department contexts and information sources"
+    },
+    {
+      "type": "stakeholder_communication",
+      "description": "Finding information needed for cross-departmental communication and stakeholder updates"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Faster access to cross-departmental status and project information",
+    "secondary_benefits": [
+      "Reduced time hunting for updates",
+      "Better preparation for leadership conversations",
+      "Quicker response to status inquiries",
+      "Improved cross-functional coordination"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to project documents, status reports, team updates, and departmental files",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) project status reports, (2) team updates and meeting notes, (3) departmental reports, (4) operational dashboards and KPI documents"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Email",
+        "reason": "Can search email for status updates, project communications, and team announcements",
+        "setup_instructions": "Enable if operations manager receives status updates and project information via email"
+      },
+      {
+        "name": "GraphConnectors",
+        "reason": "Can connect to project management or ERP systems via Graph connectors",
+        "setup_instructions": "Configure if organization has Graph connectors for project management or operational systems"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves information but does not update project status, modify documents, or send communications."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Project status",
+      "text": "What's the current status of [project name]?"
+    },
+    {
+      "title": "Team updates",
+      "text": "What are the latest updates from the [department] team?"
+    },
+    {
+      "title": "Weekly highlights",
+      "text": "Summarize the key operational updates from this week"
+    },
+    {
+      "title": "Issue tracking",
+      "text": "Are there any open issues or blockers across projects?"
+    },
+    {
+      "title": "Department status",
+      "text": "What's happening in [department] right now?"
+    },
+    {
+      "title": "Meeting prep",
+      "text": "What do I need to know before my meeting with [team/person]?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 25,
+    "prerequisites": [
+      "SharePoint site or folder with project status documents",
+      "Team updates and meeting notes accessible via SharePoint",
+      "Departmental reports stored in SharePoint",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Project status reports",
+      "Team meeting notes and updates",
+      "Departmental reports and summaries",
+      "Operational dashboards",
+      "KPI tracking documents"
+    ],
+    "data_not_accessed": [
+      "Live project management system data (unless Graph connector configured)",
+      "HR confidential information",
+      "Financial details beyond operational budgets",
+      "Personal employee information"
+    ],
+    "recommended_audience": [
+      "Operations Managers",
+      "General Managers",
+      "Directors of Operations",
+      "Plant Managers",
+      "Regional Managers"
+    ],
+    "admin_considerations": [
+      "Ensure status reports are regularly updated in SharePoint",
+      "Consider which departmental information should be accessible",
+      "Review sensitivity of project information",
+      "Encourage teams to maintain consistent status update formats"
+    ]
+  }
+}

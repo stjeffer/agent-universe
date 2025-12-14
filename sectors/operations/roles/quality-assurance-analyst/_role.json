@@ -1,0 +1,220 @@
+{
+  "id": "quality-assurance-analyst",
+  "name": "Quality Assurance Analyst",
+  "sector": "operations",
+  "description": "Ensures that products, processes, and systems meet established quality standards and regulatory requirements through inspection, testing, documentation, and corrective action management.",
+
+  "profile": {
+    "typical_titles": [
+      "Quality Assurance Analyst",
+      "QA Analyst",
+      "Quality Analyst",
+      "Quality Control Analyst",
+      "Quality Assurance Specialist",
+      "QA Specialist",
+      "Quality Inspector"
+    ],
+    "reports_to": [
+      "QA Manager",
+      "Quality Director",
+      "Operations Manager",
+      "Plant Manager"
+    ],
+    "collaborates_with": [
+      "Production",
+      "Engineering",
+      "Supply Chain",
+      "Regulatory Affairs",
+      "Suppliers",
+      "Auditors"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Pharmaceuticals",
+      "Medical devices",
+      "Food and beverage",
+      "Electronics",
+      "Aerospace",
+      "Automotive",
+      "Healthcare"
+    ]
+  },
+
+  "task_clusters": [
+    {
+      "name": "Inspection & Testing",
+      "time_allocation_percent": 25,
+      "frequency": "daily",
+      "activities": [
+        "Performing quality inspections",
+        "Conducting tests against specifications",
+        "Using measuring and testing equipment",
+        "Recording inspection results",
+        "Identifying defects and non-conformances"
+      ]
+    },
+    {
+      "name": "Documentation & Record Keeping",
+      "time_allocation_percent": 20,
+      "frequency": "daily",
+      "activities": [
+        "Creating and maintaining SOPs",
+        "Documenting inspection results",
+        "Maintaining quality records",
+        "Preparing test reports",
+        "Managing document control"
+      ]
+    },
+    {
+      "name": "Audit Support & Compliance",
+      "time_allocation_percent": 15,
+      "frequency": "weekly/monthly",
+      "activities": [
+        "Supporting internal and external audits",
+        "Ensuring regulatory compliance",
+        "Maintaining audit readiness",
+        "Tracking certifications and calibrations"
+      ]
+    },
+    {
+      "name": "CAPA & Problem Resolution",
+      "time_allocation_percent": 15,
+      "frequency": "as_needed",
+      "activities": [
+        "Investigating non-conformances",
+        "Conducting root cause analysis",
+        "Implementing corrective and preventive actions",
+        "Tracking CAPA effectiveness"
+      ]
+    },
+    {
+      "name": "Data Analysis & Reporting",
+      "time_allocation_percent": 10,
+      "frequency": "weekly",
+      "activities": [
+        "Analyzing quality metrics and trends",
+        "Creating quality reports",
+        "Tracking KPIs",
+        "Statistical process control"
+      ]
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "time_allocation_percent": 10,
+      "frequency": "daily",
+      "activities": [
+        "Working with production on quality issues",
+        "Coordinating with suppliers",
+        "Supporting new product introductions",
+        "Training production staff"
+      ]
+    },
+    {
+      "name": "Process Improvement",
+      "time_allocation_percent": 5,
+      "frequency": "ongoing",
+      "activities": [
+        "Identifying improvement opportunities",
+        "Recommending process changes",
+        "Updating quality procedures"
+      ]
+    }
+  ],
+
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Finding specifications, standards, SOPs, test methods, and quality records",
+      "evidence": "Interpreting documentation and technical requirements; sifting through documentation",
+      "time_impact_hours_per_week": 4,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F2",
+      "type": "manual_document_creation",
+      "description": "Creating and updating SOPs, test reports, inspection records, CAPA reports",
+      "evidence": "Develop and review quality and operational documents including SOPs",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F3",
+      "type": "compliance_verification",
+      "description": "Tracking certifications, calibrations, training records, audit schedules",
+      "evidence": "Ensuring inspections are current and compliant; maintaining ISO program",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F4",
+      "type": "reporting_overhead",
+      "description": "Preparing quality reports, management summaries, audit findings",
+      "evidence": "Preparing detailed reports on findings and recommendations",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F5",
+      "type": "information_seeking",
+      "description": "Finding NCR history, CAPA status, corrective action effectiveness",
+      "evidence": "Managing deviations, CAPAs, change controls",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F6",
+      "type": "vendor_supplier_evaluation",
+      "description": "Finding supplier quality records, certifications, performance history",
+      "evidence": "Maintaining purchasing controls and supplier quality agreements",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F7",
+      "type": "audit_preparation",
+      "description": "Gathering documents for audits, preparing audit packages",
+      "evidence": "Supporting internal and external audits",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F8",
+      "type": "stakeholder_communication",
+      "description": "Coordinating with production, engineering, suppliers on quality issues",
+      "evidence": "Communication challenges across teams",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    }
+  ],
+
+  "tools_and_systems": {
+    "quality_management": ["EQMS", "Document control systems", "CAPA management", "Deviation tracking"],
+    "inspection_testing": ["Measuring equipment", "SPC software", "Calibration management"],
+    "compliance_audit": ["Audit management software", "Training management", "Certification tracking"],
+    "analysis_reporting": ["Quality dashboards", "Excel", "KPI tracking"],
+    "collaboration": ["Microsoft Teams", "Outlook", "SharePoint"]
+  },
+
+  "agent_opportunities": [
+    {
+      "name": "Quality Docs Finder",
+      "friction_addressed": ["F1", "F3", "F6"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 4
+    },
+    {
+      "name": "Quality Report Assistant",
+      "friction_addressed": ["F2", "F4", "F5"],
+      "complexity": "medium",
+      "estimated_time_saved_hours": 3
+    }
+  ],
+
+  "sources_analyzed": {
+    "job_board_templates": 6,
+    "job_postings": 4,
+    "pain_point_articles": 5,
+    "evidence_file": "job-evidence.csv"
+  }
+}
