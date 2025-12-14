@@ -2,7 +2,7 @@
   "$schema": "./schemas/catalog.schema.json",
   "version": "1.0.0",
   "generated_at": "2025-01-15T00:00:00Z",
-  "total_agents": 1,
+  "total_agents": 7,
   "agents": [
     {
       "id": "operations-procurement-officer-contract-supplier-finder",
@@ -12,60 +12,208 @@
       "role": "procurement-officer",
       "role_name": "Procurement Officer",
       "description": "Helps procurement officers quickly find past contracts, supplier information, pricing history, and performance records across procurement documentation.",
-      "friction_addressed": [
-        "information_seeking",
-        "context_switching",
-        "contract_tracking"
-      ],
-      "capabilities_required": [
-        "OneDriveAndSharePoint"
-      ],
-      "capabilities_optional": [
-        "Email",
-        "GraphConnectors"
-      ],
+      "friction_addressed": ["information_seeking", "context_switching", "contract_tracking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
       "has_actions": false,
       "complexity": "low",
       "setup_time_minutes": 20,
       "time_saved_hours_per_week": 3,
-      "tags": [
-        "procurement",
-        "contracts",
-        "suppliers",
-        "vendors",
-        "sourcing",
-        "pricing",
-        "negotiations"
-      ],
+      "tags": ["procurement", "contracts", "suppliers", "vendors", "sourcing", "pricing", "negotiations"],
       "path": "sectors/operations/roles/procurement-officer/agents/contract-supplier-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-procurement-officer-rfp-drafting-assistant",
+      "name": "RFP/RFQ Drafting Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers draft RFPs, RFQs, and procurement specifications by leveraging templates, past solicitations, and organizational policies.",
+      "friction_addressed": ["manual_document_creation", "compliance_verification", "information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["WebSearch"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["procurement", "rfp", "rfq", "rfi", "solicitation", "sourcing", "templates", "specifications"],
+      "path": "sectors/operations/roles/procurement-officer/agents/rfp-drafting-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-procurement-officer-procurement-spend-analyst",
+      "name": "Procurement Spend Analyst",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers analyze spend data, summarize supplier performance, identify savings opportunities, and prepare procurement reports.",
+      "friction_addressed": ["reporting_overhead", "data_analysis", "vendor_supplier_evaluation"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["procurement", "spend-analysis", "reporting", "supplier-performance", "cost-savings", "analytics", "dashboards"],
+      "path": "sectors/operations/roles/procurement-officer/agents/procurement-spend-analyst",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-supply-chain-analyst-inventory-order-tracker",
+      "name": "Inventory & Order Tracker",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "supply-chain-analyst",
+      "role_name": "Supply Chain Analyst",
+      "description": "Helps supply chain analysts quickly find inventory status, order information, shipment tracking, and supply chain exceptions across documentation and reports.",
+      "friction_addressed": ["information_seeking", "context_switching"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors", "Email"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["supply-chain", "inventory", "orders", "tracking", "logistics", "shipments", "exceptions", "status"],
+      "path": "sectors/operations/roles/supply-chain-analyst/agents/inventory-order-tracker",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-supply-chain-analyst-supply-chain-report-assistant",
+      "name": "Supply Chain Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "supply-chain-analyst",
+      "role_name": "Supply Chain Analyst",
+      "description": "Helps supply chain analysts draft periodic reports, summarize KPIs, analyze supply chain data, and create management updates.",
+      "friction_addressed": ["reporting_overhead", "manual_document_creation", "data_analysis"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["supply-chain", "reporting", "kpi", "analytics", "dashboards", "management", "metrics", "performance"],
+      "path": "sectors/operations/roles/supply-chain-analyst/agents/supply-chain-report-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-facilities-manager-maintenance-service-finder",
+      "name": "Maintenance & Service Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "facilities-manager",
+      "role_name": "Facilities Manager",
+      "description": "Helps facilities managers quickly find maintenance records, vendor information, service contracts, equipment history, and compliance documentation.",
+      "friction_addressed": ["information_seeking", "vendor_supplier_evaluation", "compliance_verification"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["facilities", "maintenance", "vendors", "contracts", "service", "equipment", "compliance", "work-orders"],
+      "path": "sectors/operations/roles/facilities-manager/agents/maintenance-service-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-facilities-manager-space-asset-lookup",
+      "name": "Space & Asset Lookup",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "facilities-manager",
+      "role_name": "Facilities Manager",
+      "description": "Helps facilities managers find information about building spaces, room configurations, equipment locations, and asset details.",
+      "friction_addressed": ["information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 2,
+      "tags": ["facilities", "space", "assets", "rooms", "floor-plans", "equipment", "locations", "inventory"],
+      "path": "sectors/operations/roles/facilities-manager/agents/space-asset-lookup",
       "version": "1.0.0"
     }
   ],
   "index": {
     "by_sector": {
       "operations": [
-        "operations-procurement-officer-contract-supplier-finder"
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup"
       ]
     },
     "by_role": {
       "procurement-officer": [
-        "operations-procurement-officer-contract-supplier-finder"
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst"
+      ],
+      "supply-chain-analyst": [
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
+      ],
+      "facilities-manager": [
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup"
       ]
     },
     "by_capability": {
       "OneDriveAndSharePoint": [
-        "operations-procurement-officer-contract-supplier-finder"
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup"
+      ],
+      "CodeInterpreter": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
       ]
     },
     "by_friction": {
       "information_seeking": [
-        "operations-procurement-officer-contract-supplier-finder"
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup"
       ],
       "context_switching": [
-        "operations-procurement-officer-contract-supplier-finder"
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-supply-chain-analyst-inventory-order-tracker"
       ],
       "contract_tracking": [
         "operations-procurement-officer-contract-supplier-finder"
+      ],
+      "manual_document_creation": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
+      ],
+      "compliance_verification": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-facilities-manager-maintenance-service-finder"
+      ],
+      "reporting_overhead": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
+      ],
+      "data_analysis": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
+      ],
+      "vendor_supplier_evaluation": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-facilities-manager-maintenance-service-finder"
       ]
     }
   }
