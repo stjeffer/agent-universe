@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "hr-policy-benefits-finder",
+  "version": "1.0.0",
+  "name": "HR Policy & Benefits Finder",
+  "description": "Helps HR generalists and employees quickly find policy information, benefits details, PTO guidelines, and HR procedures from company documentation.",
+
+  "metadata": {
+    "sector": "human-resources",
+    "role": "hr-generalist",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "hr",
+      "policies",
+      "benefits",
+      "handbook",
+      "pto",
+      "leave",
+      "compliance",
+      "employee-support"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "repetitive_inquiries",
+      "description": "Answering the same policy and benefits questions repeatedly from employees"
+    },
+    {
+      "type": "information_seeking",
+      "description": "Finding policies, procedures, and benefits details to answer questions"
+    },
+    {
+      "type": "benefits_administration",
+      "description": "Answering benefits questions and directing employees to the right resources"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 4,
+    "primary_benefit": "Instant answers to policy and benefits questions without HR intervention",
+    "secondary_benefits": [
+      "Reduced repetitive questions for HR team",
+      "Employees get answers faster",
+      "Consistent policy interpretation",
+      "24/7 availability for common questions"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to employee handbook, benefits guides, policy documents, and HR procedures",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) employee handbook, (2) benefits guides and summaries, (3) HR policies and procedures, (4) leave and PTO guidelines, (5) compliance documentation"
+      }
+    ],
+    "optional": [
+      {
+        "name": "WebSearch",
+        "reason": "Can search for external resources like government benefits information or labor law references",
+        "setup_instructions": "Enable if you want agent to supplement with external information"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent retrieves information but does not update employee records, process requests, or make policy decisions."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "PTO policy",
+      "text": "How much PTO do I get per year?"
+    },
+    {
+      "title": "Benefits enrollment",
+      "text": "When is open enrollment and how do I sign up?"
+    },
+    {
+      "title": "Leave policy",
+      "text": "What's the policy for parental leave?"
+    },
+    {
+      "title": "Remote work",
+      "text": "What are the guidelines for working remotely?"
+    },
+    {
+      "title": "Expense reimbursement",
+      "text": "How do I submit an expense report?"
+    },
+    {
+      "title": "Holiday schedule",
+      "text": "What are the company holidays this year?"
+    }
+  ],
+
+  "setup": {
+    "complexity": "low",
+    "estimated_time_minutes": 20,
+    "prerequisites": [
+      "SharePoint site or folder with HR documentation",
+      "Current employee handbook",
+      "Benefits guides and summaries",
+      "Policy documents",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "Employee handbook",
+      "Benefits guides and plan summaries",
+      "HR policies and procedures",
+      "Leave and PTO guidelines",
+      "Company holiday schedules",
+      "Expense and reimbursement policies"
+    ],
+    "data_not_accessed": [
+      "Individual employee records",
+      "Salary and compensation data",
+      "Performance reviews",
+      "Confidential HR investigations",
+      "Personal employee information"
+    ],
+    "recommended_audience": [
+      "All employees (if deployed for self-service)",
+      "HR Generalists",
+      "HR Coordinators",
+      "People Operations team",
+      "Managers seeking policy guidance"
+    ],
+    "admin_considerations": [
+      "Keep handbook and policies current",
+      "Review which policies should be accessible",
+      "Consider deploying to all employees for self-service",
+      "Ensure benefits information is updated annually",
+      "Add disclaimer about verifying with HR for complex situations"
+    ]
+  }
+}

@@ -29,6 +29,8 @@ Agent Universe flips the script. Every agent in this catalog is built on a found
 | **Friction Mapping** | Specific pain points with time impact and automation potential | Prioritizes what to solve |
 | **Agent Blueprints** | Complete, deployment-ready agent packages | Ship in 30 minutes, not 30 days |
 
+**This isn't a list of ideas. It's a library of evidence-based solutions.**
+
 ---
 
 ## 📊 What's Inside
@@ -38,6 +40,7 @@ Agent Universe flips the script. Every agent in this catalog is built on a found
 | Sector | Roles | Agents | Total Time Saved |
 |--------|-------|--------|------------------|
 | **Operations** | 5 | 11 | ~38 hrs/week |
+| **Human Resources** | 1 | 2 | ~7 hrs/week |
 
 ### Operations Sector
 
@@ -54,6 +57,13 @@ Agent Universe flips the script. Every agent in this catalog is built on a found
 | | Operations Report Assistant | Drafting performance reports and leadership updates |
 | **QA Analyst** | Quality Docs Finder | Finding specs, SOPs, standards, supplier quality records |
 | | Quality Report Assistant | Drafting quality reports, NCR summaries, CAPA status |
+
+### Human Resources Sector
+
+| Role | Agents | Key Friction Solved |
+|------|--------|---------------------|
+| **HR Generalist** | HR Policy & Benefits Finder | Answering repetitive policy/benefits questions, finding handbook info |
+| | HR Document Assistant | Drafting offer letters, job descriptions, onboarding docs, HR communications |
 
 ---
 
@@ -230,10 +240,13 @@ We recommend tracking actual usage and gathering feedback to measure real impact
 
 ### Current
 - [x] Operations sector (5 roles, 11 agents)
+- [x] Human Resources sector — HR Generalist (1 role, 2 agents)
+
+### In Progress
+- [ ] Human Resources sector — Recruiter, L&D Specialist (2 roles remaining)
 
 ### Planned
 - [ ] Finance sector (Accountant, Financial Analyst, Controller)
-- [ ] Human Resources sector (HR Generalist, Recruiter, L&D Specialist)
 - [ ] Sales sector (Account Executive, Sales Operations, Sales Engineer)
 - [ ] Marketing sector (Content Marketer, Product Marketing, Demand Gen)
 - [ ] IT sector (IT Support, Systems Administrator, Security Analyst)

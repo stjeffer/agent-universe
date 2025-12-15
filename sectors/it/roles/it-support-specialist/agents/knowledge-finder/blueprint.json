@@ -1,0 +1,95 @@
+{
+  "id": "knowledge-finder",
+  "name": "IT Knowledge Finder",
+  "version": "1.0.0",
+  "role": "it-support-specialist",
+  "sector": "it",
+  "type": "finder",
+  "description": "Retrieves IT solutions, troubleshooting guides, and documentation from organizational knowledge bases to accelerate ticket resolution.",
+  "friction_addressed": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Time wasted searching for solutions in fragmented knowledge bases",
+      "time_savings_hours_week": "3-5"
+    },
+    {
+      "id": "F4",
+      "type": "knowledge_management",
+      "description": "Tribal knowledge trapped in individuals' heads and scattered documentation",
+      "time_savings_hours_week": "1-2"
+    }
+  ],
+  "capabilities": [
+    "OneDriveAndSharePoint"
+  ],
+  "data_sources": [
+    {
+      "name": "IT Knowledge Base",
+      "type": "SharePoint",
+      "description": "Knowledge base articles, FAQs, and troubleshooting guides",
+      "required": true
+    },
+    {
+      "name": "Runbooks & Procedures",
+      "type": "SharePoint",
+      "description": "Step-by-step procedures for common issues and system administration",
+      "required": true
+    },
+    {
+      "name": "Past Ticket Summaries",
+      "type": "SharePoint",
+      "description": "Documented resolutions from previous tickets (exported/archived)",
+      "required": false
+    },
+    {
+      "name": "System Documentation",
+      "type": "SharePoint",
+      "description": "Configuration guides, network diagrams, and system specifications",
+      "required": false
+    },
+    {
+      "name": "Vendor Resources",
+      "type": "SharePoint",
+      "description": "Product manuals, vendor KB articles, and support documentation",
+      "required": false
+    }
+  ],
+  "complexity": "low",
+  "deployment_time_minutes": 30,
+  "use_cases": [
+    "Find resolution steps for a specific error code or message",
+    "Locate the procedure for common tasks (password reset, VPN setup)",
+    "Search for past solutions to recurring issues",
+    "Find system configuration documentation",
+    "Retrieve vendor troubleshooting guides"
+  ],
+  "success_metrics": [
+    {
+      "metric": "Search time reduction",
+      "target": "50% reduction in time spent searching for solutions",
+      "measurement": "Compare average search time before/after deployment"
+    },
+    {
+      "metric": "First-call resolution",
+      "target": "15% increase in issues resolved without escalation",
+      "measurement": "Track escalation rates from Tier 1"
+    },
+    {
+      "metric": "Knowledge reuse",
+      "target": "30% increase in KB article utilization",
+      "measurement": "Track agent queries that return KB results"
+    }
+  ],
+  "prerequisites": [
+    "SharePoint site with IT knowledge base content",
+    "Organized folder structure for documentation",
+    "Basic metadata/tagging on key documents"
+  ],
+  "limitations": [
+    "Cannot search external websites or vendor portals directly",
+    "Cannot access ITSM ticketing systems (ServiceNow, Jira) live data",
+    "Cannot execute fixes or make system changes",
+    "Quality depends on knowledge base content quality"
+  ]
+}

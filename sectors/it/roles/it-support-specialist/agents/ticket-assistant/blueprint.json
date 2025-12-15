@@ -1,0 +1,97 @@
+{
+  "id": "ticket-assistant",
+  "name": "IT Ticket Assistant",
+  "version": "1.0.0",
+  "role": "it-support-specialist",
+  "sector": "it",
+  "type": "assistant",
+  "description": "Drafts ticket resolution notes, user communications, and support documentation to reduce administrative burden on IT support staff.",
+  "friction_addressed": [
+    {
+      "id": "F3",
+      "type": "manual_document_creation",
+      "description": "Writing ticket notes and user communications from scratch each time",
+      "time_savings_hours_week": "2-3"
+    },
+    {
+      "id": "F2",
+      "type": "repetitive_inquiries",
+      "description": "Composing similar responses to common questions",
+      "time_savings_hours_week": "1-2"
+    },
+    {
+      "id": "F6",
+      "type": "reporting_overhead",
+      "description": "Creating ticket summaries and metrics reports",
+      "time_savings_hours_week": "1"
+    }
+  ],
+  "capabilities": [
+    "OneDriveAndSharePoint",
+    "CodeInterpreter"
+  ],
+  "data_sources": [
+    {
+      "name": "Response Templates",
+      "type": "SharePoint",
+      "description": "Standard response templates and communication guidelines",
+      "required": true
+    },
+    {
+      "name": "IT Policies",
+      "type": "SharePoint",
+      "description": "IT policies and procedures for accurate responses",
+      "required": true
+    },
+    {
+      "name": "Past Ticket Data",
+      "type": "SharePoint",
+      "description": "Exported ticket data for analysis and reporting (CSV/Excel)",
+      "required": false
+    },
+    {
+      "name": "KB Article Templates",
+      "type": "SharePoint",
+      "description": "Templates for creating new knowledge base articles",
+      "required": false
+    }
+  ],
+  "complexity": "medium",
+  "deployment_time_minutes": 45,
+  "use_cases": [
+    "Draft ticket resolution notes summarizing the fix",
+    "Compose professional user response emails",
+    "Write escalation summaries for Tier 2/3",
+    "Create KB article drafts from resolved tickets",
+    "Generate weekly ticket metrics summaries",
+    "Draft user guides for common procedures"
+  ],
+  "success_metrics": [
+    {
+      "metric": "Documentation time reduction",
+      "target": "40% reduction in time spent writing ticket notes",
+      "measurement": "Survey IT staff on time spent documenting"
+    },
+    {
+      "metric": "Response consistency",
+      "target": "Improved CSAT scores from consistent, professional responses",
+      "measurement": "Track user satisfaction ratings"
+    },
+    {
+      "metric": "KB contribution rate",
+      "target": "2x increase in new KB articles created",
+      "measurement": "Count KB articles published per month"
+    }
+  ],
+  "prerequisites": [
+    "SharePoint site with response templates",
+    "IT communication guidelines documented",
+    "Optional: Exported ticket data for reporting"
+  ],
+  "limitations": [
+    "Cannot submit tickets or update ITSM systems directly",
+    "Cannot send emails—generates drafts for review",
+    "Cannot access live ticket queues",
+    "All outputs should be reviewed before sending to users"
+  ]
+}

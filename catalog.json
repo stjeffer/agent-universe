@@ -1,8 +1,8 @@
 {
   "$schema": "./schemas/catalog.schema.json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "generated_at": "2025-01-15T00:00:00Z",
-  "total_agents": 11,
+  "total_agents": 13,
   "agents": [
     {
       "id": "operations-procurement-officer-contract-supplier-finder",
@@ -212,6 +212,44 @@
       "tags": ["quality", "qa", "reporting", "ncr", "capa", "metrics", "audit"],
       "path": "sectors/operations/roles/quality-assurance-analyst/agents/quality-report-assistant",
       "version": "1.0.0"
+    },
+    {
+      "id": "human-resources-hr-generalist-hr-policy-benefits-finder",
+      "name": "HR Policy & Benefits Finder",
+      "sector": "human-resources",
+      "sector_name": "Human Resources",
+      "role": "hr-generalist",
+      "role_name": "HR Generalist",
+      "description": "Helps HR generalists and employees quickly find policy information, benefits details, PTO guidelines, and HR procedures from company documentation.",
+      "friction_addressed": ["repetitive_inquiries", "information_seeking", "benefits_administration"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["WebSearch"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["hr", "policies", "benefits", "handbook", "pto", "leave", "compliance", "employee-support"],
+      "path": "sectors/human-resources/roles/hr-generalist/agents/hr-policy-benefits-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "human-resources-hr-generalist-hr-document-assistant",
+      "name": "HR Document Assistant",
+      "sector": "human-resources",
+      "sector_name": "Human Resources",
+      "role": "hr-generalist",
+      "role_name": "HR Generalist",
+      "description": "Helps HR generalists draft onboarding documents, offer letters, policy communications, job descriptions, and HR reports using company templates.",
+      "friction_addressed": ["manual_document_creation", "reporting_overhead"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["CodeInterpreter"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["hr", "documents", "onboarding", "offer-letters", "job-descriptions", "communications", "templates"],
+      "path": "sectors/human-resources/roles/hr-generalist/agents/hr-document-assistant",
+      "version": "1.0.0"
     }
   ],
   "index": {
@@ -228,6 +266,10 @@
         "operations-operations-manager-operations-report-assistant",
         "operations-quality-assurance-analyst-quality-docs-finder",
         "operations-quality-assurance-analyst-quality-report-assistant"
+      ],
+      "human-resources": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
       ]
     },
     "by_role": {
@@ -251,6 +293,10 @@
       "quality-assurance-analyst": [
         "operations-quality-assurance-analyst-quality-docs-finder",
         "operations-quality-assurance-analyst-quality-report-assistant"
+      ],
+      "hr-generalist": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
       ]
     },
     "by_capability": {
@@ -265,7 +311,9 @@
         "operations-operations-manager-operations-status-finder",
         "operations-operations-manager-operations-report-assistant",
         "operations-quality-assurance-analyst-quality-docs-finder",
-        "operations-quality-assurance-analyst-quality-report-assistant"
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
       ],
       "CodeInterpreter": [
         "operations-procurement-officer-procurement-spend-analyst",
@@ -283,45 +331,62 @@
         "operations-facilities-manager-space-asset-lookup",
         "operations-operations-manager-operations-status-finder",
         "operations-quality-assurance-analyst-quality-docs-finder",
-        "operations-quality-assurance-analyst-quality-report-assistant"
-      ],
-      "context_switching": [
-        "operations-procurement-officer-contract-supplier-finder",
-        "operations-supply-chain-analyst-inventory-order-tracker",
-        "operations-operations-manager-operations-status-finder"
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
       ],
       "reporting_overhead": [
         "operations-procurement-officer-procurement-spend-analyst",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-operations-manager-operations-report-assistant",
-        "operations-quality-assurance-analyst-quality-report-assistant"
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-document-assistant"
       ],
       "manual_document_creation": [
         "operations-procurement-officer-rfp-drafting-assistant",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
-        "operations-quality-assurance-analyst-quality-report-assistant"
-      ],
-      "data_analysis": [
-        "operations-procurement-officer-procurement-spend-analyst",
-        "operations-supply-chain-analyst-supply-chain-report-assistant",
-        "operations-operations-manager-operations-report-assistant"
-      ],
-      "vendor_supplier_evaluation": [
-        "operations-procurement-officer-procurement-spend-analyst",
-        "operations-facilities-manager-maintenance-service-finder",
-        "operations-quality-assurance-analyst-quality-docs-finder"
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-document-assistant"
       ],
       "compliance_verification": [
         "operations-procurement-officer-rfp-drafting-assistant",
         "operations-facilities-manager-maintenance-service-finder",
         "operations-quality-assurance-analyst-quality-docs-finder"
       ],
-      "stakeholder_communication": [
+      "context_switching": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-supply-chain-analyst-inventory-order-tracker",
         "operations-operations-manager-operations-status-finder"
       ],
-      "meeting_preparation": [
-        "operations-operations-manager-operations-report-assistant"
+      "repetitive_inquiries": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
+      ],
+      "benefits_administration": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
       ]
+    }
+  },
+  "summary": {
+    "sectors": [
+      {
+        "id": "operations",
+        "name": "Operations",
+        "roles": 5,
+        "agents": 11,
+        "total_time_saved_hours": 38
+      },
+      {
+        "id": "human-resources",
+        "name": "Human Resources",
+        "roles": 1,
+        "agents": 2,
+        "total_time_saved_hours": 7
+      }
+    ],
+    "totals": {
+      "sectors": 2,
+      "roles": 6,
+      "agents": 13,
+      "total_time_saved_hours": 45
     }
   }
 }

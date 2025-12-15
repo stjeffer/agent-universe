@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../../../schemas/blueprint.schema.json",
+  "id": "hr-document-assistant",
+  "version": "1.0.0",
+  "name": "HR Document Assistant",
+  "description": "Helps HR generalists draft onboarding documents, offer letters, policy communications, job descriptions, and HR reports using company templates and guidelines.",
+
+  "metadata": {
+    "sector": "human-resources",
+    "role": "hr-generalist",
+    "author": "Agent Universe",
+    "created": "2025-01-15",
+    "updated": "2025-01-15",
+    "tags": [
+      "hr",
+      "documents",
+      "onboarding",
+      "offer-letters",
+      "job-descriptions",
+      "communications",
+      "templates",
+      "reports"
+    ]
+  },
+
+  "friction_addressed": [
+    {
+      "type": "manual_document_creation",
+      "description": "Creating onboarding documents, offer letters, policy communications, and job descriptions"
+    },
+    {
+      "type": "reporting_overhead",
+      "description": "Creating HR reports, metrics summaries, and management updates"
+    }
+  ],
+
+  "value_proposition": {
+    "time_saved_per_week_hours": 3,
+    "primary_benefit": "Faster creation of HR documents using company templates and language",
+    "secondary_benefits": [
+      "Consistent document formatting",
+      "Compliance with company standards",
+      "Reduced time on routine drafting",
+      "Better quality first drafts"
+    ]
+  },
+
+  "capabilities": {
+    "required": [
+      {
+        "name": "OneDriveAndSharePoint",
+        "reason": "Agent needs access to HR templates, previous documents, job descriptions, and company guidelines",
+        "setup_instructions": "Configure with SharePoint sites/folders containing: (1) HR document templates, (2) sample offer letters and communications, (3) job description library, (4) company style guides"
+      }
+    ],
+    "optional": [
+      {
+        "name": "CodeInterpreter",
+        "reason": "Can analyze HR data and create reports with visualizations",
+        "setup_instructions": "Enable for HR reporting and data analysis capabilities"
+      }
+    ]
+  },
+
+  "actions": {
+    "has_actions": false,
+    "description": "This agent drafts documents for HR review but does not send communications, update systems, or finalize documents."
+  },
+
+  "conversation_starters": [
+    {
+      "title": "Offer letter",
+      "text": "Help me draft an offer letter for [position]"
+    },
+    {
+      "title": "Job description",
+      "text": "Help me create a job description for [role]"
+    },
+    {
+      "title": "Onboarding email",
+      "text": "Draft a welcome email for a new hire starting [date]"
+    },
+    {
+      "title": "Policy communication",
+      "text": "Help me communicate [policy change] to employees"
+    },
+    {
+      "title": "HR report",
+      "text": "Help me create the monthly HR metrics report"
+    },
+    {
+      "title": "Announcement",
+      "text": "Draft an announcement for [event/change]"
+    }
+  ],
+
+  "setup": {
+    "complexity": "medium",
+    "estimated_time_minutes": 30,
+    "prerequisites": [
+      "SharePoint site or folder with HR templates",
+      "Sample offer letters and communications",
+      "Job description library",
+      "Company style guide (if available)",
+      "Microsoft 365 Copilot license for users"
+    ]
+  },
+
+  "governance": {
+    "data_accessed": [
+      "HR document templates",
+      "Sample offer letters and communications",
+      "Job description library",
+      "Company style guides",
+      "HR metrics data (for reporting)"
+    ],
+    "data_not_accessed": [
+      "Individual salary and compensation details",
+      "Performance reviews",
+      "Confidential employee information",
+      "Legal documents requiring attorney review"
+    ],
+    "recommended_audience": [
+      "HR Generalists",
+      "HR Coordinators",
+      "HR Business Partners",
+      "Recruiting Coordinators",
+      "HR Managers"
+    ],
+    "admin_considerations": [
+      "Maintain current templates",
+      "All drafts require HR review before use",
+      "Ensure compliance language is current",
+      "Consider legal review for sensitive documents"
+    ]
+  }
+}

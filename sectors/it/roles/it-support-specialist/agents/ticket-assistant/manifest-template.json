@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "v1.0",
+  "name": "IT Ticket Assistant",
+  "description": "Drafts ticket resolution notes, user communications, and IT support documentation to reduce administrative burden.",
+  "instructions": "$[file('instructions.md')]",
+  "conversation_starters": [
+    {
+      "title": "Draft ticket notes",
+      "text": "Write ticket resolution notes for: [describe the issue and how you fixed it]"
+    },
+    {
+      "title": "Compose user email",
+      "text": "Help me write an email to a user explaining that [describe the issue and resolution]"
+    },
+    {
+      "title": "Escalation summary",
+      "text": "Write an escalation summary for Tier 2: [describe the issue and what you've tried]"
+    },
+    {
+      "title": "Create KB article",
+      "text": "Draft a KB article for this solution: [describe the issue and fix]"
+    },
+    {
+      "title": "Summarize ticket data",
+      "text": "Analyze this ticket export and create a weekly summary [attach CSV]"
+    },
+    {
+      "title": "User guide draft",
+      "text": "Help me write a user guide for [procedure/process]"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "https://{YOUR_TENANT}.sharepoint.com/sites/IT-Templates"
+        },
+        {
+          "url": "https://{YOUR_TENANT}.sharepoint.com/sites/IT-Policies"
+        }
+      ]
+    },
+    {
+      "name": "CodeInterpreter"
+    }
+  ]
+}

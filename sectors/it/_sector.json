@@ -1,0 +1,34 @@
+{
+  "id": "it",
+  "name": "Information Technology",
+  "description": "Roles focused on maintaining, securing, and supporting organizational technology infrastructure and end-user computing needs.",
+  "icon": "💻",
+  "roles_planned": [
+    "it-support-specialist",
+    "systems-administrator",
+    "security-analyst"
+  ],
+  "roles_completed": [],
+  "common_friction_types": [
+    "information_seeking",
+    "repetitive_inquiries",
+    "manual_document_creation",
+    "reporting_overhead",
+    "knowledge_management"
+  ],
+  "common_tools": [
+    "ServiceNow",
+    "Jira Service Management",
+    "Freshservice",
+    "Microsoft 365",
+    "Active Directory",
+    "Remote Desktop Tools",
+    "Knowledge Base Systems"
+  ],
+  "sector_characteristics": {
+    "ticket_driven": true,
+    "documentation_heavy": true,
+    "cross_functional": true,
+    "tiered_support": true
+  }
+}

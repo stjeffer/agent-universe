@@ -1,0 +1,223 @@
+{
+  "id": "hr-generalist",
+  "name": "HR Generalist",
+  "sector": "human-resources",
+  "description": "Handles all aspects of human resources work across the employee lifecycle, including recruitment, onboarding, benefits, employee relations, compliance, and policy administration.",
+
+  "profile": {
+    "typical_titles": [
+      "HR Generalist",
+      "Human Resources Generalist",
+      "HR Specialist",
+      "Human Resources Specialist",
+      "HR Coordinator",
+      "People Operations Specialist",
+      "HR Business Partner"
+    ],
+    "reports_to": [
+      "HR Manager",
+      "HR Director",
+      "VP of Human Resources",
+      "Chief People Officer",
+      "CEO (in smaller companies)"
+    ],
+    "collaborates_with": [
+      "All departments",
+      "Hiring managers",
+      "Benefits vendors",
+      "Payroll",
+      "Legal counsel",
+      "External recruiters"
+    ],
+    "industries": [
+      "Professional services",
+      "Healthcare",
+      "Technology",
+      "Manufacturing",
+      "Retail",
+      "Non-profit",
+      "Government",
+      "Education"
+    ]
+  },
+
+  "task_clusters": [
+    {
+      "name": "Employee Inquiries & Policy Support",
+      "time_allocation_percent": 25,
+      "frequency": "daily",
+      "activities": [
+        "Answering employee questions about policies and benefits",
+        "Explaining company procedures and guidelines",
+        "Directing employees to appropriate resources",
+        "Clarifying handbook provisions",
+        "Handling routine HR requests"
+      ]
+    },
+    {
+      "name": "Onboarding & Offboarding",
+      "time_allocation_percent": 20,
+      "frequency": "as_needed",
+      "activities": [
+        "Coordinating new hire orientation",
+        "Processing onboarding paperwork",
+        "Setting up employee records in HRIS",
+        "Conducting exit interviews",
+        "Managing offboarding checklists"
+      ]
+    },
+    {
+      "name": "Benefits Administration",
+      "time_allocation_percent": 15,
+      "frequency": "daily/seasonal",
+      "activities": [
+        "Administering employee benefits programs",
+        "Managing open enrollment",
+        "Acting as liaison with benefits providers",
+        "Answering benefits questions",
+        "Processing benefits changes"
+      ]
+    },
+    {
+      "name": "Compliance & Documentation",
+      "time_allocation_percent": 15,
+      "frequency": "ongoing",
+      "activities": [
+        "Ensuring compliance with employment laws",
+        "Maintaining employee records",
+        "Auditing HRIS data for accuracy",
+        "Processing regulatory paperwork",
+        "Supporting audits"
+      ]
+    },
+    {
+      "name": "Recruitment Support",
+      "time_allocation_percent": 10,
+      "frequency": "as_needed",
+      "activities": [
+        "Posting job openings",
+        "Screening candidates",
+        "Scheduling interviews",
+        "Coordinating with hiring managers"
+      ]
+    },
+    {
+      "name": "Employee Relations",
+      "time_allocation_percent": 10,
+      "frequency": "as_needed",
+      "activities": [
+        "Handling employee grievances",
+        "Mediating workplace conflicts",
+        "Supporting performance management",
+        "Addressing conduct issues"
+      ]
+    },
+    {
+      "name": "HR Administration & Reporting",
+      "time_allocation_percent": 5,
+      "frequency": "weekly/monthly",
+      "activities": [
+        "Maintaining HRIS data",
+        "Running HR reports",
+        "Updating organizational charts",
+        "Managing employee directories"
+      ]
+    }
+  ],
+
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "repetitive_inquiries",
+      "description": "Answering the same policy and benefits questions repeatedly from employees",
+      "evidence": "Reduces repetitive questions to supervisors and HR; revolving door",
+      "time_impact_hours_per_week": 5,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F2",
+      "type": "information_seeking",
+      "description": "Finding policies, procedures, benefits details to answer employee questions",
+      "evidence": "Employees can refer to documents for answers",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F3",
+      "type": "manual_document_creation",
+      "description": "Creating onboarding documents, offer letters, policy updates",
+      "evidence": "Handle all administrative tasks for onboarding",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F4",
+      "type": "data_entry",
+      "description": "Entering employee data into HRIS and auditing for accuracy",
+      "evidence": "Buried in paperwork, manually entering data",
+      "time_impact_hours_per_week": 3,
+      "automation_potential": "medium"
+    },
+    {
+      "id": "F5",
+      "type": "compliance_verification",
+      "description": "Tracking certifications, required training, regulatory deadlines",
+      "evidence": "Ensure compliance with federal, state, local regulations",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "high"
+    },
+    {
+      "id": "F6",
+      "type": "benefits_administration",
+      "description": "Processing enrollments, answering benefits questions, vendor coordination",
+      "evidence": "Educating employees and answering all their plan questions",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F7",
+      "type": "reporting_overhead",
+      "description": "Creating HR reports, metrics, management updates",
+      "evidence": "Assist with audits and reporting",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium-high"
+    },
+    {
+      "id": "F8",
+      "type": "context_gathering",
+      "description": "Gathering context for employee issues and documenting conversations",
+      "evidence": "Provide HR advisory service on grievance matters",
+      "time_impact_hours_per_week": 2,
+      "automation_potential": "medium"
+    }
+  ],
+
+  "tools_and_systems": {
+    "hris": ["Workday", "ADP", "BambooHR", "PeopleSoft", "Paylocity"],
+    "productivity": ["Microsoft 365", "SharePoint", "Teams", "Outlook"],
+    "specialized": ["Applicant Tracking Systems", "Benefits platforms", "LMS", "Background check services"]
+  },
+
+  "agent_opportunities": [
+    {
+      "name": "HR Policy & Benefits Finder",
+      "friction_addressed": ["F1", "F2", "F6"],
+      "complexity": "low",
+      "estimated_time_saved_hours": 4
+    },
+    {
+      "name": "HR Document Drafting Assistant",
+      "friction_addressed": ["F3", "F7"],
+      "complexity": "medium",
+      "estimated_time_saved_hours": 3
+    }
+  ],
+
+  "sources_analyzed": {
+    "job_board_templates": 8,
+    "government_resources": 1,
+    "pain_point_articles": 6,
+    "handbook_guidance": 3,
+    "evidence_file": "job-evidence.csv"
+  }
+}

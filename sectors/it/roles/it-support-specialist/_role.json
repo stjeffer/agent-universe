@@ -1,0 +1,174 @@
+{
+  "id": "it-support-specialist",
+  "name": "IT Support Specialist",
+  "sector": "it",
+  "aliases": [
+    "Help Desk Technician",
+    "Technical Support Specialist",
+    "Desktop Support",
+    "IT Help Desk",
+    "Computer User Support Specialist",
+    "Tier 1 Support"
+  ],
+  "description": "Provides technical assistance to end users experiencing hardware, software, network, or system issues. Serves as first point of contact for IT problems, troubleshooting issues, maintaining systems, and ensuring employees can work without technology barriers.",
+  "bls_code": "15-1232",
+  "bls_title": "Computer User Support Specialists",
+  "employment_us": 729500,
+  "median_salary": 60340,
+  "growth_outlook": "-3% (2024-2034)",
+  "annual_openings": 50500,
+  "task_clusters": [
+    {
+      "name": "Ticket Resolution",
+      "percentage": 40,
+      "activities": [
+        "Responding to help desk tickets",
+        "Troubleshooting hardware/software issues",
+        "Resolving incidents within SLA",
+        "Documenting solutions"
+      ]
+    },
+    {
+      "name": "User Communication",
+      "percentage": 20,
+      "activities": [
+        "Answering calls and chats",
+        "Explaining technical solutions",
+        "Following up on tickets",
+        "Managing user expectations"
+      ]
+    },
+    {
+      "name": "Knowledge Seeking",
+      "percentage": 15,
+      "activities": [
+        "Searching knowledge bases",
+        "Looking up documentation",
+        "Researching solutions",
+        "Finding past resolutions"
+      ]
+    },
+    {
+      "name": "System Maintenance",
+      "percentage": 10,
+      "activities": [
+        "Installing software updates",
+        "Configuring systems",
+        "Monitoring performance",
+        "Managing security patches"
+      ]
+    },
+    {
+      "name": "Onboarding/Provisioning",
+      "percentage": 10,
+      "activities": [
+        "Setting up new user accounts",
+        "Configuring workstations",
+        "Provisioning hardware",
+        "Managing access permissions"
+      ]
+    },
+    {
+      "name": "Documentation",
+      "percentage": 5,
+      "activities": [
+        "Writing ticket notes",
+        "Creating KB articles",
+        "Updating procedures",
+        "Maintaining records"
+      ]
+    }
+  ],
+  "friction_points": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Time wasted searching for solutions in fragmented knowledge bases, past tickets, and documentation",
+      "time_impact_hours_week": "4-8",
+      "automation_potential": "high",
+      "evidence_quotes": [
+        "Employees waste 1.8 hours every day searching for information (McKinsey)",
+        "IT employees spend 4.2 hours looking for relevant information (Document360)",
+        "More than half take 5-29 minutes to locate a prior solution the second time (Spiceworks)"
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "repetitive_inquiries",
+      "description": "Answering the same questions repeatedly (password resets, VPN setup, software access)",
+      "time_impact_hours_week": "5-10",
+      "automation_potential": "high",
+      "evidence_quotes": [
+        "Password resets make up about 30% of all tickets (ITBD)",
+        "Technical service teams waste too much time answering FAQs (Help Desk Migration)",
+        "57% of employees reset a work password in the past 90 days (XL.net)"
+      ]
+    },
+    {
+      "id": "F3",
+      "type": "manual_document_creation",
+      "description": "Writing ticket notes, resolution summaries, and user communications from scratch each time",
+      "time_impact_hours_week": "3-5",
+      "automation_potential": "high",
+      "evidence_quotes": [
+        "If it isn't in the ticket, it never happened (Dissmeyer)",
+        "Unnecessary documentation takes extra time and makes tickets confusing (Newegg)"
+      ]
+    },
+    {
+      "id": "F4",
+      "type": "knowledge_management",
+      "description": "Tribal knowledge trapped in individuals' heads; poor KB maintenance; outdated documentation",
+      "time_impact_hours_week": "2-4",
+      "automation_potential": "medium",
+      "evidence_quotes": [
+        "Tribal knowledge: Solutions live in individuals' notebooks, bookmarked web pages (Windows Forum)",
+        "Documentation exists but is not searchable, lacks metadata (Spiceworks)"
+      ]
+    },
+    {
+      "id": "F5",
+      "type": "context_switching",
+      "description": "Juggling multiple tickets, applications, and user conversations simultaneously",
+      "time_impact_hours_week": "2-3",
+      "automation_potential": "medium",
+      "evidence_quotes": [
+        "At least ten different applications open (CompTIA)",
+        "Challenging to apply training in real scenarios with multiple systems"
+      ]
+    },
+    {
+      "id": "F6",
+      "type": "reporting_overhead",
+      "description": "Creating ticket summaries, metrics reports, and status updates for management",
+      "time_impact_hours_week": "1-2",
+      "automation_potential": "medium",
+      "evidence_quotes": [
+        "Track their performance and identify areas for improvement (Common IT Help Desk)"
+      ]
+    }
+  ],
+  "common_tools": [
+    "ServiceNow",
+    "Jira Service Management",
+    "Freshservice",
+    "Active Directory",
+    "Microsoft 365",
+    "Remote Desktop Tools",
+    "SharePoint",
+    "Teams/Slack"
+  ],
+  "certifications": [
+    "CompTIA A+",
+    "CompTIA Network+",
+    "ITIL Foundation",
+    "Microsoft 365 Certified",
+    "HDI Desktop Support Technician"
+  ],
+  "agents": [
+    "knowledge-finder",
+    "ticket-assistant"
+  ],
+  "research_sources": 41,
+  "last_updated": "2025-01-15"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "human-resources",
+  "name": "Human Resources",
+  "description": "Roles focused on employee lifecycle management, talent acquisition, policy administration, compensation and benefits, training, and workplace culture.",
+  "icon": "👥",
+  "roles_planned": [
+    "hr-generalist",
+    "recruiter",
+    "learning-development-specialist"
+  ],
+  "common_systems": [
+    "HRIS (Workday, ADP, BambooHR)",
+    "Applicant Tracking Systems (Greenhouse, Lever)",
+    "Learning Management Systems",
+    "Microsoft 365",
+    "SharePoint",
+    "Benefits administration platforms"
+  ],
+  "common_friction_patterns": [
+    "Policy questions from employees",
+    "Repetitive onboarding tasks",
+    "Benefits enrollment inquiries",
+    "Compliance documentation",
+    "Job description creation",
+    "Candidate information lookup",
+    "Training coordination"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "v1.0",
+  "name": "IT Knowledge Finder",
+  "description": "Finds IT solutions, troubleshooting guides, and documentation from the knowledge base to accelerate ticket resolution.",
+  "instructions": "$[file('instructions.md')]",
+  "conversation_starters": [
+    {
+      "title": "Find error resolution",
+      "text": "Find the resolution steps for error code [ERROR_CODE]"
+    },
+    {
+      "title": "VPN setup procedure",
+      "text": "What's the procedure for setting up VPN on a new device?"
+    },
+    {
+      "title": "Search past tickets",
+      "text": "Have we seen issues with [APPLICATION] before? What was the fix?"
+    },
+    {
+      "title": "System documentation",
+      "text": "Find the documentation for [SYSTEM_NAME]"
+    },
+    {
+      "title": "Password reset process",
+      "text": "What's the procedure for resetting a user's password?"
+    },
+    {
+      "title": "Network information",
+      "text": "What's the IP address for [SERVER_NAME]?"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "https://{YOUR_TENANT}.sharepoint.com/sites/IT-KnowledgeBase"
+        },
+        {
+          "url": "https://{YOUR_TENANT}.sharepoint.com/sites/IT-Documentation"
+        },
+        {
+          "url": "https://{YOUR_TENANT}.sharepoint.com/sites/IT-Runbooks"
+        }
+      ]
+    }
+  ]
+}
