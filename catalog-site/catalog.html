@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agent Universe</title>
 
+    <!-- Favicon (optional) -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
     <!-- Fonts -->
-    <!-- Bungee: hero/section headings only -->
-    <!-- Poppins: agent titles + subtitles -->
-    <!-- Inter: body/UI -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,22 +18,14 @@
 
     <style>
       :root {
-        /* Locked avatar background */
         --bg: #0b0f14;
-
-        /* Surfaces */
         --panel: rgba(255, 255, 255, 0.04);
         --panel2: rgba(255, 255, 255, 0.06);
         --border: rgba(255, 255, 255, 0.10);
-
-        /* Text */
         --text: rgba(255, 255, 255, 0.92);
         --muted: rgba(255, 255, 255, 0.68);
-
-        /* Accents */
         --accent1: #3be4ff;
         --accent2: #ff4fd8;
-
         --radius: 22px;
 
         --font-display: "Bungee", system-ui, sans-serif;
@@ -49,45 +41,24 @@
         font-family: var(--font-body);
         line-height: 1.45;
       }
-
-      .wrap {
-        max-width: 1160px;
-        margin: 0 auto;
-        padding: 28px 18px 70px;
-      }
+      .wrap { max-width: 1160px; margin: 0 auto; padding: 28px 18px 70px; }
 
       /* Top bar */
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 18px;
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+      .logo {
+        width: 36px; height: 36px;
+        display: block;
+        /* IMPORTANT: no rounding so you can “snip” cleanly */
+        border-radius: 0;
+        object-fit: contain;
+        background: transparent;
       }
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        color: var(--text);
-      }
-      .brandMark {
-        width: 14px;
-        height: 14px;
-        border-radius: 99px;
-        background: var(--accent1);
-        box-shadow: 0 0 18px rgba(59, 228, 255, 0.35);
-      }
-      .brandName {
-        font-family: var(--font-display);
-        letter-spacing: 0.4px;
-        font-size: 16px;
-      }
-      .nav {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-      }
+      .brandStack { display: flex; flex-direction: column; gap: 2px; }
+      .brandName { font-family: var(--font-display); letter-spacing: 0.4px; font-size: 16px; line-height: 1; }
+      .brandTag { font-size: 12px; color: var(--muted); }
+
+      .nav { display: inline-flex; align-items: center; gap: 10px; }
       .chipLink {
         padding: 10px 12px;
         border-radius: 999px;
@@ -112,27 +83,16 @@
         content: "";
         position: absolute;
         inset: -220px -220px auto auto;
-        width: 420px;
-        height: 420px;
+        width: 420px; height: 420px;
         border-radius: 999px;
         background:
           radial-gradient(circle, rgba(255,79,216,0.12), rgba(255,79,216,0) 55%),
           radial-gradient(circle, rgba(59,228,255,0.10), rgba(59,228,255,0) 60%);
         pointer-events: none;
       }
-      .kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--muted);
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
-      .kicker .spark {
-        width: 10px; height: 10px; border-radius: 99px;
-        background: var(--accent2);
-        box-shadow: 0 0 14px rgba(255,79,216,0.25);
-      }
+      .kicker { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+      .kicker .spark { width: 10px; height: 10px; border-radius: 99px; background: var(--accent2); box-shadow: 0 0 14px rgba(255,79,216,0.25); }
+
       h1 {
         font-family: var(--font-display);
         letter-spacing: 0.6px;
@@ -140,20 +100,9 @@
         font-size: clamp(30px, 4vw, 44px);
         line-height: 1.05;
       }
-      .heroCopy {
-        margin: 14px 0 0;
-        max-width: 78ch;
-        color: rgba(255,255,255,0.82);
-        font-size: 15px;
-      }
+      .heroCopy { margin: 14px 0 0; max-width: 78ch; color: rgba(255,255,255,0.82); font-size: 15px; }
 
-      .heroActions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 18px;
-        align-items: center;
-      }
+      .heroActions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; align-items: center; }
 
       .btn {
         border: 1px solid rgba(255,255,255,0.18);
@@ -169,10 +118,7 @@
         gap: 8px;
         font-size: 13px;
       }
-      .btn.primary {
-        border-color: rgba(59,228,255,0.35);
-        box-shadow: 0 0 0 2px rgba(59,228,255,0.10) inset;
-      }
+      .btn.primary { border-color: rgba(59,228,255,0.35); box-shadow: 0 0 0 2px rgba(59,228,255,0.10) inset; }
       .btn:hover { border-color: rgba(255,255,255,0.24); }
       .btn.primary:hover { border-color: rgba(59,228,255,0.55); }
 
@@ -196,12 +142,7 @@
       }
 
       /* Stats */
-      .stats {
-        margin-top: 14px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 12px;
-      }
+      .stats { margin-top: 14px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
       .stat {
         grid-column: span 4;
         border: 1px solid var(--border);
@@ -211,13 +152,7 @@
       }
       @media (max-width: 900px) { .stat { grid-column: span 12; } }
       .statLabel { color: var(--muted); font-size: 12px; margin: 0; }
-      .statValue {
-        margin: 6px 0 0;
-        font-family: var(--font-display);
-        letter-spacing: 0.3px;
-        font-size: 20px;
-        line-height: 1.1;
-      }
+      .statValue { margin: 6px 0 0; font-family: var(--font-display); letter-spacing: 0.3px; font-size: 20px; line-height: 1.1; }
 
       /* Section */
       .section {
@@ -227,31 +162,13 @@
         border-radius: var(--radius);
         padding: 18px;
       }
-      .sectionTitle {
-        font-family: var(--font-display);
-        letter-spacing: 0.4px;
-        font-size: 16px;
-        margin: 0;
-      }
-      .sectionCopy {
-        margin: 10px 0 0;
-        color: rgba(255,255,255,0.78);
-        font-size: 14px;
-        max-width: 90ch;
-      }
+      .sectionTitle { font-family: var(--font-display); letter-spacing: 0.4px; font-size: 16px; margin: 0; }
+      .sectionCopy { margin: 10px 0 0; color: rgba(255,255,255,0.78); font-size: 14px; max-width: 90ch; }
 
       /* Controls */
-      .controls {
-        margin-top: 14px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-      }
-
+      .controls { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
       .search {
-        flex: 1 1 280px;
-        min-width: 220px;
+        flex: 1 1 280px; min-width: 220px;
         border: 1px solid rgba(255,255,255,0.14);
         background: rgba(255,255,255,0.04);
         color: rgba(255,255,255,0.92);
@@ -261,7 +178,6 @@
         font-size: 13px;
       }
       .search::placeholder { color: rgba(255,255,255,0.45); }
-
       select {
         border: 1px solid rgba(255,255,255,0.14);
         background: rgba(255,255,255,0.04);
@@ -271,15 +187,10 @@
         outline: none;
         font-size: 13px;
       }
+      .divider { height: 1px; background: rgba(255,255,255,0.06); margin: 14px 0; }
 
       /* Cards */
-      .agentGrid {
-        margin-top: 14px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 12px;
-      }
-
+      .agentGrid { margin-top: 14px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
       .agentCard {
         grid-column: span 4;
         border: 1px solid var(--border);
@@ -289,63 +200,30 @@
         position: relative;
         overflow: hidden;
       }
-
       .agentCard:before {
         content: "";
         position: absolute;
         inset: -140px auto auto -140px;
-        width: 260px;
-        height: 260px;
+        width: 260px; height: 260px;
         border-radius: 999px;
         background: radial-gradient(circle, rgba(59,228,255,0.10), rgba(59,228,255,0) 60%);
         pointer-events: none;
       }
-
       @media (max-width: 1000px) { .agentCard { grid-column: span 6; } }
       @media (max-width: 720px) { .agentCard { grid-column: span 12; } }
 
-      .agentTop {
-        display: grid;
-        grid-template-columns: 72px 1fr;
-        gap: 12px;
-        align-items: start;
-      }
-
+      .agentTop { display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: start; }
       .avatarFrame {
-        width: 72px;
-        height: 72px;
+        width: 72px; height: 72px;
         border-radius: 18px;
         border: 1px solid rgba(255,255,255,0.14);
         background: rgba(255,255,255,0.03);
         overflow: hidden;
         position: relative;
-        box-shadow: 0 0 0 2px rgba(255,255,255,0.02) inset;
       }
+      .avatar { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--bg); }
 
-      .avatarFrame:after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.08), rgba(255,255,255,0) 55%);
-        pointer-events: none;
-      }
-
-      .avatar {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        background: var(--bg);
-      }
-
-      .agentTitleRow {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 10px;
-      }
-
-      /* Readability fix: use Poppins for agent titles */
+      .agentTitleRow { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
       .agentName {
         margin: 0;
         font-family: var(--font-title);
@@ -354,7 +232,6 @@
         font-size: 16px;
         line-height: 1.2;
       }
-
       .badge {
         border: 1px solid rgba(255,255,255,0.16);
         background: rgba(255,255,255,0.04);
@@ -365,17 +242,10 @@
         white-space: nowrap;
       }
 
-      .agentMeta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
+      .agentMeta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
       .pill {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
         padding: 7px 10px;
         border-radius: 999px;
         border: 1px solid rgba(255,255,255,0.12);
@@ -383,21 +253,9 @@
         color: rgba(255,255,255,0.82);
         font-size: 12px;
       }
+      .agentDesc { margin: 10px 0 0; color: rgba(255,255,255,0.78); font-size: 13px; max-width: 60ch; }
 
-      .agentDesc {
-        margin: 10px 0 0;
-        color: rgba(255,255,255,0.78);
-        font-size: 13px;
-        max-width: 60ch;
-      }
-
-      .agentStats {
-        margin-top: 12px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 10px;
-      }
-
+      .agentStats { margin-top: 12px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px; }
       .statMini {
         grid-column: span 4;
         border: 1px solid rgba(255,255,255,0.10);
@@ -405,7 +263,6 @@
         border-radius: 16px;
         padding: 10px 10px;
       }
-
       .statMiniLabel { color: rgba(255,255,255,0.60); font-size: 11px; }
       .statMiniValue { margin-top: 5px; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.88); }
 
@@ -418,9 +275,7 @@
         margin-bottom: 6px;
         letter-spacing: 0.2px;
       }
-
       .chipsRow { display: flex; flex-wrap: wrap; gap: 8px; }
-
       .chip {
         display: inline-flex;
         align-items: center;
@@ -431,31 +286,24 @@
         color: rgba(255,255,255,0.78);
         font-size: 12px;
       }
-
       .mutedSmall { color: rgba(255,255,255,0.55); font-size: 12px; }
 
-      .agentActions {
-        margin-top: 14px;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .divider {
-        height: 1px;
-        background: rgba(255,255,255,0.06);
-        margin: 14px 0;
-      }
+      .agentActions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
     </style>
   </head>
 
   <body>
     <div class="wrap">
       <div class="topbar">
-        <a class="brand" href="#">
-          <span class="brandMark"></span>
-          <span class="brandName">Agent Universe</span>
+        <a class="brand" href="#about">
+          <!-- Put your logo here -->
+          <img class="logo" src="img/AgentUniverseLogo.png" alt="Agent Universe logo" />
+          <div class="brandStack">
+            <div class="brandName">Agent Universe</div>
+            <div class="brandTag">Role-first agent catalogue</div>
+          </div>
         </a>
+
         <nav class="nav">
           <a class="chipLink" href="#catalogue">Catalogue</a>
           <a class="chipLink" href="#how">How it works</a>
@@ -469,18 +317,16 @@
         <p class="heroCopy">
           <strong>Agent Universe</strong> is a curated catalogue of practical AI agents organised by
           <strong>business role</strong> and <strong>sector</strong>—so teams can move from “interesting idea” to
-          “deployable solution” with less guesswork. Each entry captures the purpose, friction removed, required
-          capabilities, and expected time saved.
+          “deployable solution” with less guesswork.
         </p>
 
         <div class="heroActions">
-          <button class="btn primary" id="reloadBtn" type="button">Reload</button>
+          <a class="btn primary" href="#catalogue">Explore</a>
+          <button class="btn" id="reloadBtn" type="button">Reload</button>
           <span class="code" id="dataSource">—</span>
         </div>
 
-        <div class="notice">
-          Status: <span id="statusLine">Waiting for data…</span>
-        </div>
+        <div class="notice">Status: <span id="statusLine">Waiting for data…</span></div>
       </section>
 
       <div class="stats">
@@ -502,15 +348,14 @@
         <h2 class="sectionTitle">How it works</h2>
         <p class="sectionCopy">
           Start with the role you’re designing for. Browse agents designed for that role, then filter by friction and
-          required capabilities. The goal: reduce discovery time and standardise how you describe and scale agents.
+          required capabilities.
         </p>
       </section>
 
       <section class="section" id="catalogue">
         <h2 class="sectionTitle">Catalogue</h2>
         <p class="sectionCopy">
-          Agents are loaded from <span class="code">catalog.json</span>. Avatars are loaded from <span class="code">img/</span>
-          using your role filename convention (e.g. <span class="code">FacilitiesManager.png</span>).
+          Search is live. Filters are instant. Avatars are loaded from <span class="code">img/</span> based on role (e.g. <span class="code">FacilitiesManager.png</span>).
         </p>
 
         <div class="controls">
@@ -531,24 +376,19 @@
     </div>
 
     <script>
-      // If you're opening locally (file://), fetch() often can't load local JSON due to browser security.
-      // This page supports both:
-      // 1) Local: it tries to fetch ./catalog.json (works if served via a local web server)
-      // 2) Remote: it falls back to GitHub raw if local fetch fails
       const REMOTE_CATALOG_URL =
         "https://raw.githubusercontent.com/stjeffer/agent-universe/main/catalog.json";
 
-      // Avatars: local relative path to folder (works for file:// and served pages)
       const LOCAL_AVATAR_BASE = "img";
 
-      // Placeholder avatar (keeps layout stable if missing)
-      const PLACEHOLDER_AVATAR = `data:image/svg+xml;utf8,` + encodeURIComponent(`
+      const PLACEHOLDER_AVATAR =
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(`
         <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
           <rect width="256" height="256" rx="28" fill="#0B0F14"/>
           <circle cx="78" cy="84" r="56" fill="rgba(59,228,255,0.16)"/>
           <circle cx="180" cy="180" r="70" fill="rgba(255,79,216,0.10)"/>
           <path d="M70 160c22-30 94-30 116 0" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="10" stroke-linecap="round"/>
-          <path d="M86 112c10-10 22-10 32 0M138 112c10-10 22-10 32 0" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="10" stroke-linecap="round"/>
         </svg>
       `);
 
@@ -578,7 +418,6 @@
           els.agents.textContent = String(totals.agents ?? "—");
           return;
         }
-        // Fallback: infer from agents
         const agents = Array.isArray(catalog?.agents) ? catalog.agents : [];
         const sectors = new Set(agents.map(a => a.sector_name || a.sector).filter(Boolean));
         const roles = new Set(agents.map(a => a.role_name || a.role).filter(Boolean));
@@ -608,7 +447,6 @@
       }
 
       function roleToAvatarFilename(agent) {
-        // From your screenshot: FacilitiesManager.png, HRGeneralist.png, SupplyChainAnalyst.png, etc.
         const roleName = agent?.role_name || titleCaseFromSlugOrUnderscore(agent?.role || "");
         const pascal = roleName
           .replace(/[^a-zA-Z0-9\s]/g, "")
@@ -622,9 +460,7 @@
 
       function avatarUrl(agent) {
         const file = roleToAvatarFilename(agent);
-        if (!file) return PLACEHOLDER_AVATAR;
-        // Local relative path: catalog-site/img/<Role>.png
-        return `${LOCAL_AVATAR_BASE}/${encodeURIComponent(file)}`;
+        return file ? `${LOCAL_AVATAR_BASE}/${encodeURIComponent(file)}` : PLACEHOLDER_AVATAR;
       }
 
       function pill(label, kind = "chip") {
@@ -640,14 +476,8 @@
         const required = Array.isArray(agent.capabilities_required) ? agent.capabilities_required : [];
         const optional = Array.isArray(agent.capabilities_optional) ? agent.capabilities_optional : [];
 
-        const timeSaved =
-          typeof agent.time_saved_hours_per_week === "number"
-            ? `${agent.time_saved_hours_per_week}h/wk`
-            : "—";
-        const setup =
-          typeof agent.setup_time_minutes === "number"
-            ? `${agent.setup_time_minutes} min setup`
-            : "—";
+        const timeSaved = typeof agent.time_saved_hours_per_week === "number" ? `${agent.time_saved_hours_per_week}h/wk` : "—";
+        const setup = typeof agent.setup_time_minutes === "number" ? `${agent.setup_time_minutes} min setup` : "—";
         const complexity = agent.complexity ? titleCaseFromSlugOrUnderscore(agent.complexity) : "—";
 
         return `
@@ -692,39 +522,27 @@
             <div class="agentSection">
               <div class="agentSectionLabel">Friction addressed</div>
               <div class="chipsRow">
-                ${
-                  frictions.length
-                    ? frictions.map(f => pill(titleCaseFromSlugOrUnderscore(f))).join("")
-                    : `<span class="mutedSmall">—</span>`
-                }
+                ${frictions.length ? frictions.map(f => pill(titleCaseFromSlugOrUnderscore(f))).join("") : `<span class="mutedSmall">—</span>`}
               </div>
             </div>
 
             <div class="agentSection">
               <div class="agentSectionLabel">Required</div>
               <div class="chipsRow">
-                ${
-                  required.length
-                    ? required.map(c => pill(c, "pill")).join("")
-                    : `<span class="mutedSmall">—</span>`
-                }
+                ${required.length ? required.map(c => pill(c, "pill")).join("") : `<span class="mutedSmall">—</span>`}
               </div>
             </div>
 
             <div class="agentSection">
               <div class="agentSectionLabel">Optional</div>
               <div class="chipsRow">
-                ${
-                  optional.length
-                    ? optional.map(c => pill(c, "pill")).join("")
-                    : `<span class="mutedSmall">—</span>`
-                }
+                ${optional.length ? optional.map(c => pill(c, "pill")).join("") : `<span class="mutedSmall">—</span>`}
               </div>
             </div>
 
             <div class="agentActions">
               <button class="btn primary" type="button" data-action="copy" data-id="${esc(agent.id)}">Copy ID</button>
-              <button class="btn" type="button" data-action="path" data-path="${esc(agent.path || "")}">Path</button>
+              <button class="btn" type="button" data-action="path" data-path="${esc(agent.path || "")}">Copy Path</button>
             </div>
           </article>
         `;
@@ -746,10 +564,16 @@
         const roles = uniqueSorted(agents.map(a => a.role_name || titleCaseFromSlugOrUnderscore(a.role)));
         const sectors = uniqueSorted(agents.map(a => a.sector_name || titleCaseFromSlugOrUnderscore(a.sector)));
 
-        els.roleFilter.innerHTML = `<option value="">All roles</option>` + roles.map(r => `<option value="${esc(r)}">${esc(r)}</option>`).join("");
-        els.sectorFilter.innerHTML = `<option value="">All sectors</option>` + sectors.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+        els.roleFilter.innerHTML =
+          `<option value="">All roles</option>` +
+          roles.map(r => `<option value="${esc(r)}">${esc(r)}</option>`).join("");
+
+        els.sectorFilter.innerHTML =
+          `<option value="">All sectors</option>` +
+          sectors.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
       }
 
+      // ✅ Search works here: live filtering on input + dropdowns
       function applyFilters() {
         const q = (els.search.value || "").toLowerCase().trim();
         const role = els.roleFilter.value;
@@ -761,22 +585,15 @@
 
           if (role && roleName !== role) return false;
           if (sector && sectorName !== sector) return false;
-
           if (!q) return true;
 
           const hay = [
-            a.name,
-            a.description,
-            roleName,
-            sectorName,
+            a.name, a.description, roleName, sectorName,
             ...(Array.isArray(a.tags) ? a.tags : []),
             ...(Array.isArray(a.friction_addressed) ? a.friction_addressed : []),
             ...(Array.isArray(a.capabilities_required) ? a.capabilities_required : []),
             ...(Array.isArray(a.capabilities_optional) ? a.capabilities_optional : []),
-          ]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase();
+          ].filter(Boolean).join(" ").toLowerCase();
 
           return hay.includes(q);
         });
@@ -797,7 +614,7 @@
           applyFilters();
         });
 
-        // Buttons inside cards (delegated)
+        // Card buttons (delegated)
         els.mount.addEventListener("click", (e) => {
           const btn = e.target.closest("button[data-action]");
           if (!btn) return;
@@ -828,35 +645,23 @@
       async function loadCatalog() {
         setStatus("Loading catalog.json…");
 
-        // First try local (relative) then fallback to remote
+        // Try local first, then GitHub raw (useful if running from a server)
         const localUrl = "./catalog.json";
         const remoteUrl = REMOTE_CATALOG_URL;
 
         try {
           const data = await fetchJson(`${localUrl}?t=${Date.now()}`);
           els.dataSource.textContent = localUrl;
-          setStatus("Loaded catalog.json (local).");
           return data;
-        } catch (e1) {
-          try {
-            const data = await fetchJson(`${remoteUrl}?t=${Date.now()}`);
-            els.dataSource.textContent = remoteUrl;
-            setStatus("Loaded catalog.json (remote).");
-            return data;
-          } catch (e2) {
-            els.dataSource.textContent = "Failed";
-            setStatus(`Failed to load catalog.json. ${e2.message}`);
-            return null;
-          }
+        } catch {
+          const data = await fetchJson(`${remoteUrl}?t=${Date.now()}`);
+          els.dataSource.textContent = "GitHub raw";
+          return data;
         }
       }
 
       async function boot() {
-        attachHandlers();
-
         const catalog = await loadCatalog();
-        if (!catalog) return;
-
         setStatsFromCatalog(catalog);
 
         ALL_AGENTS = Array.isArray(catalog.agents) ? catalog.agents : [];
@@ -865,6 +670,7 @@
         setStatus(`Showing ${ALL_AGENTS.length} agents.`);
       }
 
+      attachHandlers();
       els.reload.addEventListener("click", boot);
       boot();
     </script>
