@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Universe – Font Preview</title>
+
+    <!-- Google Fonts: load all families used in the preview -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Locked avatar background */
+        --bg: #0b0f14;
+
+        /* UI colors */
+        --panel: rgba(255, 255, 255, 0.04);
+        --panel2: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.10);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+
+        /* accents (keep subtle for preview; adjust later) */
+        --accent1: #3be4ff;
+        --accent2: #ff4fd8;
+
+        --radius: 20px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.45;
+      }
+
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 28px 18px 60px;
+      }
+
+      header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .title {
+        margin: 0;
+        font-size: clamp(20px, 3.2vw, 32px);
+        letter-spacing: 0.4px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        margin: 6px 0 0;
+        color: var(--muted);
+        max-width: 70ch;
+        font-size: 14px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--panel2), var(--panel));
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 10px; height: 10px; border-radius: 99px;
+        background: var(--accent1);
+        box-shadow: 0 0 14px rgba(59, 228, 255, 0.35);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .card {
+        grid-column: span 6;
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--panel2), var(--panel));
+        border-radius: var(--radius);
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (max-width: 900px) {
+        .card { grid-column: span 12; }
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        inset: -120px -120px auto auto;
+        width: 240px; height: 240px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(59,228,255,0.14), rgba(59,228,255,0) 60%);
+        pointer-events: none;
+      }
+
+      .pair-label {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .pair-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .pair-meta {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .hero {
+        margin: 0;
+        font-size: 30px;
+        letter-spacing: 0.2px;
+        line-height: 1.05;
+      }
+
+      .h2 {
+        margin: 10px 0 6px;
+        font-size: 16px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .body {
+        margin: 10px 0 0;
+        color: var(--text);
+        font-size: 14px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+        align-items: center;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.04);
+        color: rgba(255,255,255,0.82);
+        font-size: 12px;
+      }
+
+      .chip .mini {
+        width: 8px; height: 8px; border-radius: 99px;
+        background: var(--accent2);
+        box-shadow: 0 0 12px rgba(255,79,216,0.25);
+      }
+
+      .btn {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.06);
+        color: rgba(255,255,255,0.92);
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn.primary {
+        border-color: rgba(59,228,255,0.35);
+        box-shadow: 0 0 0 2px rgba(59,228,255,0.10) inset;
+      }
+
+      .sample-list {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* ===========================
+         FONT PAIRINGS (per card)
+         =========================== */
+
+      /* 1) Bungee + Inter */
+      .bungee-inter .hero,
+      .bungee-inter .btn {
+        font-family: "Bungee", system-ui, sans-serif;
+        font-weight: 400;
+      }
+      .bungee-inter .h2,
+      .bungee-inter .body,
+      .bungee-inter .chip,
+      .bungee-inter .sample-list {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      /* 2) Poppins + Source Sans 3 */
+      .poppins-source .hero,
+      .poppins-source .btn {
+        font-family: "Poppins", system-ui, sans-serif;
+        font-weight: 700;
+      }
+      .poppins-source .h2,
+      .poppins-source .body,
+      .poppins-source .chip,
+      .poppins-source .sample-list {
+        font-family: "Source Sans 3", system-ui, sans-serif;
+      }
+
+      /* 3) Montserrat + Roboto */
+      .montserrat-roboto .hero,
+      .montserrat-roboto .btn {
+        font-family: "Montserrat", system-ui, sans-serif;
+        font-weight: 800;
+      }
+      .montserrat-roboto .h2,
+      .montserrat-roboto .body,
+      .montserrat-roboto .chip,
+      .montserrat-roboto .sample-list {
+        font-family: "Roboto", system-ui, sans-serif;
+      }
+
+      /* 4) Fredoka + Inter (accent-heavy) */
+      .fredoka-inter .hero,
+      .fredoka-inter .btn {
+        font-family: "Fredoka", system-ui, sans-serif;
+        font-weight: 700;
+      }
+      .fredoka-inter .h2,
+      .fredoka-inter .body,
+      .fredoka-inter .chip,
+      .fredoka-inter .sample-list {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .note {
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: rgba(255,255,255,0.03);
+        margin-top: 14px;
+      }
+
+      code {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.10);
+        padding: 2px 6px;
+        border-radius: 8px;
+        color: rgba(255,255,255,0.9);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <h1 class="title">Agent Universe – Web Font Preview</h1>
+          <p class="subtitle">
+            Background is locked to <code>#0B0F14</code> to match the avatar set.
+            Each card previews headings, body, chips, and buttons in a realistic UI context.
+          </p>
+        </div>
+        <div class="pill"><span class="dot"></span> Locked avatar background</div>
+      </header>
+
+      <div class="grid">
+        <!-- 1) Bungee + Inter -->
+        <section class="card bungee-inter">
+          <div class="pair-label">
+            <div class="pair-name">Bungee + Inter</div>
+            <div class="pair-meta">High personality heading, serious body</div>
+          </div>
+          <h2 class="hero">AGENT CATALOGUE</h2>
+          <div class="h2">Procurement Officer · Contract & Supplier Finder</div>
+          <p class="body">
+            Helps you find past contracts, supplier info, pricing history, and performance records across documentation.
+            <span class="muted">Great for playful hero banners.</span>
+          </p>
+          <div class="row">
+            <span class="chip"><span class="mini"></span> procurement</span>
+            <span class="chip"><span class="mini"></span> contracts</span>
+            <span class="chip"><span class="mini"></span> vendors</span>
+            <button class="btn primary">VIEW</button>
+            <button class="btn">SAVE</button>
+          </div>
+          <ul class="sample-list">
+            <li>Clear hierarchy on dark backgrounds</li>
+            <li>Best when headings are short</li>
+            <li>Use Inter everywhere else</li>
+          </ul>
+        </section>
+
+        <!-- 2) Poppins + Source Sans 3 -->
+        <section class="card poppins-source">
+          <div class="pair-label">
+            <div class="pair-name">Poppins + Source Sans 3</div>
+            <div class="pair-meta">Modern, friendly, scalable</div>
+          </div>
+          <h2 class="hero">Agent Universe</h2>
+          <div class="h2">Supply Chain Analyst · Supply Chain Report Assistant</div>
+          <p class="body">
+            Draft periodic reports, summarise KPIs, analyse supply chain data, and create management updates.
+            <span class="muted">Feels “product” and trustworthy.</span>
+          </p>
+          <div class="row">
+            <span class="chip"><span class="mini"></span> kpi</span>
+            <span class="chip"><span class="mini"></span> dashboards</span>
+            <span class="chip"><span class="mini"></span> analytics</span>
+            <button class="btn primary">View agent</button>
+            <button class="btn">Compare</button>
+          </div>
+          <ul class="sample-list">
+            <li>Very readable UI copy</li>
+            <li>Friendly without looking childish</li>
+            <li>Strong default for the whole site</li>
+          </ul>
+        </section>
+
+        <!-- 3) Montserrat + Roboto -->
+        <section class="card montserrat-roboto">
+          <div class="pair-label">
+            <div class="pair-name">Montserrat + Roboto</div>
+            <div class="pair-meta">Enterprise energy, crisp headings</div>
+          </div>
+          <h2 class="hero">OPERATIONS HUB</h2>
+          <div class="h2">Facilities Manager · Maintenance & Service Finder</div>
+          <p class="body">
+            Quickly find maintenance records, vendor info, service contracts, equipment history, and compliance docs.
+            <span class="muted">More “serious” brand feel.</span>
+          </p>
+          <div class="row">
+            <span class="chip"><span class="mini"></span> facilities</span>
+            <span class="chip"><span class="mini"></span> equipment</span>
+            <span class="chip"><span class="mini"></span> compliance</span>
+            <button class="btn primary">Open</button>
+            <button class="btn">Pin</button>
+          </div>
+          <ul class="sample-list">
+            <li>Feels corporate / premium</li>
+            <li>Headings are bold but clean</li>
+            <li>Great for dashboards</li>
+          </ul>
+        </section>
+
+        <!-- 4) Fredoka + Inter -->
+        <section class="card fredoka-inter">
+          <div class="pair-label">
+            <div class="pair-name">Fredoka + Inter</div>
+            <div class="pair-meta">Most playful (use sparingly)</div>
+          </div>
+          <h2 class="hero">New Agents!</h2>
+          <div class="h2">HR Generalist · HR Policy & Benefits Finder</div>
+          <p class="body">
+            Find policy information, benefits details, PTO guidelines, and HR procedures from company documentation.
+            <span class="muted">Great for badges, not whole pages.</span>
+          </p>
+          <div class="row">
+            <span class="chip"><span class="mini"></span> onboarding</span>
+            <span class="chip"><span class="mini"></span> benefits</span>
+            <span class="chip"><span class="mini"></span> employee support</span>
+            <button class="btn primary">Try it</button>
+            <button class="btn">Details</button>
+          </div>
+          <ul class="sample-list">
+            <li>Best for accents and short labels</li>
+            <li>Inter keeps the body grounded</li>
+            <li>Easy to overdo—keep it controlled</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="note">
+        If you want a single “default” choice for the whole site:
+        <strong>Poppins (headings) + Inter (body)</strong> is a very safe, premium baseline.
+        If you want more comic flavour: use <strong>Bungee</strong> only for the hero title and section banners.
+      </div>
+
+      <footer>
+        Tip: if you’re using Tailwind, you can map these to <code>font-display</code> and <code>font-sans</code> tokens.
+      </footer>
+    </div>
+  </body>
+</html>
