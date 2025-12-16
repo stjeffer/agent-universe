@@ -1,0 +1,71 @@
+{
+  "id": "competitive-intel-finder",
+  "name": "Competitive Intel Finder",
+  "version": "1.0.0",
+  "type": "retrieval",
+  "role": "product-marketing-manager",
+  "sector": "marketing",
+  "description": "Searches competitive intelligence repositories, battlecards, win/loss data, analyst reports, and market research to surface relevant competitive insights for Product Marketing Managers.",
+  "friction_addressed": [
+    {
+      "id": "F1",
+      "type": "information_seeking",
+      "description": "Finding competitive intelligence scattered across multiple sources",
+      "time_saved_weekly": "3-4 hours"
+    },
+    {
+      "id": "F6",
+      "type": "repetitive_inquiries",
+      "description": "Answering repeated questions from sales about competitors",
+      "time_saved_weekly": "1-2 hours"
+    }
+  ],
+  "capabilities": [
+    "OneDriveAndSharePoint"
+  ],
+  "data_sources": [
+    {
+      "name": "Competitive Battlecards",
+      "type": "SharePoint Library",
+      "description": "Repository of competitive comparison documents and battlecards",
+      "required": true
+    },
+    {
+      "name": "Win/Loss Analysis",
+      "type": "SharePoint Library",
+      "description": "Collection of win/loss reports and competitive deal outcomes",
+      "required": true
+    },
+    {
+      "name": "Market Research",
+      "type": "SharePoint Library",
+      "description": "Analyst reports, market studies, and industry research",
+      "required": false
+    },
+    {
+      "name": "PMM Knowledge Base",
+      "type": "SharePoint Site",
+      "description": "Central repository for positioning docs, messaging frameworks, and competitive intelligence",
+      "required": true
+    }
+  ],
+  "example_queries": [
+    "What are our key differentiators vs [Competitor]?",
+    "Find recent win/loss data against [Competitor]",
+    "What pricing does [Competitor] use for their enterprise tier?",
+    "How should we position against [Competitor] for security buyers?",
+    "What objections do sales encounter most often with [Competitor]?",
+    "Find analyst coverage of [Competitor]'s latest product launch"
+  ],
+  "guardrails": [
+    "Only searches designated competitive intelligence repositories",
+    "Does not create or modify content",
+    "Does not make strategic recommendations without citing sources",
+    "Flags when information may be outdated (>90 days old)",
+    "Respects confidentiality markings on documents"
+  ],
+  "deployment_complexity": "low",
+  "estimated_setup_time": "30 minutes",
+  "created": "2025-12-16",
+  "last_updated": "2025-12-16"
+}

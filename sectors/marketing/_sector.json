@@ -1,0 +1,36 @@
+{
+  "id": "marketing",
+  "name": "Marketing",
+  "description": "Roles focused on market research, product positioning, demand generation, content creation, and customer engagement to drive brand awareness and revenue growth.",
+  "roles": [
+    "product-marketing-manager"
+  ],
+  "planned_roles": [
+    "content-marketer",
+    "demand-generation-specialist"
+  ],
+  "common_friction_types": [
+    "competitive_intelligence",
+    "content_creation",
+    "cross_functional_alignment",
+    "information_seeking",
+    "manual_document_creation",
+    "reporting_overhead"
+  ],
+  "tools_ecosystem": [
+    "Salesforce",
+    "HubSpot",
+    "Marketo",
+    "Google Analytics",
+    "Tableau",
+    "Klue",
+    "Crayon",
+    "Gong",
+    "Highspot",
+    "Seismic",
+    "Asana",
+    "Monday.com",
+    "Slack",
+    "Microsoft 365"
+  ]
+}

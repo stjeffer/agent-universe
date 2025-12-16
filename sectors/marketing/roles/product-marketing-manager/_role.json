@@ -1,0 +1,51 @@
+{
+  "id": "product-marketing-manager",
+  "title": "Product Marketing Manager",
+  "sector": "marketing",
+  "aliases": ["PMM", "Product Marketer", "GTM Manager"],
+  "description": "Bridges product development, marketing, and sales by developing positioning, messaging, and go-to-market strategies that communicate product value to target audiences and enable sales teams to win deals.",
+  "bls_data": {
+    "soc_code": "11-2021",
+    "occupation_group": "Marketing Managers",
+    "employment_2024": 407000,
+    "median_wage_2024": 161030,
+    "projected_growth_2024_2034": "7%",
+    "projected_openings_annual": 36400
+  },
+  "core_responsibilities": [
+    "Develop product positioning and messaging frameworks",
+    "Conduct market and competitive research",
+    "Create buyer personas and understand customer journeys",
+    "Plan and execute go-to-market strategies for product launches",
+    "Create sales enablement content (battlecards, one-pagers, presentations)",
+    "Collaborate with product management on roadmap and feature priorities",
+    "Train and enable sales teams on product value propositions",
+    "Analyze win/loss data and market feedback",
+    "Develop pricing and packaging strategies",
+    "Coordinate cross-functional launch activities"
+  ],
+  "key_tools": [
+    "Microsoft 365 (PowerPoint, Word, Excel, SharePoint)",
+    "Salesforce / HubSpot CRM",
+    "Competitive intelligence tools (Klue, Crayon, Kompyte)",
+    "Sales enablement platforms (Highspot, Seismic, Showpad)",
+    "Marketing automation (Marketo, HubSpot)",
+    "Analytics (Google Analytics, Mixpanel, Tableau)",
+    "Project management (Asana, Monday.com, Jira)",
+    "Communication (Slack, Teams)"
+  ],
+  "typical_time_allocation": {
+    "competitive_intelligence": "15-20%",
+    "content_creation": "20-25%",
+    "cross_functional_collaboration": "20-25%",
+    "market_research": "10-15%",
+    "sales_enablement": "15-20%",
+    "go_to_market_planning": "10-15%"
+  },
+  "agents": [
+    "competitive-intel-finder",
+    "launch-content-assistant"
+  ],
+  "research_sources_count": 41,
+  "last_updated": "2025-12-16"
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "v1.0",
+  "name": "Content Assistant",
+  "description": "Helps Content Marketers draft content pieces efficiently while maintaining brand voice and editorial standards",
+  "instructions": "You are the Content Assistant, a specialized helper that assists Content Marketers in drafting content pieces efficiently while maintaining brand voice and editorial standards. You create outlines, briefs, social media posts, newsletter drafts, and performance summaries based on organizational templates and guidelines. ALL output must be marked as DRAFT requiring human review. Use only approved brand voice and messaging. Do not invent statistics or factual claims. Flag when guidelines are unclear or when SME input is needed. You draft content but never publish or distribute it.",
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "https://{tenant}.sharepoint.com/sites/{site}/BrandGuidelines"
+        },
+        {
+          "url": "https://{tenant}.sharepoint.com/sites/{site}/ContentTemplates"
+        },
+        {
+          "url": "https://{tenant}.sharepoint.com/sites/{site}/ContentLibrary"
+        },
+        {
+          "url": "https://{tenant}.sharepoint.com/sites/{site}/PerformanceData"
+        }
+      ]
+    },
+    {
+      "name": "CodeInterpreter"
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Blog outline",
+      "text": "Create a blog outline about [topic]"
+    },
+    {
+      "title": "Content brief",
+      "text": "Draft a content brief for an ebook on [topic]"
+    },
+    {
+      "title": "Social media posts",
+      "text": "Write social media posts for our new blog about [topic]"
+    },
+    {
+      "title": "Newsletter section",
+      "text": "Draft a newsletter section summarizing this month's content"
+    },
+    {
+      "title": "Performance summary",
+      "text": "Create a monthly content performance summary"
+    },
+    {
+      "title": "Meta descriptions",
+      "text": "Generate meta descriptions for these blog posts: [titles]"
+    }
+  ]
+}

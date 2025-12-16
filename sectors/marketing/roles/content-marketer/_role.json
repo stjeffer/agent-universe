@@ -1,0 +1,135 @@
+{
+  "role_id": "content-marketer",
+  "role_name": "Content Marketer",
+  "sector_id": "marketing",
+  "description": "Plans, creates, and distributes content to attract and engage target audiences. Manages content strategy, SEO optimization, editorial calendars, and multi-channel distribution. Bridges brand voice with audience needs through blogs, social media, email, and other formats.",
+  "aliases": [
+    "Content Marketing Manager",
+    "Content Marketing Specialist",
+    "Content Strategist",
+    "Digital Content Manager",
+    "Content Marketing Coordinator"
+  ],
+  "seniority_levels": [
+    "Specialist",
+    "Senior Specialist",
+    "Manager",
+    "Senior Manager",
+    "Director"
+  ],
+  "bls_data": {
+    "soc_code": "11-2021",
+    "occupation_title": "Marketing Managers",
+    "employment_2024": 407000,
+    "median_wage_2024": 161030,
+    "projected_growth_2024_2034": "6%",
+    "growth_outlook": "Faster than average",
+    "notes": "Content Marketing falls under broader Marketing Managers category. BLS does not track content marketing separately."
+  },
+  "industry_presence": [
+    "Technology",
+    "SaaS",
+    "E-commerce",
+    "Financial Services",
+    "Healthcare",
+    "Professional Services",
+    "Media & Publishing",
+    "Consumer Goods",
+    "B2B Services",
+    "Education"
+  ],
+  "typical_team_size": {
+    "small_company": "1-2 (often sole content person)",
+    "mid_size_company": "3-8",
+    "enterprise": "10-25+"
+  },
+  "common_reporting_lines": [
+    "VP of Marketing",
+    "Director of Marketing",
+    "CMO",
+    "Head of Content",
+    "Marketing Manager"
+  ],
+  "key_collaborators": [
+    "SEO Specialist",
+    "Social Media Manager",
+    "Graphic Designer",
+    "Product Marketing Manager",
+    "Demand Generation",
+    "Sales Team",
+    "Subject Matter Experts"
+  ],
+  "core_responsibilities": [
+    "Develop and execute content strategy",
+    "Create blog posts, articles, and long-form content",
+    "Manage editorial calendar and publishing schedule",
+    "Conduct keyword research and SEO optimization",
+    "Coordinate content distribution across channels",
+    "Maintain brand voice consistency",
+    "Analyze content performance metrics",
+    "Manage freelancers and external contributors",
+    "Repurpose content for multiple formats",
+    "Collaborate with design on visual assets"
+  ],
+  "tools_ecosystem": {
+    "cms_platforms": [
+      "WordPress",
+      "HubSpot CMS",
+      "Contentful",
+      "Webflow"
+    ],
+    "seo_tools": [
+      "SEMrush",
+      "Ahrefs",
+      "Moz",
+      "Google Search Console"
+    ],
+    "analytics": [
+      "Google Analytics 4",
+      "HubSpot Analytics",
+      "Databox"
+    ],
+    "project_management": [
+      "Asana",
+      "Trello",
+      "Monday.com",
+      "Notion"
+    ],
+    "writing_editing": [
+      "Google Docs",
+      "Grammarly",
+      "Hemingway Editor"
+    ],
+    "design_collaboration": [
+      "Canva",
+      "Figma",
+      "Adobe Creative Suite"
+    ],
+    "social_scheduling": [
+      "Hootsuite",
+      "Buffer",
+      "Sprout Social"
+    ],
+    "email_platforms": [
+      "Mailchimp",
+      "HubSpot",
+      "Klaviyo"
+    ]
+  },
+  "created_date": "2025-12-16",
+  "last_updated": "2025-12-16",
+  "version": "1.0.0",
+  "research_sources_count": 41,
+  "agents": [
+    {
+      "agent_id": "content-finder",
+      "agent_name": "Content Finder",
+      "friction_addressed": ["F1", "F6"]
+    },
+    {
+      "agent_id": "content-assistant",
+      "agent_name": "Content Assistant",
+      "friction_addressed": ["F2", "F5"]
+    }
+  ]
+}

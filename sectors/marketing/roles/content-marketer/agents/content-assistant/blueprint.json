@@ -1,0 +1,130 @@
+{
+  "agent_id": "content-assistant",
+  "agent_name": "Content Assistant",
+  "version": "1.0.0",
+  "created_date": "2025-12-16",
+  "last_updated": "2025-12-16",
+  "sector_id": "marketing",
+  "role_id": "content-marketer",
+  "agent_type": "drafting",
+  "description": "Helps Content Marketers draft content pieces more efficiently while maintaining brand voice and editorial standards. Creates outlines, briefs, summaries, and first drafts based on organizational templates and guidelines.",
+  "friction_addressed": [
+    {
+      "friction_id": "F2",
+      "friction_type": "manual_document_creation",
+      "description": "Creating new content pieces from scratch when similar content exists; repetitive drafting of similar content types",
+      "time_impact_weekly_hours": "8-12"
+    },
+    {
+      "friction_id": "F5",
+      "friction_type": "reporting_overhead",
+      "description": "Compiling performance data from multiple sources into coherent reports; manual metric gathering",
+      "time_impact_weekly_hours": "3-4"
+    }
+  ],
+  "estimated_time_savings": {
+    "hours_per_week": "4-6",
+    "primary_benefit": "Accelerated drafting and consistent formatting"
+  },
+  "capabilities": [
+    "Draft blog post outlines following organizational templates",
+    "Create content briefs for writers and contributors",
+    "Generate social media post variations in brand voice",
+    "Draft newsletter sections and email copy",
+    "Create content performance summary reports",
+    "Build content audit documentation",
+    "Generate meta descriptions and SEO elements",
+    "Draft content repurposing plans"
+  ],
+  "output_types": [
+    {
+      "type": "blog_outline",
+      "description": "Structured outline for blog posts with headers, key points, and CTA suggestions"
+    },
+    {
+      "type": "content_brief",
+      "description": "Writer brief including target keyword, audience, outline, and requirements"
+    },
+    {
+      "type": "social_posts",
+      "description": "Platform-specific social media post variations"
+    },
+    {
+      "type": "newsletter_draft",
+      "description": "Email newsletter sections with subject line options"
+    },
+    {
+      "type": "performance_summary",
+      "description": "Content performance report with key metrics and insights"
+    },
+    {
+      "type": "meta_content",
+      "description": "SEO meta descriptions, titles, and page elements"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "Brand Guidelines",
+      "type": "SharePoint",
+      "description": "Style guide, brand voice documentation, messaging framework",
+      "required": true
+    },
+    {
+      "name": "Content Templates",
+      "type": "SharePoint",
+      "description": "Blog templates, brief templates, format guides",
+      "required": true
+    },
+    {
+      "name": "Content Library",
+      "type": "SharePoint",
+      "description": "Published content for reference and context",
+      "required": false
+    },
+    {
+      "name": "Performance Data",
+      "type": "SharePoint",
+      "description": "Content analytics and performance metrics",
+      "required": false
+    }
+  ],
+  "example_queries": [
+    "Create a blog outline about content marketing ROI",
+    "Draft a content brief for an ebook on customer success",
+    "Write social media posts for our new blog about SEO trends",
+    "Create a newsletter section summarizing this month's content",
+    "Draft a quarterly content performance summary",
+    "Generate meta descriptions for these three blog posts",
+    "Create a repurposing plan for our webinar recording"
+  ],
+  "guardrails": [
+    "All output is marked as DRAFT requiring human review",
+    "Uses only approved brand voice and messaging from organizational guidelines",
+    "Does not invent statistics, quotes, or factual claims",
+    "Cites source documents when referencing existing content",
+    "Flags when brand guidelines may be missing or unclear",
+    "Does not publish or distribute content - drafting only",
+    "Indicates areas requiring SME input or verification"
+  ],
+  "out_of_scope": [
+    "Publishing or scheduling content",
+    "Creating final visual designs",
+    "Making strategic content decisions",
+    "Approving content for publication",
+    "Writing customer-facing legal or compliance content",
+    "Creating content outside brand guidelines"
+  ],
+  "m365_capabilities": [
+    "OneDriveAndSharePoint",
+    "CodeInterpreter"
+  ],
+  "complexity": "medium",
+  "deployment_time_estimate": "45 minutes",
+  "maintenance_frequency": "monthly",
+  "success_metrics": [
+    "Reduction in time from idea to first draft",
+    "Increased content production volume",
+    "Improved brand voice consistency scores",
+    "Reduced revision cycles from better first drafts"
+  ]
+}

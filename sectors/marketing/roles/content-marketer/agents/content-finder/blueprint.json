@@ -1,0 +1,103 @@
+{
+  "agent_id": "content-finder",
+  "agent_name": "Content Finder",
+  "version": "1.0.0",
+  "created_date": "2025-12-16",
+  "last_updated": "2025-12-16",
+  "sector_id": "marketing",
+  "role_id": "content-marketer",
+  "agent_type": "retrieval",
+  "description": "Helps Content Marketers quickly locate existing content assets, brand guidelines, style documentation, and reference materials across organizational content libraries.",
+  "friction_addressed": [
+    {
+      "friction_id": "F1",
+      "friction_type": "information_seeking",
+      "description": "Finding existing content assets, brand guidelines, approved messaging, and reference materials scattered across systems",
+      "time_impact_weekly_hours": "4-6"
+    },
+    {
+      "friction_id": "F6",
+      "friction_type": "repetitive_inquiries",
+      "description": "Answering repeated questions about brand guidelines, approved terminology, content status, and asset locations",
+      "time_impact_weekly_hours": "2-3"
+    }
+  ],
+  "estimated_time_savings": {
+    "hours_per_week": "3-5",
+    "primary_benefit": "Faster asset discovery and brand guidance retrieval"
+  },
+  "capabilities": [
+    "Search content asset libraries by topic, format, date, or channel",
+    "Retrieve brand voice guidelines and style documentation",
+    "Find approved messaging, taglines, and positioning statements",
+    "Locate existing content for repurposing opportunities",
+    "Surface historical content performance data",
+    "Answer questions about brand standards and terminology",
+    "Find content templates and formatting guides",
+    "Retrieve content calendar and editorial planning documents"
+  ],
+  "data_sources": [
+    {
+      "name": "Content Library",
+      "type": "SharePoint",
+      "description": "Published blog posts, articles, ebooks, and downloadable assets",
+      "required": true
+    },
+    {
+      "name": "Brand Guidelines",
+      "type": "SharePoint",
+      "description": "Style guide, brand voice documentation, visual identity standards",
+      "required": true
+    },
+    {
+      "name": "Content Templates",
+      "type": "SharePoint",
+      "description": "Blog templates, brief templates, social media formats",
+      "required": false
+    },
+    {
+      "name": "Editorial Calendar",
+      "type": "SharePoint",
+      "description": "Content planning documents, publishing schedules, topic calendars",
+      "required": false
+    }
+  ],
+  "example_queries": [
+    "Find all blog posts about customer success from this year",
+    "What's our approved messaging for the new product launch?",
+    "Show me the brand voice guidelines for social media",
+    "Do we have any existing content about SEO best practices?",
+    "What's the correct way to format case study titles?",
+    "Find content that's performed well on the topic of AI",
+    "Where's the template for content briefs?",
+    "What ebooks do we have that could be updated for 2024?"
+  ],
+  "guardrails": [
+    "Only searches organizational content libraries - does not create content",
+    "References official brand guidelines as authoritative source",
+    "Flags when content may be outdated (>12 months old)",
+    "Does not access restricted or confidential content unless user has permissions",
+    "Cannot modify or delete content - read-only access",
+    "Indicates when requested content type may not exist"
+  ],
+  "out_of_scope": [
+    "Creating new content from scratch",
+    "Publishing or scheduling content",
+    "Providing strategic content recommendations",
+    "Accessing competitor content",
+    "Modifying existing content",
+    "Content performance optimization advice"
+  ],
+  "m365_capabilities": [
+    "OneDriveAndSharePoint"
+  ],
+  "complexity": "low",
+  "deployment_time_estimate": "30 minutes",
+  "maintenance_frequency": "quarterly",
+  "success_metrics": [
+    "Reduction in time spent searching for content assets",
+    "Increased brand guideline compliance",
+    "Higher content repurposing rate",
+    "Reduced repeat questions to content team leads"
+  ]
+}

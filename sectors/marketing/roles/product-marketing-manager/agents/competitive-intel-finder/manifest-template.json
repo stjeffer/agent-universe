@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.2/schema.json",
+  "version": "v1.2",
+  "name": "Competitive Intel Finder",
+  "description": "Searches competitive intelligence repositories, battlecards, win/loss data, and market research to surface relevant competitive insights for Product Marketing Managers.",
+  "instructions": "$[file('instructions.md')]",
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "{{BATTLECARDS_LIBRARY_URL}}"
+        },
+        {
+          "url": "{{WINLOSS_LIBRARY_URL}}"
+        },
+        {
+          "url": "{{MARKET_RESEARCH_LIBRARY_URL}}"
+        },
+        {
+          "url": "{{PMM_KNOWLEDGE_BASE_URL}}"
+        }
+      ]
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Competitor Differentiators",
+      "text": "What are our key differentiators against [Competitor Name]?"
+    },
+    {
+      "title": "Win/Loss Analysis",
+      "text": "Find recent win/loss data against [Competitor Name]"
+    },
+    {
+      "title": "Objection Handling",
+      "text": "How should I handle the objection that [Competitor] is [cheaper/faster/easier]?"
+    },
+    {
+      "title": "Competitive Pricing",
+      "text": "What's the pricing structure for [Competitor Name]?"
+    },
+    {
+      "title": "Battlecard Lookup",
+      "text": "Pull up the battlecard for [Competitor Name]"
+    },
+    {
+      "title": "Market Intelligence",
+      "text": "What analyst coverage do we have on [market segment or competitor]?"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "launch-content-assistant",
+  "name": "Launch Content Assistant",
+  "version": "1.0.0",
+  "type": "drafting",
+  "role": "product-marketing-manager",
+  "sector": "marketing",
+  "description": "Helps Product Marketing Managers draft launch communications, update battlecards, create competitive summaries, and develop sales enablement content using existing positioning frameworks and market data.",
+  "friction_addressed": [
+    {
+      "id": "F2",
+      "type": "manual_document_creation",
+      "description": "Creating and updating sales enablement assets",
+      "time_saved_weekly": "4-6 hours"
+    },
+    {
+      "id": "F5",
+      "type": "reporting_overhead",
+      "description": "Creating launch reports and competitive summaries",
+      "time_saved_weekly": "1-2 hours"
+    }
+  ],
+  "capabilities": [
+    "OneDriveAndSharePoint",
+    "CodeInterpreter"
+  ],
+  "data_sources": [
+    {
+      "name": "Positioning & Messaging",
+      "type": "SharePoint Library",
+      "description": "Product positioning frameworks, messaging guides, and value propositions",
+      "required": true
+    },
+    {
+      "name": "Launch Templates",
+      "type": "SharePoint Library",
+      "description": "Templates for launch communications, battlecards, and sales collateral",
+      "required": true
+    },
+    {
+      "name": "Product Documentation",
+      "type": "SharePoint Library",
+      "description": "Feature specs, release notes, and product information",
+      "required": true
+    },
+    {
+      "name": "Competitive Battlecards",
+      "type": "SharePoint Library",
+      "description": "Existing battlecards to reference for updates",
+      "required": false
+    }
+  ],
+  "output_types": [
+    "Internal launch announcements",
+    "Sales enablement emails",
+    "Battlecard sections",
+    "Competitive comparison tables",
+    "Feature benefit statements",
+    "Talk track drafts",
+    "Launch timeline summaries"
+  ],
+  "example_queries": [
+    "Draft an internal launch announcement for [feature name]",
+    "Create a competitive comparison table for [competitor] vs our [product]",
+    "Write sales enablement talking points for [new feature]",
+    "Update the [competitor] battlecard with our new [capability]",
+    "Generate a launch timeline summary for the [product] release",
+    "Draft an email to sales about the upcoming [feature] launch"
+  ],
+  "guardrails": [
+    "Uses approved positioning and messaging from organizational templates",
+    "Clearly marks all output as draft requiring review",
+    "Does not invent product capabilities or features",
+    "Cites source documents used in content creation",
+    "Flags when positioning guidance is missing or unclear",
+    "Does not publish or distribute content - drafts only"
+  ],
+  "deployment_complexity": "medium",
+  "estimated_setup_time": "45 minutes",
+  "created": "2025-12-16",
+  "last_updated": "2025-12-16"
+}

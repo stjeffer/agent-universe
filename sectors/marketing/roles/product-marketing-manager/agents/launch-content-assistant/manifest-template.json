@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.2/schema.json",
+  "version": "v1.2",
+  "name": "Launch Content Assistant",
+  "description": "Helps Product Marketing Managers draft launch communications, battlecard updates, competitive summaries, and sales enablement content using approved positioning and messaging frameworks.",
+  "instructions": "$[file('instructions.md')]",
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "{{POSITIONING_MESSAGING_URL}}"
+        },
+        {
+          "url": "{{LAUNCH_TEMPLATES_URL}}"
+        },
+        {
+          "url": "{{PRODUCT_DOCUMENTATION_URL}}"
+        },
+        {
+          "url": "{{COMPETITIVE_BATTLECARDS_URL}}"
+        }
+      ]
+    },
+    {
+      "name": "CodeInterpreter"
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Launch Announcement",
+      "text": "Draft an internal launch announcement for [feature/product name]"
+    },
+    {
+      "title": "Competitive Comparison",
+      "text": "Create a competitive comparison table for [competitor] vs our [product]"
+    },
+    {
+      "title": "Sales Talking Points",
+      "text": "Write sales enablement talking points for [feature name]"
+    },
+    {
+      "title": "Battlecard Update",
+      "text": "Draft an update to the [competitor] battlecard with our new [capability]"
+    },
+    {
+      "title": "Launch Email",
+      "text": "Draft an email to sales about the upcoming [feature] launch"
+    },
+    {
+      "title": "Feature Benefits",
+      "text": "Generate benefit statements for [feature] targeted at [persona]"
+    }
+  ]
+}
