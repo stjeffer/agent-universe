@@ -1,384 +1,392 @@
 {
-  "catalog_version": "2.0.0",
-  "last_updated": "2025-12-16",
-  "description": "Agent Universe - A research-driven catalog of Microsoft 365 Copilot declarative agents organized by industry sector and role",
-  
-  "summary": {
-    "total_sectors": 3,
-    "total_roles": 3,
-    "total_agents": 6,
-    "sectors_completed": ["it", "marketing"],
-    "sectors_in_progress": [],
-    "sectors_planned": ["operations", "human-resources", "finance", "sales", "development", "product"]
-  },
-
-  "sectors": {
-    "it": {
-      "id": "it",
-      "name": "Information Technology",
-      "description": "Roles focused on IT operations, support, security, and infrastructure management",
-      "status": "in_progress",
-      "roles_completed": 1,
-      "roles_planned": 3,
-      "total_agents": 2,
-      "roles": {
-        "it-support-specialist": {
-          "id": "it-support-specialist",
-          "title": "IT Support Specialist",
-          "status": "complete",
-          "research_sources": 41,
-          "agents": [
-            {
-              "id": "knowledge-finder",
-              "name": "IT Knowledge Finder",
-              "type": "retrieval",
-              "description": "Retrieves IT solutions, troubleshooting guides, and documentation from organizational knowledge bases",
-              "friction_addressed": ["information_seeking", "knowledge_fragmentation"],
-              "time_saved_weekly": "3-5 hours",
-              "capabilities": ["OneDriveAndSharePoint"]
-            },
-            {
-              "id": "ticket-assistant",
-              "name": "IT Ticket Assistant",
-              "type": "drafting",
-              "description": "Creates ticket documentation, user communications, and resolution summaries",
-              "friction_addressed": ["manual_document_creation", "repetitive_inquiries", "reporting_overhead"],
-              "time_saved_weekly": "3-4 hours",
-              "capabilities": ["OneDriveAndSharePoint", "CodeInterpreter"]
-            }
-          ]
-        },
-        "security-analyst": {
-          "id": "security-analyst",
-          "title": "Security Analyst",
-          "status": "planned",
-          "expected_agents": ["policy-finder", "incident-assistant"]
-        },
-        "systems-administrator": {
-          "id": "systems-administrator",
-          "title": "Systems Administrator",
-          "status": "planned",
-          "expected_agents": ["config-finder", "runbook-assistant"]
-        }
-      }
+  "$schema": "./schemas/catalog.schema.json",
+  "version": "1.1.0",
+  "generated_at": "2025-01-15T00:00:00Z",
+  "total_agents": 13,
+  "agents": [
+    {
+      "id": "operations-procurement-officer-contract-supplier-finder",
+      "name": "Contract & Supplier Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers quickly find past contracts, supplier information, pricing history, and performance records across procurement documentation.",
+      "friction_addressed": ["information_seeking", "context_switching", "contract_tracking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 3,
+      "tags": ["procurement", "contracts", "suppliers", "vendors", "sourcing", "pricing"],
+      "path": "sectors/operations/roles/procurement-officer/agents/contract-supplier-finder",
+      "version": "1.0.0"
     },
-
-    "marketing": {
-      "id": "marketing",
-      "name": "Marketing",
-      "description": "Roles focused on market research, product positioning, demand generation, content creation, and customer engagement",
-      "status": "in_progress",
-      "roles_completed": 2,
-      "roles_planned": 3,
-      "total_agents": 4,
-      "roles": {
-        "product-marketing-manager": {
-          "id": "product-marketing-manager",
-          "title": "Product Marketing Manager",
-          "status": "complete",
-          "research_sources": 41,
-          "agents": [
-            {
-              "id": "competitive-intel-finder",
-              "name": "Competitive Intel Finder",
-              "type": "retrieval",
-              "description": "Searches competitive intelligence repositories, battlecards, win/loss data, and market research",
-              "friction_addressed": ["information_seeking", "competitive_intelligence"],
-              "time_saved_weekly": "3-5 hours",
-              "capabilities": ["OneDriveAndSharePoint"]
-            },
-            {
-              "id": "launch-content-assistant",
-              "name": "Launch Content Assistant",
-              "type": "drafting",
-              "description": "Drafts launch communications, battlecard updates, competitive summaries, and sales enablement content",
-              "friction_addressed": ["manual_document_creation", "content_creation", "cross_functional_alignment"],
-              "time_saved_weekly": "4-6 hours",
-              "capabilities": ["OneDriveAndSharePoint", "CodeInterpreter"]
-            }
-          ]
-        },
-        "content-marketer": {
-          "id": "content-marketer",
-          "title": "Content Marketer",
-          "status": "complete",
-          "research_sources": 41,
-          "agents": [
-            {
-              "id": "content-finder",
-              "name": "Content Finder",
-              "type": "retrieval",
-              "description": "Searches content libraries by topic, format, date; retrieves brand voice guidelines and approved messaging",
-              "friction_addressed": ["information_seeking", "repetitive_inquiries"],
-              "time_saved_weekly": "3-5 hours",
-              "capabilities": ["OneDriveAndSharePoint"]
-            },
-            {
-              "id": "content-assistant",
-              "name": "Content Assistant",
-              "type": "drafting",
-              "description": "Creates blog outlines, content briefs, social media variations, and performance summary reports",
-              "friction_addressed": ["manual_document_creation", "reporting_overhead"],
-              "time_saved_weekly": "4-6 hours",
-              "capabilities": ["OneDriveAndSharePoint", "CodeInterpreter"]
-            }
-          ]
-        },
-        "demand-generation-specialist": {
-          "id": "demand-generation-specialist",
-          "title": "Demand Generation Specialist",
-          "status": "planned",
-          "expected_agents": ["campaign-finder", "campaign-assistant"]
-        }
-      }
+    {
+      "id": "operations-procurement-officer-rfp-drafting-assistant",
+      "name": "RFP/RFQ Drafting Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers draft RFPs, RFQs, and procurement specifications by leveraging templates, past solicitations, and organizational policies.",
+      "friction_addressed": ["manual_document_creation", "compliance_verification", "information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["WebSearch"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["procurement", "rfp", "rfq", "solicitation", "sourcing", "templates"],
+      "path": "sectors/operations/roles/procurement-officer/agents/rfp-drafting-assistant",
+      "version": "1.0.0"
     },
-
-    "operations": {
-      "id": "operations",
-      "name": "Operations",
-      "description": "Roles focused on procurement, supply chain, facilities, and operational excellence",
-      "status": "planned",
-      "roles_completed": 0,
-      "roles_planned": 5,
-      "total_agents": 0,
-      "roles": {
-        "procurement-officer": {
-          "id": "procurement-officer",
-          "title": "Procurement Officer",
-          "status": "planned",
-          "expected_agents": ["contract-finder", "procurement-assistant", "vendor-tracker"]
-        },
-        "supply-chain-analyst": {
-          "id": "supply-chain-analyst",
-          "title": "Supply Chain Analyst",
-          "status": "planned",
-          "expected_agents": ["supply-finder", "supply-assistant"]
-        },
-        "facilities-manager": {
-          "id": "facilities-manager",
-          "title": "Facilities Manager",
-          "status": "planned",
-          "expected_agents": ["facilities-finder", "facilities-assistant"]
-        },
-        "operations-manager": {
-          "id": "operations-manager",
-          "title": "Operations Manager",
-          "status": "planned",
-          "expected_agents": ["ops-finder", "ops-assistant"]
-        },
-        "quality-assurance-analyst": {
-          "id": "quality-assurance-analyst",
-          "title": "Quality Assurance Analyst",
-          "status": "planned",
-          "expected_agents": ["qa-finder", "qa-assistant"]
-        }
-      }
+    {
+      "id": "operations-procurement-officer-procurement-spend-analyst",
+      "name": "Procurement Spend Analyst",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "procurement-officer",
+      "role_name": "Procurement Officer",
+      "description": "Helps procurement officers analyze spend data, summarize supplier performance, identify savings opportunities, and prepare procurement reports.",
+      "friction_addressed": ["reporting_overhead", "data_analysis", "vendor_supplier_evaluation"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["procurement", "spend-analysis", "reporting", "supplier-performance", "analytics"],
+      "path": "sectors/operations/roles/procurement-officer/agents/procurement-spend-analyst",
+      "version": "1.0.0"
     },
-
-    "human-resources": {
-      "id": "human-resources",
-      "name": "Human Resources",
-      "description": "Roles focused on talent acquisition, employee development, and HR administration",
-      "status": "planned",
-      "roles_completed": 0,
-      "roles_planned": 3,
-      "total_agents": 0,
-      "roles": {
-        "hr-generalist": {
-          "id": "hr-generalist",
-          "title": "HR Generalist",
-          "status": "planned",
-          "expected_agents": ["policy-finder", "hr-assistant"]
-        },
-        "recruiter": {
-          "id": "recruiter",
-          "title": "Recruiter",
-          "status": "planned",
-          "expected_agents": ["candidate-finder", "recruiting-assistant"]
-        },
-        "learning-development-specialist": {
-          "id": "learning-development-specialist",
-          "title": "L&D Specialist",
-          "status": "planned",
-          "expected_agents": ["training-finder", "training-assistant"]
-        }
-      }
+    {
+      "id": "operations-supply-chain-analyst-inventory-order-tracker",
+      "name": "Inventory & Order Tracker",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "supply-chain-analyst",
+      "role_name": "Supply Chain Analyst",
+      "description": "Helps supply chain analysts quickly find inventory status, order information, shipment tracking, and supply chain exceptions across documentation and reports.",
+      "friction_addressed": ["information_seeking", "context_switching"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors", "Email"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["supply-chain", "inventory", "orders", "tracking", "logistics", "shipments"],
+      "path": "sectors/operations/roles/supply-chain-analyst/agents/inventory-order-tracker",
+      "version": "1.0.0"
     },
-
-    "finance": {
-      "id": "finance",
-      "name": "Finance",
-      "description": "Roles focused on financial planning, accounting, and fiscal management",
-      "status": "planned",
-      "roles_completed": 0,
-      "roles_planned": 3,
-      "total_agents": 0,
-      "roles": {
-        "accountant": {
-          "id": "accountant",
-          "title": "Accountant",
-          "status": "planned",
-          "expected_agents": ["accounting-finder", "accounting-assistant"]
-        },
-        "financial-analyst": {
-          "id": "financial-analyst",
-          "title": "Financial Analyst",
-          "status": "planned",
-          "expected_agents": ["finance-finder", "finance-assistant"]
-        },
-        "controller": {
-          "id": "controller",
-          "title": "Controller",
-          "status": "planned",
-          "expected_agents": ["compliance-finder", "reporting-assistant"]
-        }
-      }
+    {
+      "id": "operations-supply-chain-analyst-supply-chain-report-assistant",
+      "name": "Supply Chain Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "supply-chain-analyst",
+      "role_name": "Supply Chain Analyst",
+      "description": "Helps supply chain analysts draft periodic reports, summarize KPIs, analyze supply chain data, and create management updates.",
+      "friction_addressed": ["reporting_overhead", "manual_document_creation", "data_analysis"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["supply-chain", "reporting", "kpi", "analytics", "dashboards", "metrics"],
+      "path": "sectors/operations/roles/supply-chain-analyst/agents/supply-chain-report-assistant",
+      "version": "1.0.0"
     },
-
-    "sales": {
-      "id": "sales",
-      "name": "Sales",
-      "description": "Roles focused on revenue generation, account management, and sales operations",
-      "status": "planned",
-      "roles_completed": 0,
-      "roles_planned": 3,
-      "total_agents": 0,
-      "roles": {
-        "account-executive": {
-          "id": "account-executive",
-          "title": "Account Executive",
-          "status": "planned",
-          "expected_agents": ["deal-finder", "proposal-assistant"]
-        },
-        "sales-operations": {
-          "id": "sales-operations",
-          "title": "Sales Operations",
-          "status": "planned",
-          "expected_agents": ["pipeline-finder", "forecast-assistant"]
-        },
-        "sales-engineer": {
-          "id": "sales-engineer",
-          "title": "Sales Engineer",
-          "status": "planned",
-          "expected_agents": ["demo-finder", "technical-assistant"]
-        }
-      }
+    {
+      "id": "operations-facilities-manager-maintenance-service-finder",
+      "name": "Maintenance & Service Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "facilities-manager",
+      "role_name": "Facilities Manager",
+      "description": "Helps facilities managers quickly find maintenance records, vendor information, service contracts, equipment history, and compliance documentation.",
+      "friction_addressed": ["information_seeking", "vendor_supplier_evaluation", "compliance_verification"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["facilities", "maintenance", "vendors", "contracts", "service", "equipment"],
+      "path": "sectors/operations/roles/facilities-manager/agents/maintenance-service-finder",
+      "version": "1.0.0"
     },
-
-    "development": {
-      "id": "development",
-      "name": "Development",
-      "description": "Roles focused on software development, engineering management, and technical documentation",
-      "status": "planned",
-      "roles_completed": 0,
-      "roles_planned": 3,
-      "total_agents": 0,
-      "roles": {
-        "software-developer": {
-          "id": "software-developer",
-          "title": "Software Developer",
-          "status": "planned",
-          "expected_agents": ["docs-finder", "pr-assistant"]
-        },
-        "engineering-manager": {
-          "id": "engineering-manager",
-          "title": "Engineering Manager",
-          "status": "planned",
-          "expected_agents": ["team-finder", "planning-assistant"]
-        },
-        "technical-writer": {
-          "id": "technical-writer",
-          "title": "Technical Writer",
-          "status": "planned",
-          "expected_agents": ["docs-finder", "docs-assistant"]
-        }
-      }
+    {
+      "id": "operations-facilities-manager-space-asset-lookup",
+      "name": "Space & Asset Lookup",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "facilities-manager",
+      "role_name": "Facilities Manager",
+      "description": "Helps facilities managers find information about building spaces, room configurations, equipment locations, and asset details.",
+      "friction_addressed": ["information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 2,
+      "tags": ["facilities", "space", "assets", "rooms", "floor-plans", "equipment"],
+      "path": "sectors/operations/roles/facilities-manager/agents/space-asset-lookup",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-operations-manager-operations-status-finder",
+      "name": "Operations Status Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "operations-manager",
+      "role_name": "Operations Manager",
+      "description": "Helps operations managers quickly find status updates, project information, team updates, and cross-departmental information across organizational documentation.",
+      "friction_addressed": ["information_seeking", "context_switching", "stakeholder_communication"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["Email", "GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["operations", "status", "projects", "cross-functional", "updates", "tracking"],
+      "path": "sectors/operations/roles/operations-manager/agents/operations-status-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-operations-manager-operations-report-assistant",
+      "name": "Operations Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "operations-manager",
+      "role_name": "Operations Manager",
+      "description": "Helps operations managers draft performance reports, summarize KPIs, prepare meeting materials, and create leadership updates.",
+      "friction_addressed": ["reporting_overhead", "data_analysis", "meeting_preparation"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 4,
+      "tags": ["operations", "reporting", "kpi", "performance", "dashboards", "leadership"],
+      "path": "sectors/operations/roles/operations-manager/agents/operations-report-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-quality-assurance-analyst-quality-docs-finder",
+      "name": "Quality Docs Finder",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "quality-assurance-analyst",
+      "role_name": "Quality Assurance Analyst",
+      "description": "Helps QA analysts quickly find specifications, standards, SOPs, supplier quality records, and compliance documentation.",
+      "friction_addressed": ["information_seeking", "compliance_verification", "vendor_supplier_evaluation"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["quality", "qa", "specifications", "sop", "standards", "compliance", "audit"],
+      "path": "sectors/operations/roles/quality-assurance-analyst/agents/quality-docs-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "operations-quality-assurance-analyst-quality-report-assistant",
+      "name": "Quality Report Assistant",
+      "sector": "operations",
+      "sector_name": "Operations",
+      "role": "quality-assurance-analyst",
+      "role_name": "Quality Assurance Analyst",
+      "description": "Helps QA analysts draft quality reports, summarize non-conformance data, analyze quality metrics, and prepare audit documentation.",
+      "friction_addressed": ["manual_document_creation", "reporting_overhead", "information_seeking"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["quality", "qa", "reporting", "ncr", "capa", "metrics", "audit"],
+      "path": "sectors/operations/roles/quality-assurance-analyst/agents/quality-report-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "human-resources-hr-generalist-hr-policy-benefits-finder",
+      "name": "HR Policy & Benefits Finder",
+      "sector": "human-resources",
+      "sector_name": "Human Resources",
+      "role": "hr-generalist",
+      "role_name": "HR Generalist",
+      "description": "Helps HR generalists and employees quickly find policy information, benefits details, PTO guidelines, and HR procedures from company documentation.",
+      "friction_addressed": ["repetitive_inquiries", "information_seeking", "benefits_administration"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["WebSearch"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["hr", "policies", "benefits", "handbook", "pto", "leave", "compliance", "employee-support"],
+      "path": "sectors/human-resources/roles/hr-generalist/agents/hr-policy-benefits-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "human-resources-hr-generalist-hr-document-assistant",
+      "name": "HR Document Assistant",
+      "sector": "human-resources",
+      "sector_name": "Human Resources",
+      "role": "hr-generalist",
+      "role_name": "HR Generalist",
+      "description": "Helps HR generalists draft onboarding documents, offer letters, policy communications, job descriptions, and HR reports using company templates.",
+      "friction_addressed": ["manual_document_creation", "reporting_overhead"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["CodeInterpreter"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 3,
+      "tags": ["hr", "documents", "onboarding", "offer-letters", "job-descriptions", "communications", "templates"],
+      "path": "sectors/human-resources/roles/hr-generalist/agents/hr-document-assistant",
+      "version": "1.0.0"
     }
-  },
-
-  "indexes": {
+  ],
+  "index": {
     "by_sector": {
-      "it": ["knowledge-finder", "ticket-assistant"],
-      "marketing": ["competitive-intel-finder", "launch-content-assistant", "content-finder", "content-assistant"]
+      "operations": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
+      ],
+      "human-resources": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
+      ]
     },
     "by_role": {
-      "it-support-specialist": ["knowledge-finder", "ticket-assistant"],
-      "product-marketing-manager": ["competitive-intel-finder", "launch-content-assistant"],
-      "content-marketer": ["content-finder", "content-assistant"]
-    },
-    "by_type": {
-      "retrieval": ["knowledge-finder", "competitive-intel-finder", "content-finder"],
-      "drafting": ["ticket-assistant", "launch-content-assistant", "content-assistant"]
-    },
-    "by_friction": {
-      "information_seeking": ["knowledge-finder", "competitive-intel-finder", "content-finder"],
-      "manual_document_creation": ["ticket-assistant", "launch-content-assistant", "content-assistant"],
-      "repetitive_inquiries": ["knowledge-finder", "ticket-assistant", "content-finder"],
-      "reporting_overhead": ["ticket-assistant", "content-assistant"],
-      "competitive_intelligence": ["competitive-intel-finder"],
-      "content_creation": ["launch-content-assistant", "content-assistant"],
-      "cross_functional_alignment": ["launch-content-assistant"]
+      "procurement-officer": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst"
+      ],
+      "supply-chain-analyst": [
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant"
+      ],
+      "facilities-manager": [
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup"
+      ],
+      "operations-manager": [
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant"
+      ],
+      "quality-assurance-analyst": [
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant"
+      ],
+      "hr-generalist": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
+      ]
     },
     "by_capability": {
-      "OneDriveAndSharePoint": ["knowledge-finder", "ticket-assistant", "competitive-intel-finder", "launch-content-assistant", "content-finder", "content-assistant"],
-      "CodeInterpreter": ["ticket-assistant", "launch-content-assistant", "content-assistant"]
+      "OneDriveAndSharePoint": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "human-resources-hr-generalist-hr-document-assistant"
+      ],
+      "CodeInterpreter": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant"
+      ]
+    },
+    "by_friction": {
+      "information_seeking": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-facilities-manager-space-asset-lookup",
+        "operations-operations-manager-operations-status-finder",
+        "operations-quality-assurance-analyst-quality-docs-finder",
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
+      ],
+      "reporting_overhead": [
+        "operations-procurement-officer-procurement-spend-analyst",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-operations-manager-operations-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-document-assistant"
+      ],
+      "manual_document_creation": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-supply-chain-analyst-supply-chain-report-assistant",
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "human-resources-hr-generalist-hr-document-assistant"
+      ],
+      "compliance_verification": [
+        "operations-procurement-officer-rfp-drafting-assistant",
+        "operations-facilities-manager-maintenance-service-finder",
+        "operations-quality-assurance-analyst-quality-docs-finder"
+      ],
+      "context_switching": [
+        "operations-procurement-officer-contract-supplier-finder",
+        "operations-supply-chain-analyst-inventory-order-tracker",
+        "operations-operations-manager-operations-status-finder"
+      ],
+      "repetitive_inquiries": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
+      ],
+      "benefits_administration": [
+        "human-resources-hr-generalist-hr-policy-benefits-finder"
+      ]
     }
   },
-
-  "friction_types": {
-    "information_seeking": {
-      "id": "information_seeking",
-      "name": "Information Seeking",
-      "description": "Time spent searching for documents, records, policies, or answers across systems",
-      "agents_addressing": 3
-    },
-    "manual_document_creation": {
-      "id": "manual_document_creation",
-      "name": "Manual Document Creation",
-      "description": "Creating reports, communications, and documents from scratch or templates",
-      "agents_addressing": 3
-    },
-    "repetitive_inquiries": {
-      "id": "repetitive_inquiries",
-      "name": "Repetitive Inquiries",
-      "description": "Answering the same questions repeatedly from different stakeholders",
-      "agents_addressing": 3
-    },
-    "reporting_overhead": {
-      "id": "reporting_overhead",
-      "name": "Reporting Overhead",
-      "description": "Creating status reports, metrics summaries, and management updates",
-      "agents_addressing": 2
-    },
-    "competitive_intelligence": {
-      "id": "competitive_intelligence",
-      "name": "Competitive Intelligence",
-      "description": "Gathering, organizing, and synthesizing information about competitors",
-      "agents_addressing": 1
-    },
-    "content_creation": {
-      "id": "content_creation",
-      "name": "Content Creation",
-      "description": "Developing marketing content, copy, and creative assets",
-      "agents_addressing": 2
-    },
-    "cross_functional_alignment": {
-      "id": "cross_functional_alignment",
-      "name": "Cross-Functional Alignment",
-      "description": "Coordinating information and activities across teams and departments",
-      "agents_addressing": 1
-    }
-  },
-
-  "metadata": {
-    "methodology": "Research-driven approach with 15-50 sources per role",
-    "deployment_target": "Microsoft 365 Copilot Studio",
-    "agent_pattern": "Finder (retrieval) + Assistant (drafting) per role",
-    "design_philosophy": {
-      "helper_agents": "Retrieve information or draft content, not workflow automation",
-      "universality": "Work across organizations without custom code",
-      "friction_first": "Every agent traces back to documented pain points",
-      "deployment_time": "30 minutes to configure and go live"
+  "summary": {
+    "sectors": [
+      {
+        "id": "operations",
+        "name": "Operations",
+        "roles": 5,
+        "agents": 11,
+        "total_time_saved_hours": 38
+      },
+      {
+        "id": "human-resources",
+        "name": "Human Resources",
+        "roles": 1,
+        "agents": 2,
+        "total_time_saved_hours": 7
+      }
+    ],
+    "totals": {
+      "sectors": 2,
+      "roles": 6,
+      "agents": 13,
+      "total_time_saved_hours": 45
     }
   }
 }
