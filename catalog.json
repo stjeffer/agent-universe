@@ -1,8 +1,8 @@
 {
   "$schema": "./schemas/catalog.schema.json",
-  "version": "1.1.0",
-  "generated_at": "2025-01-15T00:00:00Z",
-  "total_agents": 13,
+  "version": "2.0.0",
+  "generated_at": "2025-12-16T00:00:00Z",
+  "total_agents": 19,
   "agents": [
     {
       "id": "operations-procurement-officer-contract-supplier-finder",
@@ -250,6 +250,120 @@
       "tags": ["hr", "documents", "onboarding", "offer-letters", "job-descriptions", "communications", "templates"],
       "path": "sectors/human-resources/roles/hr-generalist/agents/hr-document-assistant",
       "version": "1.0.0"
+    },
+    {
+      "id": "it-it-support-specialist-knowledge-finder",
+      "name": "IT Knowledge Finder",
+      "sector": "it",
+      "sector_name": "Information Technology",
+      "role": "it-support-specialist",
+      "role_name": "IT Support Specialist",
+      "description": "Retrieves IT solutions, troubleshooting guides, and documentation from organizational knowledge bases to accelerate ticket resolution.",
+      "friction_addressed": ["information_seeking", "knowledge_fragmentation", "repetitive_inquiries"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["it-support", "help-desk", "knowledge-base", "troubleshooting", "technical-support"],
+      "path": "sectors/it/roles/it-support-specialist/agents/knowledge-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "it-it-support-specialist-ticket-assistant",
+      "name": "IT Ticket Assistant",
+      "sector": "it",
+      "sector_name": "Information Technology",
+      "role": "it-support-specialist",
+      "role_name": "IT Support Specialist",
+      "description": "Creates ticket documentation, user communications, resolution summaries, and status reports for IT support workflows.",
+      "friction_addressed": ["manual_document_creation", "repetitive_inquiries", "reporting_overhead"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["Email"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["it-support", "help-desk", "tickets", "documentation", "user-communication"],
+      "path": "sectors/it/roles/it-support-specialist/agents/ticket-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "marketing-product-marketing-manager-competitive-intel-finder",
+      "name": "Competitive Intel Finder",
+      "sector": "marketing",
+      "sector_name": "Marketing",
+      "role": "product-marketing-manager",
+      "role_name": "Product Marketing Manager",
+      "description": "Searches competitive intelligence repositories, battlecards, win/loss data, analyst reports, and market research to surface relevant competitive insights.",
+      "friction_addressed": ["information_seeking", "competitive_intelligence"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors", "WebSearch"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 25,
+      "time_saved_hours_per_week": 4,
+      "tags": ["product-marketing", "competitive-intelligence", "battlecards", "win-loss", "market-research"],
+      "path": "sectors/marketing/roles/product-marketing-manager/agents/competitive-intel-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "marketing-product-marketing-manager-launch-content-assistant",
+      "name": "Launch Content Assistant",
+      "sector": "marketing",
+      "sector_name": "Marketing",
+      "role": "product-marketing-manager",
+      "role_name": "Product Marketing Manager",
+      "description": "Drafts launch communications, battlecard updates, competitive summaries, and sales enablement content using approved positioning frameworks.",
+      "friction_addressed": ["manual_document_creation", "content_creation", "cross_functional_alignment"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["Email"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 5,
+      "tags": ["product-marketing", "launches", "sales-enablement", "messaging", "positioning"],
+      "path": "sectors/marketing/roles/product-marketing-manager/agents/launch-content-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "id": "marketing-content-marketer-content-finder",
+      "name": "Content Finder",
+      "sector": "marketing",
+      "sector_name": "Marketing",
+      "role": "content-marketer",
+      "role_name": "Content Marketer",
+      "description": "Searches content libraries by topic, format, and date; retrieves brand voice guidelines, style guides, and approved messaging for content repurposing.",
+      "friction_addressed": ["information_seeking", "repetitive_inquiries"],
+      "capabilities_required": ["OneDriveAndSharePoint"],
+      "capabilities_optional": ["GraphConnectors"],
+      "has_actions": false,
+      "complexity": "low",
+      "setup_time_minutes": 20,
+      "time_saved_hours_per_week": 4,
+      "tags": ["content-marketing", "content-library", "brand-voice", "style-guide", "assets"],
+      "path": "sectors/marketing/roles/content-marketer/agents/content-finder",
+      "version": "1.0.0"
+    },
+    {
+      "id": "marketing-content-marketer-content-assistant",
+      "name": "Content Assistant",
+      "sector": "marketing",
+      "sector_name": "Marketing",
+      "role": "content-marketer",
+      "role_name": "Content Marketer",
+      "description": "Creates blog outlines, content briefs, social media post variations, and performance summary reports following brand guidelines.",
+      "friction_addressed": ["manual_document_creation", "reporting_overhead"],
+      "capabilities_required": ["OneDriveAndSharePoint", "CodeInterpreter"],
+      "capabilities_optional": ["WebSearch"],
+      "has_actions": false,
+      "complexity": "medium",
+      "setup_time_minutes": 30,
+      "time_saved_hours_per_week": 5,
+      "tags": ["content-marketing", "blog", "social-media", "briefs", "reporting"],
+      "path": "sectors/marketing/roles/content-marketer/agents/content-assistant",
+      "version": "1.0.0"
     }
   ],
   "index": {
@@ -270,6 +384,16 @@
       "human-resources": [
         "human-resources-hr-generalist-hr-policy-benefits-finder",
         "human-resources-hr-generalist-hr-document-assistant"
+      ],
+      "it": [
+        "it-it-support-specialist-knowledge-finder",
+        "it-it-support-specialist-ticket-assistant"
+      ],
+      "marketing": [
+        "marketing-product-marketing-manager-competitive-intel-finder",
+        "marketing-product-marketing-manager-launch-content-assistant",
+        "marketing-content-marketer-content-finder",
+        "marketing-content-marketer-content-assistant"
       ]
     },
     "by_role": {
@@ -297,6 +421,18 @@
       "hr-generalist": [
         "human-resources-hr-generalist-hr-policy-benefits-finder",
         "human-resources-hr-generalist-hr-document-assistant"
+      ],
+      "it-support-specialist": [
+        "it-it-support-specialist-knowledge-finder",
+        "it-it-support-specialist-ticket-assistant"
+      ],
+      "product-marketing-manager": [
+        "marketing-product-marketing-manager-competitive-intel-finder",
+        "marketing-product-marketing-manager-launch-content-assistant"
+      ],
+      "content-marketer": [
+        "marketing-content-marketer-content-finder",
+        "marketing-content-marketer-content-assistant"
       ]
     },
     "by_capability": {
@@ -313,13 +449,22 @@
         "operations-quality-assurance-analyst-quality-docs-finder",
         "operations-quality-assurance-analyst-quality-report-assistant",
         "human-resources-hr-generalist-hr-policy-benefits-finder",
-        "human-resources-hr-generalist-hr-document-assistant"
+        "human-resources-hr-generalist-hr-document-assistant",
+        "it-it-support-specialist-knowledge-finder",
+        "it-it-support-specialist-ticket-assistant",
+        "marketing-product-marketing-manager-competitive-intel-finder",
+        "marketing-product-marketing-manager-launch-content-assistant",
+        "marketing-content-marketer-content-finder",
+        "marketing-content-marketer-content-assistant"
       ],
       "CodeInterpreter": [
         "operations-procurement-officer-procurement-spend-analyst",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-operations-manager-operations-report-assistant",
-        "operations-quality-assurance-analyst-quality-report-assistant"
+        "operations-quality-assurance-analyst-quality-report-assistant",
+        "it-it-support-specialist-ticket-assistant",
+        "marketing-product-marketing-manager-launch-content-assistant",
+        "marketing-content-marketer-content-assistant"
       ]
     },
     "by_friction": {
@@ -332,20 +477,28 @@
         "operations-operations-manager-operations-status-finder",
         "operations-quality-assurance-analyst-quality-docs-finder",
         "operations-quality-assurance-analyst-quality-report-assistant",
-        "human-resources-hr-generalist-hr-policy-benefits-finder"
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "it-it-support-specialist-knowledge-finder",
+        "marketing-product-marketing-manager-competitive-intel-finder",
+        "marketing-content-marketer-content-finder"
       ],
       "reporting_overhead": [
         "operations-procurement-officer-procurement-spend-analyst",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-operations-manager-operations-report-assistant",
         "operations-quality-assurance-analyst-quality-report-assistant",
-        "human-resources-hr-generalist-hr-document-assistant"
+        "human-resources-hr-generalist-hr-document-assistant",
+        "it-it-support-specialist-ticket-assistant",
+        "marketing-content-marketer-content-assistant"
       ],
       "manual_document_creation": [
         "operations-procurement-officer-rfp-drafting-assistant",
         "operations-supply-chain-analyst-supply-chain-report-assistant",
         "operations-quality-assurance-analyst-quality-report-assistant",
-        "human-resources-hr-generalist-hr-document-assistant"
+        "human-resources-hr-generalist-hr-document-assistant",
+        "it-it-support-specialist-ticket-assistant",
+        "marketing-product-marketing-manager-launch-content-assistant",
+        "marketing-content-marketer-content-assistant"
       ],
       "compliance_verification": [
         "operations-procurement-officer-rfp-drafting-assistant",
@@ -358,10 +511,25 @@
         "operations-operations-manager-operations-status-finder"
       ],
       "repetitive_inquiries": [
-        "human-resources-hr-generalist-hr-policy-benefits-finder"
+        "human-resources-hr-generalist-hr-policy-benefits-finder",
+        "it-it-support-specialist-knowledge-finder",
+        "it-it-support-specialist-ticket-assistant",
+        "marketing-content-marketer-content-finder"
       ],
       "benefits_administration": [
         "human-resources-hr-generalist-hr-policy-benefits-finder"
+      ],
+      "knowledge_fragmentation": [
+        "it-it-support-specialist-knowledge-finder"
+      ],
+      "competitive_intelligence": [
+        "marketing-product-marketing-manager-competitive-intel-finder"
+      ],
+      "content_creation": [
+        "marketing-product-marketing-manager-launch-content-assistant"
+      ],
+      "cross_functional_alignment": [
+        "marketing-product-marketing-manager-launch-content-assistant"
       ]
     }
   },
@@ -380,13 +548,27 @@
         "roles": 1,
         "agents": 2,
         "total_time_saved_hours": 7
+      },
+      {
+        "id": "it",
+        "name": "Information Technology",
+        "roles": 1,
+        "agents": 2,
+        "total_time_saved_hours": 8
+      },
+      {
+        "id": "marketing",
+        "name": "Marketing",
+        "roles": 2,
+        "agents": 4,
+        "total_time_saved_hours": 18
       }
     ],
     "totals": {
-      "sectors": 2,
-      "roles": 6,
-      "agents": 13,
-      "total_time_saved_hours": 45
+      "sectors": 4,
+      "roles": 9,
+      "agents": 19,
+      "total_time_saved_hours": 71
     }
   }
 }
