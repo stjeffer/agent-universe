@@ -289,10 +289,44 @@
       .mutedSmall { color: rgba(255,255,255,0.55); font-size: 12px; }
 
       .agentActions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+      /* Background logo watermark */
+.bg-logo {
+  position: fixed;
+  top: -80px;
+  left: -80px;
+
+  width: min(65vw, 720px);
+  height: auto;
+
+  opacity: 0.08;                 /* subtle */
+  filter: saturate(110%) blur(0.5px);
+
+  pointer-events: none;          /* never clickable */
+  user-select: none;
+
+  z-index: 0;                    /* behind content */
+}
+
+/* Ensure all real content stays above */
+.wrap,
+.topbar,
+.hero,
+.section {
+  position: relative;
+  z-index: 1;
+}
     </style>
   </head>
 
   <body>
+    <!-- Decorative background logo -->
+    <img
+    src="img/AgentUniverseLogo.png"
+    alt=""
+    aria-hidden="true"
+    class="bg-logo"
+    />
     <div class="wrap">
       <div class="topbar">
         <a class="brand" href="#about">
