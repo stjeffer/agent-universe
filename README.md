@@ -29,8 +29,6 @@ Agent Universe flips the script. Every agent in this catalog is built on a found
 | **Friction Mapping** | Specific pain points with time impact and automation potential | Prioritizes what to solve |
 | **Agent Blueprints** | Complete, deployment-ready agent packages | Ship in 30 minutes, not 30 days |
 
-**This isn't a list of ideas. It's a library of evidence-based solutions.**
-
 ---
 
 ## 📊 What's Inside
